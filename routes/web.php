@@ -44,6 +44,9 @@ Route::get('/poem_cat', function () {
 Route::get('/poem', function () {
     return view('frontend.poem');
 });
+Route::get('/homeArticle', function () {
+    return view('homeArticle.index');
+});
 
 Route::get('/login', [auth::class,'signInForm'])->name('login');
 
