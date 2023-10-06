@@ -1,0 +1,501 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+
+/*------------------- Home Page Css---------------------------------- */
+
+
+/* ----------Navbar Logo----------- */
+
+.logo {
+    width: 4.375rem;
+    height: 4.375rem;
+}
+
+.logo_style {
+    text-align: center;
+}
+
+.website_name {
+    display: inline-block;
+    line-height: 10px;
+}
+
+.website_name p {
+    margin-top: -5px;
+    text-align: left;
+}
+
+.header_view {
+    font-size: 12px;
+}
+
+/* --------------Nav Menu----------------- */
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link:hover::after {
+    content: "";
+    height: 3px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    position: absolute;
+}
+
+.masthead {
+    /* background-size: cover; */
+    min-height: 60vh;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
+    /* background-image: url('images/Rectangle\ 11.png'); */
+}
+
+.responsive_view {
+    position: absolute;
+    background-color: rgb(0, 0, 0, 1);
+    color: white;
+    display: flex;
+    text-align: center;
+    bottom: 35px;
+    right: 50px;
+}
+
+
+.post h4 {
+    margin-bottom: 0;
+    padding-right: 15px;
+    padding-left: 20px;
+}
+
+.post h1 {
+    margin-top: 0;
+    padding-right: 15px;
+    padding-left: 20px;
+}
+
+.view h4 {
+    margin-bottom: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.view {
+    background-color: #000;
+    border: 3px solid #fff;
+    border-bottom: 0;
+    border-top: 0;
+}
+
+.view h1 {
+    margin-top: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.share {
+    background-color: #000;
+}
+
+.share h4 {
+    margin-bottom: 0;
+    padding-left: 15px;
+
+}
+
+.share h1 {
+    margin-top: 0;
+    padding-left: 15px;
+}
+
+/* main content */
+.main_content {
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-bottom: 100px;
+
+}
+
+
+.image-collage-1 {
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
+    padding-left: 7px;
+}
+
+.image-content-1 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.image-content-1 a {
+    text-decoration: none;
+    text-align: center;
+    margin-top: 1px;
+}
+
+.image-body-1 {
+    margin-right: 2px;
+}
+
+.image-collage-2 {
+
+    position: relative;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
+    padding-left: 0px;
+    margin-bottom: 3px;
+}
+
+.image-content-2 {
+    position: absolute;
+    top: 75px;
+    left: 20px;
+}
+
+.image-content-2 a {
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    margin-top: 1px;
+}
+
+.image-collage-3 {
+    margin-left: 0;
+    /* background-size: cover; */
+    /* min-height: 30vh; */
+    position: relative;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
+    /* background-image: url(images/Rectangle\ 14.png); */
+}
+
+.image_3-4 {
+    margin-right: 0px;
+}
+
+.image-content-3 {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+}
+
+.image-content-3 a {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    margin-top: 1px;
+}
+
+.image-collage-4 {
+    margin-left: 0;
+    /* background-size: cover; */
+    min-height: 30vh;
+    position: relative;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
+    /* background-image: url(images/Rectangle\ 14.png); */
+
+
+}
+
+.image-content-4 {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+}
+
+.image-content-4 a {
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    margin-top: 1px;
+
+}
+
+
+
+.mission h3 {
+    text-align: center;
+}
+
+
+.box {
+
+    background-color: #D9D9D9;
+}
+
+.mission_content {
+    margin-left: 30px;
+}
+
+.mission_content p {
+    margin-top: 100px;
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.mission_content input {
+    margin-left: 20px;
+}
+
+.footer {
+    background-color: #292836;
+
+}
+
+.footer h4 {
+    color: #A3FFD2;
+
+}
+
+
+.address-text {
+    font-family: 9px;
+}
+
+.address-text p {
+    font-size: 12px;
+    padding-top: 17px;
+}
+
+.footer-icon {
+    padding-top: 70px;
+    font-size: 30px;
+    text-align: right;
+    color: #A3FFD2;
+
+}
+
+.button_design {
+    background-color: #183158;
+    border-radius: 5px;
+}
+
+ul li:hover {
+
+    cursor: pointer;
+
+}
+
+.main_body {
+    position: relative;
+}
+
+.div_design {
+    position: absolute;
+    top: 90px;
+    left: -20px;
+}
+
+.ad_img_1 {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.ad_img_2 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.advertisement {
+    width: 50px;
+    height: auto;
+    background-color: #A3FFD2;
+}
+
+.button_design {
+    border: 2px solid black;
+    border-radius: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #fff;
+    text-decoration: none;
+
+}
+
+.button_body {
+    text-align: center;
+    margin-bottom: 25px;
+
+}
+
+.image_icon {
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+
+
+.poem_advertise {
+    width: 50px;
+    height: 400px;
+    background-color: #362829;
+}
+
+.icon_design {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    margin-top: 1px;
+
+}
+
+.icons {
+    color: #000;
+    background-color: red;
+}
+
+.google_app_icon a {
+    padding-left: 40px;
+    text-decoration: none;
+    max-width: 50%;
+    float: left;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+/* For mobile phones: */
+
+@media(max-width: 768px) {
+    .masthead {
+        min-height: 60vh;
+    }
+
+    .responsive_view {
+        position: sticky;
+        bottom: 180px;
+        left: 50px;
+
+    }
+
+    .main_content {
+        padding-top: 20px;
+        padding-left: 55px;
+        padding-bottom: 10px;
+    }
+
+    .main_content p {
+        padding-left: 0 px important !;
+    }
+
+    .header_view {
+        display: none;
+    }
+
+    .image-collage-1 {
+
+        padding-left: 2px;
+        width: 98%;
+        margin-bottom: 10px;
+    }
+
+    .image-content-1 {
+        position: absolute;
+        bottom: 140px;
+        left: 20px;
+    }
+
+    .image-content-2 {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .image-collage-2_1 {
+        max-width: 98%;
+        margin-bottom: 5px;
+
+
+    }
+
+    .image-collage-3 {
+        max-width: 98%;
+        margin-bottom: 8px;
+
+    }
+
+    .image-collage-4 img {
+        position: relative;
+        max-width: 98%;
+    }
+
+    .mission_content p {
+        margin-top: 20px;
+        padding-left: 20px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .about_us h4 {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .footer-icon {
+        text-align: left;
+        display: inline-block;
+    }
+
+    .information {
+
+        text-align: center;
+
+    }
+
+    .search_btn {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .div_design {
+        top: 0px;
+        left: 35px;
+        display: none;
+    }
+
+    .main_body_image img {
+        width: 50% !important;
+        height: auto;
+
+
+    }
+
+    .advertisement {
+        background-color: #A3FFD2;
+    }
+
+    .text_image_home {
+        font-size: 10px;
+    }
+
+
+    .poem_title {
+        margin-top: 20px;
+    }
+
+    .image4_text {
+        margin-top: 200px;
+    }
+
+    .nav-mobile {
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+
+    }
+}
