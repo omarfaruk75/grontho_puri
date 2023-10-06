@@ -45,6 +45,8 @@ Route::get('/poem', function () {
     return view('frontend.poem');
 });
 
+Route::get('/login', [auth::class,'signInForm'])->name('login');
+
 Route::get('/register', [auth::class,'signUpForm'])->name('register');
 Route::post('/register', [auth::class,'signUpStore'])->name('register.store');
 Route::get('/admin', [auth::class,'signInForm'])->name('signIn');

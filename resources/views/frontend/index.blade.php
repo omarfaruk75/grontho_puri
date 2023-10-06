@@ -10,8 +10,7 @@
                         <div class="col-sm-flex col-md-12 col-lg-12 ">
                             <div class="card" style="width: 18rem;">
                                 <div class="card-body">
-                                    <h5 class="card-title"><i class="fa-solid fa-circle fs-3"></i>Smith Holder<i
-                                            class="fa-solid fa-circle fs-5 ps-1"></i> 1
+                                    <h5 class="card-title"><img src="{{asset('assets/frontend/images/Rectangle 14.png')}}" class="ad_img_1" alt=""> Smith Holder . 1 
                                         hour</h5>
 
                                     <h4 class="card-text pt-3 mb-3">Your global source for trusted, enlightening news.
