@@ -13,6 +13,7 @@ use App\Http\Controllers\Settings\Location\ThanaController as thana;
 use App\Http\Controllers\SettingController as settings;
 use App\Http\Controllers\Home\HomeArticleController as home;
 use App\Http\Controllers\Home\HeaderCardController as HeaderCard;
+use App\Http\Controllers\Home\HeaderArticleController as HeaderArticle;
 use App\Http\Controllers\FirstPageController as firstPage;
 use App\Http\Controllers\About\TextController as about;
 
@@ -75,6 +76,7 @@ Route::group(['middleware'=>isAdmin::class],function(){
         /* Home */
         Route::resource('homeArticle',home::class,['as'=>'admin']);
         Route::resource('headerCard',HeaderCard::class,['as'=>'admin']);
+        Route::resource('headerArticle',HeaderArticle::class,['as'=>'admin']);
         /* Page-1 */
         Route::resource('firstPage',firstPage::class,['as'=>'admin']);
         /* About Page*/ 
