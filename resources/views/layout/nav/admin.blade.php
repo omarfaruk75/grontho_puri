@@ -35,23 +35,5 @@
             </li>
         </ul>
     </li>
-    <li class="sidebar-item has-sub">
-        <a href="#" class='sidebar-link'>
-            <i class="bi bi-files"></i>
-            <span>{{__('Home')}}</span>
-        </a>
-        <ul class="submenu">
-            <li class="submenu-item sidebar-item has-sub">
-                <a href="#" class='sidebar-link'> {{__('Post')}}</a>
-                <ul class="submenu">
-                    <li class="py-1"><a href="{{route(currentUser().'.post.index')}}">{{__('Post')}}</a></li>
-                   
-                    <li class="py-1"><a href="{{route(currentUser().'.thana.index')}}">{{__('Thana')}}</a></li>
-                    <li class="py-1"><a href="{{route(currentUser().'.admin.index')}}">{{__('Users')}}</a></li>
-                    {{--  <li class="py-1"><a href="{{route(currentUser().'.terms.index')}}">{{__('Terms & Condition')}}</a></li>  --}}
-                    {{--  <li class="py-1"><a href="{{route(currentUser().'.settings.index')}}">{{__('Website Settings')}}</a></li>  --}}
-                </ul>
-            </li>
-        </ul>
-    </li>
+    
 </ul>
