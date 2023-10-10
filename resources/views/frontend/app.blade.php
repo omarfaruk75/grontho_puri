@@ -26,8 +26,8 @@
             <div class="col-sm-8 col-md-6 col-lg-8 logo_style ">
                 <img src="{{asset('assets/frontend/images/logo.jpeg')}}" class="p-2 bg-light" alt="logo">
                 <div class="website_name p-2">
-                    <h3 mb-0 mt-1>Website Name Here</h3>
-                    <p> website name here </p>
+                    <h3 mb-0 mt-1>Grantho-Puri</h3>
+                    <p> Grantho-Puri </p>
                 </div>
             </div>
             <div class="col-sm-4  col-md-6 col-lg-4 header_view p-1 mt-4">

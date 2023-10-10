@@ -12,6 +12,7 @@ use App\Http\Controllers\Settings\Location\UpazilaController as upazila;
 use App\Http\Controllers\Settings\Location\ThanaController as thana;
 use App\Http\Controllers\SettingController as settings;
 
+
 /* Middleware */
 use App\Http\Middleware\isMember;
 use App\Http\Middleware\isAdmin;
@@ -67,7 +68,6 @@ Route::group(['middleware'=>isAdmin::class],function(){
         Route::resource('upazila',upazila::class,['as'=>'admin']);
         Route::resource('thana',thana::class,['as'=>'admin']);
         Route::resource('unit',unit::class,['as'=>'admin']);
-
     });
 });
 

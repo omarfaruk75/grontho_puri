@@ -1,6 +1,6 @@
 @extends('frontend.app')
 @section('content')   
-    <!--Start Main Image -->
+    <!--Start Main Image 01-->
     <div class="container-fluid ">
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12 p-0 m-0 about_us">

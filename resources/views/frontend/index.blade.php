@@ -154,7 +154,7 @@
         </div>
     </div>
     <!-- End media -->
-    <div class="container d-lg-flex justify-content-center">
+    <div class="container d-lg-flex justify-content-center mb-5">
         <div class="row g-3">
             <div class="col-sm-12 col-md-4">
                 <div class="card">
