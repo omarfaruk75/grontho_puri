@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\Home;
+namespace App\Http\Controllers\About;
 
 use App\Http\Controllers\Controller;
 
-use App\Models\Home\HomeArticle;
+use App\Models\About\Text;
 use Illuminate\Http\Request;
 use App\Http\Traits\ResponseTrait;
-use App\Http\Traits\ImageHandleTraits;
 
-class HomeArticleController extends Controller
+
+class TextController extends Controller
 {
     use ResponseTrait;
-    use ImageHandleTraits;
+
     /**
      * Display a listing of the resource.
      *
@@ -20,8 +20,8 @@ class HomeArticleController extends Controller
      */
     public function index()
     {
-        $home=HomeArticle::paginate(10);
-        return view('home.homeArticle.index',compact('home'));
+      $text= Text::Paginate(10);
+      return view('about.text.index', compact('text'));
     }
 
     /**
@@ -31,7 +31,7 @@ class HomeArticleController extends Controller
      */
     public function create()
     {
-        return view('home.homeArticle.create');
+   return view('about.text.create');
     }
 
     /**
@@ -42,16 +42,13 @@ class HomeArticleController extends Controller
      */
     public function store(Request $request)
     {
-        try{
-            $home=new HomeArticle;
-            if($request->has('image'))
-            $home->image=$this->resizeImage($request->image,'uploads/home_page/home_article/image',true,200,200,false);
-            $home->name=$request->name;
-            $home->category=$request->category;
-            $home->short_details=$request->short_details;
+       try{
+            $text=new Text;
+            $text->category=$request->category;
+            $text->short_texts=$request->short_texts;
             
-            if($home->save())
-                return redirect()->route(currentUser().'.homeArticle.index')->with($this->resMessageHtml(true,null,'Successfully Registred'));
+            if($text->save())
+                return redirect()->route(currentUser().'.text.index')->with($this->resMessageHtml(true,null,'Successfully Registred'));
             else
                 return redirect()->back()->withInput()->with($this->resMessageHtml(false,'error','Please try again'));
             
@@ -64,46 +61,44 @@ class HomeArticleController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\HomeArticle  $homeArticle
+     * @param  \App\Models\about\Text  $text
      * @return \Illuminate\Http\Response
      */
-    public function show(HomeArticle $homeArticle)
+    public function show(Text $text)
     {
-        // 
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\HomeArticle  $homeArticle
+     * @param  \App\Models\about\Text  $text
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $home=HomeArticle::findOrFail(encryptor('decrypt',$id));
-        return view('home.homeArticle.edit',compact('home'));
+      $text=Text::findOrFail(encryptor('decrypt',$id));
+      return view('about.text.edit',compact('text'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\HomeArticle  $homeArticle
+     * @param  \App\Models\about\Text  $text
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
         try{
-            $home=HomeArticle::findOrFail(encryptor('decrypt',$id));
-            $home->name=$request->name;
-            $home->category=$request->category;
-            $home->short_details=$request->short_details;
-            if($request->has('image'))
-                $home->image=$this->resizeImage($request->image,'uploads/home_page/home_article/image',true,200,200,false);
-            if($home->save())
-                return redirect()->route(currentUser().'.homeArticle.index')->with($this->resMessageHtml(true,null,'Successfully updated'));
+            $text= Text::findOrFail(encryptor('decrypt',$id));
+            $text->category=$request->category;
+            $text->short_texts=$request->short_texts;
+            if($text->save())
+                return redirect()->route(currentUser().'.text.index')->with($this->resMessageHtml(true,null,'Successfully Registred'));
             else
                 return redirect()->back()->withInput()->with($this->resMessageHtml(false,'error','Please try again'));
+            
         }catch(Exception $e){
             // dd($e);
             return redirect()->back()->withInput()->with($this->resMessageHtml(false,'error','Please try again'));
@@ -113,13 +108,13 @@ class HomeArticleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\HomeArticle  $homeArticle
+     * @param  \App\Models\about\Text  $text
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $h= HomeArticle::findOrFail(encryptor('decrypt',$id));
-        $h->delete();
-        return redirect()->back();
+      $text=Text::findOrFail(encryptor('decrypt',$id));
+      $text->delete();
+      return redirect()->back();
     }
 }
