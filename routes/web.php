@@ -16,6 +16,7 @@ use App\Http\Controllers\Home\HeaderCardController as HeaderCard;
 use App\Http\Controllers\Home\HeaderArticleController as HeaderArticle;
 use App\Http\Controllers\FirstPageController as firstPage;
 use App\Http\Controllers\About\TextController as about;
+use App\Http\Controllers\About\CollageTextController as collage;
 
 /* Middleware */
 use App\Http\Middleware\isMember;
@@ -81,6 +82,7 @@ Route::group(['middleware'=>isAdmin::class],function(){
         Route::resource('firstPage',firstPage::class,['as'=>'admin']);
         /* About Page*/ 
         Route::resource('text',about::class,['as'=>'admin']);
+        Route::resource('collage',collage::class,['as'=>'admin']);
 
     });
 });

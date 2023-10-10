@@ -36,6 +36,7 @@
                 <a href="#" class='sidebar-link'> {{__('About Page')}}</a>
                 <ul class="submenu">
                     <li class="py-1"><a href="{{route(currentUser().'.text.index')}}">{{__('About Article')}}</a></li>
+                    <li class="py-1"><a href="{{route(currentUser().'.collage.index')}}">{{__('Collage Image')}}</a></li>
                 </ul>
             </li>
             <li class="submenu-item sidebar-item">
