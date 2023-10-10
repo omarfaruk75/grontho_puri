@@ -31,9 +31,16 @@
                     <li class="py-1"><a href="{{route(currentUser().'.headerCard.index')}}">{{__('Header Card')}}</a></li>
                 </ul>
             </li>
+            <li class="submenu-item sidebar-item has-sub">
+                <a href="#" class='sidebar-link'> {{__('About Page')}}</a>
+                <ul class="submenu">
+                    <li class="py-1"><a href="{{route(currentUser().'.text.index')}}">{{__('About Article')}}</a></li>
+                </ul>
+            </li>
             <li class="submenu-item sidebar-item">
                 <a href="{{route(currentUser().'.firstPage.index')}}">{{__('Page-1')}}</a>
             </li>
         </ul>
     </li>
+    
 </ul>

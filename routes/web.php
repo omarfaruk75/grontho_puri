@@ -14,6 +14,7 @@ use App\Http\Controllers\SettingController as settings;
 use App\Http\Controllers\Home\HomeArticleController as home;
 use App\Http\Controllers\Home\HeaderCardController as HeaderCard;
 use App\Http\Controllers\FirstPageController as firstPage;
+use App\Http\Controllers\About\TextController as about;
 
 /* Middleware */
 use App\Http\Middleware\isMember;
@@ -76,6 +77,8 @@ Route::group(['middleware'=>isAdmin::class],function(){
         Route::resource('headerCard',HeaderCard::class,['as'=>'admin']);
         /* Page-1 */
         Route::resource('firstPage',firstPage::class,['as'=>'admin']);
+        /* About Page*/ 
+        Route::resource('text',about::class,['as'=>'admin']);
 
     });
 });

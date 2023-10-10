@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('pageTitle',trans('Create Article for Home page'))
+@section('pageTitle',trans('Create Article for About page'))
 @section('pageSubTitle',trans('Create'))
 
 @section('content')
@@ -14,29 +14,9 @@
                     @endif
                     <div class="card-content">
                         <div class="card-body">
-                            <form class="form" method="post" enctype="multipart/form-data" action="{{route(currentUser().'.homeArticle.store')}}">
+                            <form class="form" method="post" enctype="multipart/form-data" action="{{route(currentUser().'.text.store')}}">
                                 @csrf
                                 <div class="row">
-                                    <div class="col-md-6 col-12">
-                                        <div class="form-group">
-                                            <label for="image">Image</label>
-                                            <input type="file" id="image" class="form-control"
-                                                placeholder="Image" name="image">
-                                                @if($errors->has('image'))
-                                                    <span class="text-danger"> {{ $errors->first('image') }}</span>
-                                                @endif
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-12">
-                                        <div class="form-group">
-                                            <label for="name">Writer Name</label>
-                                            <input type="text" id="name" class="form-control" value="{{ old('name')}}" name="name">
-                                            @if($errors->has('name'))
-                                                <span class="text-danger"> {{ $errors->first('name') }}</span>
-                                            @endif
-                                        </div>
-                                    </div>
-                                
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="category">Category</label>
@@ -48,11 +28,11 @@
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="short_details">Sort Details</label>
-                                            <textarea type="text" id="short_details" class="form-control" value="{{ old('short_details')}}" name="short_details" cols="30" rows="5"></textarea>
+                                            <label for="short_texts">Short Text</label>
+                                            <textarea type="text" id="short_texts" class="form-control" value="{{ old('short_texts')}}" name="short_texts" cols="30" rows="5"></textarea>
                                             
-                                            @if($errors->has('short_details'))
-                                                <span class="text-danger"> {{ $errors->first('short_details') }}</span>
+                                            @if($errors->has('short_texts'))
+                                                <span class="text-danger"> {{ $errors->first('short_texts') }}</span>
                                             @endif
                                         </div>
                                     </div>

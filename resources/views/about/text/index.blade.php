@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('pageTitle',trans('Home Article List'))
+@section('pageTitle',trans('About Article List'))
 @section('pageSubTitle',trans('List'))
 
 @section('content')
@@ -13,40 +13,38 @@
                     {!!Session::get('response')['message']!!}
                 @endif
                 <div>
-                    <a class="btn btn-sm btn-primary float-end" href="{{route(currentUser().'.homeArticle.create')}}"><i class="bi bi-plus"></i></a>
+                    <a class="btn btn-sm btn-primary float-end" href="{{route(currentUser().'.text.create')}}"><i class="bi bi-plus"></i></a>
                 </div>
                 <!-- table bordered -->
                 <div class="table-responsive">
                     <table class="table table-bordered mb-0">
                         <thead>
                             <tr>
-                                <th scope="col">{{__('#SL')}}</th>
-                                <th scope="col">{{__('Image')}}</th>
-                                <th scope="col">{{__('Writer Name')}}</th>
+                                <th scope="col">{{__('#SL')}}</th> 
                                 <th scope="col">{{__('Category')}}</th>
-                                <th scope="col">{{__('Short Details')}}</th>
+                                <th scope="col">{{__('Short Texts')}}</th>
                                 <th scope="col">{{__('Status')}}</th>
                                 <th class="white-space-nowrap">{{__('Action') }}</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse($home as $p)
+                            @forelse($text as $abt)
                             <tr>
                                 <th scope="row">{{ ++$loop->index }}</th>
-                                <td><img width="50px" src="{{asset('uploads/home_page/home_article/image/'.$p->image)}}" alt="image"></td>
-                                <td>{{$p->name}}</td>
-                                <td>{{$p->category}}</td>
-                                <td>{{$p->short_details}}</td>
-                                <td>@if($p->status == 1) {{__('Active') }} @else {{__('Inactive') }} @endif</td>
-                                <!-- or <td>{{ $p->status == 1?"Active":"Inactive" }}</td>-->
+                                
+                              
+                                <td>{{$abt->category}}</td>
+                                <td>{{$abt->short_texts}}</td>
+                                <td>@if($abt->status == 1) {{__('Active') }} @else {{__('Inactive') }} @endif</td>
+                               
                                 <td class="white-space-nowrap">
-                                    <a href="{{route(currentUser().'.homeArticle.edit',encryptor('encrypt',$p->id))}}">
+                                    <a href="{{route(currentUser().'.text.edit',encryptor('encrypt',$abt->id))}}">
                                         <i class="bi bi-pencil-square"></i>
                                     </a>
-                                    <a href="javascript:void()" onclick="$('#form{{$p->id}}').submit()">
+                                    <a href="javascript:void()" onclick="$('#form{{$abt->id}}').submit()">
                                         <i class="bi bi-trash"></i>
                                     </a>
-                                    <form id="form{{$p->id}}" action="{{route(currentUser().'.homeArticle.destroy',encryptor('encrypt',$p->id))}}" method="post">
+                                    <form id="form{{$abt->id}}" action="{{route(currentUser().'.text.destroy',encryptor('encrypt',$abt->id))}}" method="post">
                                         @csrf
                                         @method('delete')
                                     </form>
