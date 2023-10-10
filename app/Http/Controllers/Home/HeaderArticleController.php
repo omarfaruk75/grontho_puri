@@ -1,12 +1,17 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Home;
 
-use App\Models\HeaderArticle;
+use App\Http\Controllers\Controller;
+use App\Models\Home\HeaderArticle;
 use Illuminate\Http\Request;
+use App\Http\Traits\ResponseTrait;
+use App\Http\Traits\ImageHandleTraits;
 
 class HeaderArticleController extends Controller
 {
+    use ResponseTrait;
+    use ImageHandleTraits;
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +19,8 @@ class HeaderArticleController extends Controller
      */
     public function index()
     {
-        //
+        $home=HeaderArticle::paginate(10);
+        return view('home.headerArticle.index',compact('home'));
     }
 
     /**
@@ -24,7 +30,7 @@ class HeaderArticleController extends Controller
      */
     public function create()
     {
-        //
+        return view('home.headerArticle.create');
     }
 
     /**
@@ -35,7 +41,25 @@ class HeaderArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            $home=new HeaderArticle;
+            if($request->has('image'))
+                $home->image=$this->resizeImage($request->image,'uploads/home_page/header_article/image',true,200,200,false);
+             if($request->has('logo_img'))
+                $home->logo_img=$this->resizeImage($request->logo_img,'uploads/home_page/header_article/logo_img',true,200,200,false);
+            $home->user_id=$request->user_id;
+            $home->title=$request->title;
+            $home->category=$request->category;
+            
+            if($home->save())
+                return redirect()->route(currentUser().'.headerArticle.index')->with($this->resMessageHtml(true,null,'Successfully Registred'));
+            else
+                return redirect()->back()->withInput()->with($this->resMessageHtml(false,'error','Please try again'));
+            
+        }catch(Exception $e){
+            // dd($e);
+            return redirect()->back()->withInput()->with($this->resMessageHtml(false,'error','Please try again'));
+        }
     }
 
     /**
@@ -55,9 +79,10 @@ class HeaderArticleController extends Controller
      * @param  \App\Models\HeaderArticle  $headerArticle
      * @return \Illuminate\Http\Response
      */
-    public function edit(HeaderArticle $headerArticle)
+    public function edit($id)
     {
-        //
+        $home=HeaderArticle::findOrFail(encryptor('decrypt',$id));
+        return view('home.headerArticle.edit',compact('home'));
     }
 
     /**
@@ -67,9 +92,27 @@ class HeaderArticleController extends Controller
      * @param  \App\Models\HeaderArticle  $headerArticle
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, HeaderArticle $headerArticle)
+    public function update(Request $request, $id)
     {
-        //
+        try{
+            $home=HeaderArticle::findOrFail(encryptor('decrypt',$id));
+            if($request->has('image'))
+                $home->image=$this->resizeImage($request->image,'uploads/home_page/header_article/image',true,200,200,false);
+             if($request->has('logo_img'))
+                $home->logo_img=$this->resizeImage($request->logo_img,'uploads/home_page/header_article/logo_img',true,200,200,false);
+            $home->user_id=$request->user_id;
+            $home->title=$request->title;
+            $home->category=$request->category;
+            
+            if($home->save())
+                return redirect()->route(currentUser().'.headerArticle.index')->with($this->resMessageHtml(true,null,'Successfully updated'));
+            else
+                return redirect()->back()->withInput()->with($this->resMessageHtml(false,'error','Please try again'));
+            
+        }catch(Exception $e){
+            // dd($e);
+            return redirect()->back()->withInput()->with($this->resMessageHtml(false,'error','Please try again'));
+        }
     }
 
     /**
@@ -78,8 +121,10 @@ class HeaderArticleController extends Controller
      * @param  \App\Models\HeaderArticle  $headerArticle
      * @return \Illuminate\Http\Response
      */
-    public function destroy(HeaderArticle $headerArticle)
+    public function destroy($id)
     {
-        //
+        $h= HeaderArticle::findOrFail(encryptor('decrypt',$id));
+        $h->delete();
+        return redirect()->back();
     }
 }

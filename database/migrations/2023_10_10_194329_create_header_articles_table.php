@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('header_articles', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
+            $table->string('logo_img');
+            $table->string('user_id');
+            $table->string('title');
+            $table->string('category');
             $table->timestamps();
         });
     }
