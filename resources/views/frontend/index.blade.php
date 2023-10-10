@@ -185,4 +185,4 @@
             </div>
         </div>
     </div>
-    @endsection('content')
+@endsection('content')

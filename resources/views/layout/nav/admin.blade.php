@@ -24,6 +24,15 @@
                     {{--  <li class="py-1"><a href="{{route(currentUser().'.settings.index')}}">{{__('Website Settings')}}</a></li>  --}}
                 </ul>
             </li>
+            <li class="submenu-item sidebar-item has-sub">
+                <a href="#" class='sidebar-link'> {{__('Home Page')}}</a>
+                <ul class="submenu">
+                    <li class="py-1"><a href="{{route(currentUser().'.homeArticle.index')}}">{{__('Home Article')}}</a></li>
+                </ul>
+            </li>
+            <li class="submenu-item sidebar-item">
+                <a href="{{route(currentUser().'.firstPage.index')}}">{{__('Page-1')}}</a>
+            </li>
         </ul>
     </li>
 </ul>
