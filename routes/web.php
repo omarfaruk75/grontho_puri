@@ -11,7 +11,8 @@ use App\Http\Controllers\Settings\Location\DistrictController as district;
 use App\Http\Controllers\Settings\Location\UpazilaController as upazila;
 use App\Http\Controllers\Settings\Location\ThanaController as thana;
 use App\Http\Controllers\SettingController as settings;
-
+use App\Http\Controllers\Home\HomeArticleController as home;
+use App\Http\Controllers\FirstPageController as firstPage;
 
 /* Middleware */
 use App\Http\Middleware\isMember;
@@ -68,6 +69,12 @@ Route::group(['middleware'=>isAdmin::class],function(){
         Route::resource('upazila',upazila::class,['as'=>'admin']);
         Route::resource('thana',thana::class,['as'=>'admin']);
         Route::resource('unit',unit::class,['as'=>'admin']);
+       
+        /* Home */
+        Route::resource('homeArticle',home::class,['as'=>'admin']);
+        /* Page-1 */
+        Route::resource('firstPage',firstPage::class,['as'=>'admin']);
+
     });
 });
 
