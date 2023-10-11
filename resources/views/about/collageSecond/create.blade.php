@@ -1,7 +1,7 @@
 @extends('layout.app')
 
-@section('pageTitle',trans('Edit Collage Image'))
-@section('pageSubTitle',trans('Update'))
+@section('pageTitle',trans('Create Collage Image for About page'))
+@section('pageSubTitle',trans('Create'))
 
 @section('content')
   <!-- // Basic multiple Column Form section start -->
@@ -14,12 +14,9 @@
                     @endif
                     <div class="card-content">
                         <div class="card-body">
-                            <form class="form" method="post" enctype="multipart/form-data" action="{{route(currentUser().'.collage.update',encryptor('encrypt',$collage->id))}}">
+                            <form class="form" method="post" enctype="multipart/form-data" action="{{route(currentUser().'.collageSecond.store')}}">
                                 @csrf
-                                @method('PATCH')
-                                <input type="hidden" name="uptoken" value="{{encryptor('encrypt',$collage->id)}}">
                                 <div class="row">
-
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="image">Image</label>
@@ -30,21 +27,21 @@
                                                 @endif
                                         </div>
                                     </div>
-
+                                 
+                                
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="brand">Brand Category</label>
-                                            <input type="text" id="brand" class="form-control" value="{{ old('brand',$collage->brand)}}" name="brand">
+                                            <input type="text" id="brand" class="form-control" value="{{ old('brand')}}" name="brand">
                                             @if($errors->has('brand'))
                                                 <span class="text-danger"> {{ $errors->first('brand') }}</span>
                                             @endif
                                         </div>
                                     </div>
-                                
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="title">Title Name</label>
-                                            <input type="text" id="title" class="form-control" value="{{ old('title',$collage->title)}}" name="title">
+                                            <input type="text" id="title" class="form-control" value="{{ old('title')}}" name="title">
                                             @if($errors->has('title'))
                                                 <span class="text-danger"> {{ $errors->first('title') }}</span>
                                             @endif
@@ -53,19 +50,16 @@
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="name">Name</label>
-                                            <input type="text" id="name" class="form-control" value="{{old('name',$collage->name)}}" name="name">
+                                            <input type="text" id="name" class="form-control" value="{{ old('name')}}" name="name">
                                             @if($errors->has('name'))
                                                 <span class="text-danger"> {{ $errors->first('name') }}</span>
                                             @endif
                                         </div>
                                     </div>
                                 </div>
-                                
                                 <div class="row">
-                                    
                                     <div class="col-12 d-flex justify-content-end">
-                                        <img width="80px" height="50px" src="{{asset('uploads/about_page/collage_image/images/'.$collage->image)}}" alt="image" class="mx-4">
-                                        <button type="submit" class="btn btn-primary me-1 mb-1 mx-2">Save</button>
+                                        <button type="submit" class="btn btn-primary me-1 mb-1">Save</button>
                                     </div>
                                 </div>
                             </form>

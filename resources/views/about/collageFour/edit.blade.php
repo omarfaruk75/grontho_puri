@@ -14,10 +14,10 @@
                     @endif
                     <div class="card-content">
                         <div class="card-body">
-                            <form class="form" method="post" enctype="multipart/form-data" action="{{route(currentUser().'.collage.update',encryptor('encrypt',$collage->id))}}">
+                            <form class="form" method="post" enctype="multipart/form-data" action="{{route(currentUser().'.collageFour.update',encryptor('encrypt',$four->id))}}">
                                 @csrf
                                 @method('PATCH')
-                                <input type="hidden" name="uptoken" value="{{encryptor('encrypt',$collage->id)}}">
+                                <input type="hidden" name="uptoken" value="{{encryptor('encrypt',$four->id)}}">
                                 <div class="row">
 
                                     <div class="col-md-6 col-12">
@@ -34,7 +34,7 @@
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="brand">Brand Category</label>
-                                            <input type="text" id="brand" class="form-control" value="{{ old('brand',$collage->brand)}}" name="brand">
+                                            <input type="text" id="brand" class="form-control" value="{{ old('brand',$four->brand)}}" name="brand">
                                             @if($errors->has('brand'))
                                                 <span class="text-danger"> {{ $errors->first('brand') }}</span>
                                             @endif
@@ -44,7 +44,7 @@
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="title">Title Name</label>
-                                            <input type="text" id="title" class="form-control" value="{{ old('title',$collage->title)}}" name="title">
+                                            <input type="text" id="title" class="form-control" value="{{ old('title',$four->title)}}" name="title">
                                             @if($errors->has('title'))
                                                 <span class="text-danger"> {{ $errors->first('title') }}</span>
                                             @endif
@@ -53,7 +53,7 @@
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="name">Name</label>
-                                            <input type="text" id="name" class="form-control" value="{{old('name',$collage->name)}}" name="name">
+                                            <input type="text" id="name" class="form-control" value="{{old('name',$four->name)}}" name="name">
                                             @if($errors->has('name'))
                                                 <span class="text-danger"> {{ $errors->first('name') }}</span>
                                             @endif
@@ -64,7 +64,7 @@
                                 <div class="row">
                                     
                                     <div class="col-12 d-flex justify-content-end">
-                                        <img width="80px" height="50px" src="{{asset('uploads/about_page/collage_image/images/'.$collage->image)}}" alt="image" class="mx-4">
+                                        <img width="80px" height="50px" src="{{asset('uploads/about_page/collage4_image/images/'.$four->image)}}" alt="image" class="mx-4">
                                         <button type="submit" class="btn btn-primary me-1 mb-1 mx-2">Save</button>
                                     </div>
                                 </div>

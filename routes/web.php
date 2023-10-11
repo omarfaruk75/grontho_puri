@@ -18,6 +18,9 @@ use App\Http\Controllers\FirstPageController as firstPage;
 use App\Http\Controllers\LinkController as link;
 use App\Http\Controllers\About\TextController as about;
 use App\Http\Controllers\About\CollageTextController as collage;
+use App\Http\Controllers\About\CollageSecondController as collageSecond;
+use App\Http\Controllers\About\CollageThirdController as collageThird;
+use App\Http\Controllers\About\CollageFourController as collageFour;
 use App\Http\Controllers\About\MissionController as mission;
 use App\Http\Controllers\About\AboutImageController as aboutImage;
 
@@ -88,6 +91,9 @@ Route::group(['middleware'=>isAdmin::class],function(){
         /* About Page*/ 
         Route::resource('text',about::class,['as'=>'admin']);
         Route::resource('collage',collage::class,['as'=>'admin']);
+        Route::resource('collageSecond',collageSecond::class,['as'=>'admin']);
+        Route::resource('collageThird',collageThird::class,['as'=>'admin']);
+        Route::resource('collageFour',collageFour::class,['as'=>'admin']);
         Route::resource('mission',mission::class,['as'=>'admin']);
         Route::resource('aboutImage',aboutImage::class,['as'=>'admin']);
 

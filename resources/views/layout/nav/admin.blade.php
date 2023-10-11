@@ -43,6 +43,9 @@
                 <ul class="submenu">
                     <li class="py-1"><a href="{{route(currentUser().'.text.index')}}">{{__('About Article')}}</a></li>
                     <li class="py-1"><a href="{{route(currentUser().'.collage.index')}}">{{__('Collage Image')}}</a></li>
+                    <li class="py-1"><a href="{{route(currentUser().'.collageSecond.index')}}">{{__('Collage Image-2')}}</a></li>
+                    <li class="py-1"><a href="{{route(currentUser().'.collageThird.index')}}">{{__('Collage Image-3')}}</a></li>
+                    <li class="py-1"><a href="{{route(currentUser().'.collageFour.index')}}">{{__('Collage Image-4')}}</a></li>
                     <li class="py-1"><a href="{{route(currentUser().'.mission.index')}}">{{__('Mission')}}</a></li>
                     <li class="py-1"><a href="{{route(currentUser().'.aboutImage.index')}}">{{__('About Image')}}</a></li>
                 </ul>
