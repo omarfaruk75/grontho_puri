@@ -32,6 +32,12 @@
                     <li class="py-1"><a href="{{route(currentUser().'.homeArticle.index')}}">{{__('Home Article')}}</a></li>
                 </ul>
             </li>
+            <li class="submenu-item sidebar-item">
+                <a href="{{route(currentUser().'.firstPage.index')}}">{{__('Page-1')}}</a>
+            </li>
+            <li class="submenu-item sidebar-item">
+                <a href="{{route(currentUser().'.link.index')}}">{{__('Link')}}</a>
+            </li>
             <li class="submenu-item sidebar-item has-sub">
                 <a href="#" class='sidebar-link'> {{__('About Page')}}</a>
                 <ul class="submenu">
@@ -40,9 +46,6 @@
                     <li class="py-1"><a href="{{route(currentUser().'.mission.index')}}">{{__('Mission')}}</a></li>
                     <li class="py-1"><a href="{{route(currentUser().'.aboutImage.index')}}">{{__('About Image')}}</a></li>
                 </ul>
-            </li>
-            <li class="submenu-item sidebar-item">
-                <a href="{{route(currentUser().'.firstPage.index')}}">{{__('Page-1')}}</a>
             </li>
         </ul>
     </li>
