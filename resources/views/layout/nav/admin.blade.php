@@ -38,6 +38,7 @@
                     <li class="py-1"><a href="{{route(currentUser().'.text.index')}}">{{__('About Article')}}</a></li>
                     <li class="py-1"><a href="{{route(currentUser().'.collage.index')}}">{{__('Collage Image')}}</a></li>
                     <li class="py-1"><a href="{{route(currentUser().'.mission.index')}}">{{__('Mission')}}</a></li>
+                    <li class="py-1"><a href="{{route(currentUser().'.aboutImage.index')}}">{{__('About Image')}}</a></li>
                 </ul>
             </li>
             <li class="submenu-item sidebar-item">
