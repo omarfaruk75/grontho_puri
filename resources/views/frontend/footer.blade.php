@@ -66,7 +66,6 @@
             </div>
         </div>
 </div>
-    <!-- End Footer Footer-->
 @endsection('content')
     
     

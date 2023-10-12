@@ -81,10 +81,10 @@
     <div class="container  my-5">
         <div class="row">
             <div class="d-flex justify-content-center button_body">
-                <a href="poem_cat" class="button_design text-muted active ">Poem</a>
-                <a href="#" class="button_design text-muted">Short Story</a>
-                <a href="#" class="button_design text-muted">Video</a>
-                <a href="#" class="button_design text-muted">Gallery</a>
+                <a href="poem_cat" class="button_design text-muted active me-1 pb-1 ">Poem</a>
+                <a href="#" class="button_design text-muted mx-1 pb-1  ">Short Story</a>
+                <a href="#" class="button_design text-muted mx-1 pb-1  ">Video</a>
+                <a href="#" class="button_design text-muted ms-1 pb-1  ">Gallery</a>
             </div>
         </div>
     </div>

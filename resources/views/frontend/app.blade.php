@@ -93,7 +93,7 @@
 
                 <div class="col-sm-4 col-md-2 col-lg-2  mt-4 mb-5 information">
                     <h4>তথ্য</h4>
-                    <p>পরিচিতি</p>
+                    <p class="mt-4">পরিচিতি</p>
                     <p>Policy</p>
                     <p>Term and Condition</p>
                 </div>
@@ -107,17 +107,17 @@
                         </div>
                     </div>
                     <div class="google_app_icon">
-                        <a title="কবিতা"
+                        <a title=" কবিতা"
                             href="https://play.google.com/store/apps/details?id=bd.com.sohelmahroof.choto_golpo"
                             target="_blank"> <img src="{{asset('assets/frontend/images/google-play-3d-rendering-icon_578229-292.avif')}}"
-                                class="w-25" alt="">কবিতা
+                                class="w-25" alt="">  কবিতা
                         </a></span>
 
-                        <a title="ছড়া"
+                        <a title=" ছড়া"
                             href="https://play.google.com/store/apps/details?id=bd.com.sohelmahroof.choto_golpo"
                             target="_blank"> <img src="{{asset('assets/frontend/images/google-play-3d-rendering-icon_578229-292.avif')}}"
                                 class="w-25" alt="">
-                            ছড়া </a>
+                              ছড়া </a>
 
                     </div>
                 </div>
@@ -125,7 +125,6 @@
             </div>
         </div>
     </div>
-    End Footer Footer
 </body>
 @stack('scripts')
 <!-- Bootstrap Cdn js link -->
