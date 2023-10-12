@@ -17,6 +17,8 @@ use App\Http\Controllers\Home\HomeCardController as HomeCard;
 use App\Http\Controllers\Home\HeaderArticleController as HeaderArticle;
 use App\Http\Controllers\FirstPageController as firstPage;
 use App\Http\Controllers\LinkController as link;
+
+use App\Http\Controllers\FrontendController as frontend;
 use App\Http\Controllers\About\TextController as about;
 use App\Http\Controllers\About\CollageTextController as collage;
 use App\Http\Controllers\About\CollageSecondController as collageSecond;
@@ -43,24 +45,29 @@ use App\Http\Middleware\isSalesman;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/app', function () {
-    return view('frontend.app');
-});
-Route::get('/about', function () {
-    return view('frontend.about');
-});
-Route::get('/', function () {
-    return view('frontend.index');
-});
-Route::get('/poem_cat', function () {
-    return view('frontend.poem_cat');
-});
-Route::get('/poem', function () {
-    return view('frontend.poem');
-});
+// Route::get('/app', function () {
+//     return view('frontend.app');
+// });
+
+// Route::get('/about', function () {
+//     return view('frontend.about');
+// });
+// Route::get('/', function () {
+//     return view('frontend.index');
+// });
+// Route::get('/poem_cat', function () {
+//     return view('frontend.poem_cat');
+// });
+// Route::get('/poem', function () {
+//     return view('frontend.poem');
+// });
+// Route::get('/', function () {
+//     return view('frontend.poem');
+// });
+
 
 Route::get('/login', [auth::class,'signInForm'])->name('login');
-
+Route::get('/', [frontend::class,'index'])->name('frontend');
 Route::get('/register', [auth::class,'signUpForm'])->name('register');
 Route::post('/register', [auth::class,'signUpStore'])->name('register.store');
 Route::get('/admin', [auth::class,'signInForm'])->name('signIn');
