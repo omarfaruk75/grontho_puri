@@ -13,6 +13,7 @@ use App\Http\Controllers\Settings\Location\ThanaController as thana;
 use App\Http\Controllers\SettingController as settings;
 use App\Http\Controllers\Home\HomeArticleController as home;
 use App\Http\Controllers\Home\HeaderCardController as HeaderCard;
+use App\Http\Controllers\Home\HomeCardController as HomeCard;
 use App\Http\Controllers\Home\HeaderArticleController as HeaderArticle;
 use App\Http\Controllers\FirstPageController as firstPage;
 use App\Http\Controllers\LinkController as link;
@@ -23,6 +24,7 @@ use App\Http\Controllers\About\CollageThirdController as collageThird;
 use App\Http\Controllers\About\CollageFourController as collageFour;
 use App\Http\Controllers\About\MissionController as mission;
 use App\Http\Controllers\About\AboutImageController as aboutImage;
+use App\Http\Controllers\Footer\ContactController as contact;
 
 /* Middleware */
 use App\Http\Middleware\isMember;
@@ -83,6 +85,7 @@ Route::group(['middleware'=>isAdmin::class],function(){
         /* Home */
         Route::resource('homeArticle',home::class,['as'=>'admin']);
         Route::resource('headerCard',HeaderCard::class,['as'=>'admin']);
+        Route::resource('homeCard',HomeCard::class,['as'=>'admin']);
         Route::resource('headerArticle',HeaderArticle::class,['as'=>'admin']);
         /* Page-1 */
         Route::resource('firstPage',firstPage::class,['as'=>'admin']);
@@ -96,7 +99,8 @@ Route::group(['middleware'=>isAdmin::class],function(){
         Route::resource('collageFour',collageFour::class,['as'=>'admin']);
         Route::resource('mission',mission::class,['as'=>'admin']);
         Route::resource('aboutImage',aboutImage::class,['as'=>'admin']);
-
+        /*  Footer Route */
+        Route::resource('contact',contact::class,['as'=>'admin']);
     });
 });
 

@@ -30,13 +30,16 @@
                     <li class="py-1"><a href="{{route(currentUser().'.headerCard.index')}}">{{__('Header Card')}}</a></li>
                     <li class="py-1"><a href="{{route(currentUser().'.headerArticle.index')}}">{{__('Header Article')}}</a></li>
                     <li class="py-1"><a href="{{route(currentUser().'.homeArticle.index')}}">{{__('Home Article')}}</a></li>
+                    <li class="py-1"><a href="{{route(currentUser().'.homeCard.index')}}">{{__('Home Card')}}</a></li>
                 </ul>
             </li>
-            <li class="submenu-item sidebar-item">
-                <a href="{{route(currentUser().'.firstPage.index')}}">{{__('Page-1')}}</a>
-            </li>
-            <li class="submenu-item sidebar-item">
-                <a href="{{route(currentUser().'.link.index')}}">{{__('Link')}}</a>
+            <li class="submenu-item sidebar-item has-sub">
+                <a href="#" class='sidebar-link'> {{__('Poem Page')}}</a>
+                <ul class="submenu">
+                    <li class="py-1"><a href="{{route(currentUser().'.firstPage.index')}}">{{__('Poem')}}</a></li>
+                    <li class="py-1"><a href="{{route(currentUser().'.link.index')}}">{{__('Poem Article')}}</a></li>
+                    
+                </ul>
             </li>
             <li class="submenu-item sidebar-item has-sub">
                 <a href="#" class='sidebar-link'> {{__('About Page')}}</a>
@@ -48,6 +51,13 @@
                     <li class="py-1"><a href="{{route(currentUser().'.collageFour.index')}}">{{__('Collage Image-4')}}</a></li>
                     <li class="py-1"><a href="{{route(currentUser().'.mission.index')}}">{{__('Mission')}}</a></li>
                     <li class="py-1"><a href="{{route(currentUser().'.aboutImage.index')}}">{{__('About Image')}}</a></li>
+                </ul>
+            </li>
+            <li class="submenu-item sidebar-item has-sub">
+                <a href="#" class='sidebar-link'> {{__('Footer')}}</a>
+                <ul class="submenu">
+                    <li class="py-1"><a href="{{route(currentUser().'.contact.index')}}">{{__('Contact Address')}}</a></li>
+                   
                 </ul>
             </li>
         </ul>
