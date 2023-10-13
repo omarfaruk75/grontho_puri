@@ -112,8 +112,8 @@ class LinkController extends Controller
      */
     public function destroy($id)
     {
-        $h= Link::findOrFail(encryptor('decrypt',$id));
-        $h->delete();
+        $link= Link::findOrFail(encryptor('decrypt',$id));
+        $link->delete();
         return redirect()->back();
     }
 }

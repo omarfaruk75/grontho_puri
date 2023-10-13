@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\firstPage;
+use App\Models\FirstPage;
 use Illuminate\Http\Request;
 use App\Http\Traits\ResponseTrait;
 use App\Http\Traits\ImageHandleTraits;
@@ -18,7 +18,7 @@ class FirstPageController extends Controller
      */
     public function index()
     {
-        $firstPage=firstPage::paginate(10);
+        $firstPage=FirstPage::paginate(10);
         return view('firstPage.index',compact('firstPage'));
     }
 
@@ -41,13 +41,14 @@ class FirstPageController extends Controller
     public function store(Request $request)
     {
         try{
-            $firstPage=new firstPage;
+            $firstPage=new FirstPage;
              if($request->has('image'))
                 $firstPage->image=$this->resizeImage($request->image,'uploads/firstPage/image/',true,200,200,false);
              if($request->has('logo_img'))
                 $firstPage->logo_img=$this->resizeImage($request->logo_img,'uploads/firstPage/logo_img/',true,200,200,false);
             $firstPage->name=$request->name;
             $firstPage->category=$request->category;
+            $firstPage->heading=$request->heading;
             $firstPage->text=$request->text;
             $firstPage->short_text=$request->short_text;
             $firstPage->title=$request->title;
@@ -82,7 +83,7 @@ class FirstPageController extends Controller
      */
     public function edit( $id)
     {
-        $firstPage=firstPage::findOrFail(encryptor('decrypt',$id));
+        $firstPage=FirstPage::findOrFail(encryptor('decrypt',$id));
         return view('firstPage.edit',compact('firstPage'));
     }
 
@@ -90,9 +91,10 @@ class FirstPageController extends Controller
     public function update(Request $request, $id)
     {
         try{
-            $firstPage=firstPage::findOrFail(encryptor('decrypt',$id));
+            $firstPage=FirstPage::findOrFail(encryptor('decrypt',$id));
             $firstPage->name=$request->name;
             $firstPage->category=$request->category;
+            $firstPage->heading=$request->heading;
             $firstPage->text=$request->text;
             $firstPage->short_text=$request->short_text;
             $firstPage->title=$request->title;
@@ -114,8 +116,8 @@ class FirstPageController extends Controller
     
     public function destroy($id)
     {
-        $h= firstPage::findOrFail(encryptor('decrypt',$id));
-        $h->delete();
+        $firstPage=FirstPage::findOrFail(encryptor('decrypt',$id));
+        $firstPage->delete();
         return redirect()->back();
     }
 }

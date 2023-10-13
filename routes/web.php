@@ -17,7 +17,6 @@ use App\Http\Controllers\Home\HomeCardController as HomeCard;
 use App\Http\Controllers\Home\HeaderArticleController as HeaderArticle;
 use App\Http\Controllers\FirstPageController as firstPage;
 use App\Http\Controllers\LinkController as link;
-
 use App\Http\Controllers\FrontendController as frontend;
 use App\Http\Controllers\About\TextController as about;
 use App\Http\Controllers\About\CollageTextController as collage;
@@ -52,9 +51,7 @@ use App\Http\Middleware\isSalesman;
 // Route::get('/about', function () {
 //     return view('frontend.about');
 // });
-// Route::get('/', function () {
-//     return view('frontend.index');
-// });
+
 // Route::get('/poem_cat', function () {
 //     return view('frontend.poem_cat');
 // });
@@ -66,8 +63,16 @@ use App\Http\Middleware\isSalesman;
 // });
 
 
+Route::get('/', [frontend::class,'home'])->name('home');
+Route::get('/home', [frontend::class,'home'])->name('home');
+
+Route::get('/about', [frontend::class,'about'])->name('about');
+Route::get('/poem', [frontend::class,'poem'])->name('poem');
+Route::get('/poem_cat', [frontend::class,'poem_cat'])->name('poem_cat');
+Route::get('/footer', [frontend::class,'footer'])->name('footer');
+
+
 Route::get('/login', [auth::class,'signInForm'])->name('login');
-Route::get('/', [frontend::class,'index'])->name('frontend');
 Route::get('/register', [auth::class,'signUpForm'])->name('register');
 Route::post('/register', [auth::class,'signUpStore'])->name('register.store');
 Route::get('/admin', [auth::class,'signInForm'])->name('signIn');

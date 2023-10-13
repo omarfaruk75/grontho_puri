@@ -26,6 +26,7 @@
                                 <th scope="col">{{__('Logo Image')}}</th>
                                 <th scope="col">{{__('Writer Name')}}</th>
                                 <th scope="col">{{__('Article/Poem Image')}}</th>
+                                <th scope="col">{{__('Headline')}}</th>
                                 <th scope="col">{{__('Short Text')}}</th>
                                 <th scope="col">{{__('Text')}}</th>
                                 <th scope="col">{{__('Status')}}</th>
@@ -41,6 +42,7 @@
                                 <td><img width="50px" src="{{asset('uploads/firstPage/logo_img/'.$p->logo_img)}}" alt="logo_img"></td>
                                 <td>{{$p->name}}</td>
                                 <td><img width="50px" src="{{asset('uploads/firstPage/image/'.$p->image)}}" alt="image"></td>
+                                <td>{{$p->heading}}</td>
                                 <td>{{$p->short_text}}</td>
                                 <td>{{$p->text}}</td>
                                 <td>@if($p->status == 1) {{__('Active') }} @else {{__('Inactive') }} @endif</td>

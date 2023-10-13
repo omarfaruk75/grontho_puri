@@ -20,7 +20,7 @@ class CollageSecondController extends Controller
     public function index()
     {
         $second= CollageSecond::Paginate(10);
-        return view('about.CollageSecond.index', compact('second'));
+        return view('about.collageSecond.index', compact('second'));
     }
 
     /**

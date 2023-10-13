@@ -21,8 +21,8 @@
 
 <body>
     <!--Start Logo-Part -->
-    <div class="container">
-        <div class="row">
+    <div class="container ">
+        <div class="row ">
             <div class="col-sm-8 col-md-6 col-lg-8 logo_style ">
                 <img src="{{asset('assets/frontend/images/logo.jpeg')}}" class="p-2 bg-light" alt="logo">
                 <div class="website_name p-2">
@@ -46,11 +46,11 @@
             </button>
             <div class=" collapse navbar-collapse " id="btn">
                 <ul class="navbar-nav m-auto">
-                    <li class="nav-item px-3"><a href="index" class="nav-link text-dark">Home</a></li>
+                    <li class="nav-item px-3"><a href="{{route('home')}}" class="nav-link text-dark">Home</a></li>
                     <li class="nav-item px-3"><a href="#" class="nav-link text-dark">Book Review</a></li>
                     <li class="nav-item px-3"><a href="#" class="nav-link text-dark">Film</a></li>
                     <li class="nav-item px-3"><a href="#" class="nav-link text-dark">Art</a></li>
-                    <li class="nav-item px-3"><a href="about" class="nav-link text-dark">About Us</a></li>
+                    <li class="nav-item px-3"><a href="{{route('about')}}" class="nav-link text-dark">About Us</a></li>
 
                 </ul>
             </div>
@@ -73,7 +73,7 @@
                     <span><i class="fa-solid fa-envelope pt-3 mt-3"></i></span>
                 </div>
                 <div class="col-10 col-sm-10 col-md-4 co-lg-4  mt-4 mb-4 address-text">
-                    <h4 class="m-auto mb-4 ">Webpage Name Here</h4>
+                    <h4 class="m-auto mb-4 ">Grontho Puri</h4>
                     <p><span> ট্র্যাভেলেক্স, 109,স্যানমার
                             স্প্রীং
                             গার্ডেন(১ম

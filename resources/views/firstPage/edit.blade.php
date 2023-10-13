@@ -69,9 +69,17 @@
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="short_text">Detail Text</label>
-                                            <textarea type="short_text" id="short_text" class="form-control" value="{{ old('short_text',$firstPage->short_text)}}" name="short_text" cols="30" rows="15"></textarea>
-                                            
+                                            <label for="heading">Headline</label>
+                                            <input type="text" id="name" class="form-control" value="{{ old('heading',$firstPage->heading)}}" name="heading">
+                                            @if($errors->has('heading'))
+                                                <span class="text-danger"> {{ $errors->first('heading') }}</span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="short_text">Short Text</label>
+                                            <textarea type="short_text" id="short_text" class="form-control" value="{{ old('short_text',$firstPage->short_text)}}" name="short_text" cols="30" rows="5">{{$firstPage->short_text}}</textarea>
                                             @if($errors->has('short_text'))
                                                 <span class="text-danger"> {{ $errors->first('short_text') }}</span>
                                             @endif
@@ -79,8 +87,8 @@
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="text">Detail Text</label>
-                                            <textarea type="text" id="text" class="form-control" value="{{ old('text',$firstPage->text)}}" name="text" cols="30" rows="15"></textarea>
+                                            <label for="text">Details Text</label>
+                                            <textarea type="text" id="text" class="form-control" value="{{ old('text',$firstPage->text)}}" name="text" cols="30" rows="15">{{$firstPage->text}}</textarea>
                                             
                                             @if($errors->has('text'))
                                                 <span class="text-danger"> {{ $errors->first('text') }}</span>

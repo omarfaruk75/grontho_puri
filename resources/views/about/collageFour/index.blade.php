@@ -40,7 +40,7 @@
                                 <td>@if($f->status == 1) {{__('Active') }} @else {{__('Inactive') }} @endif</td>
                               
                                 <td class="white-space-nowrap">
-                                    <a href="{{route(currentUser().'.collageThird.edit',encryptor('encrypt',$f->id))}}">
+                                    <a href="{{route(currentUser().'.collageFour.edit',encryptor('encrypt',$f->id))}}">
                                         <i class="bi bi-pencil-square"></i>
                                     </a>
                                     <a href="javascript:void()" onclick="$('#form{{$f->id}}').submit()">

@@ -66,6 +66,15 @@
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
+                                            <label for="heading">Headline</label>
+                                            <input type="text" id="heading" class="form-control" value="{{ old('heading')}}" name="heading">
+                                            @if($errors->has('heading'))
+                                                <span class="text-danger"> {{ $errors->first('heading') }}</span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
                                             <label for="short_text">Short Text</label>
                                             <textarea type="short_text" id="short_text" class="form-control" value="{{ old('short_text')}}" name="short_text" cols="30" rows="5"></textarea>
                                             

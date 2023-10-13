@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('logo_img');
             $table->string('name');
             $table->string('image');
+            $table->string('heading');
             $table->string('short_text');
             $table->text('text');
             $table->timestamps();

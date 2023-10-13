@@ -1,5 +1,5 @@
-@extends('frontend.index')
-@section('content')
+@extends('frontend.app')
+@section('content')   
     <!--End Menu-Part -->
     <div class="container">
         <div class="row">
@@ -19,7 +19,7 @@
 
                         <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat minus eum
                             facere minima vel
-                            commodi consequuntur, aliquam magni quia provident...... <b><a href="poem" class="text-decoration-none">Read More</a></b> </p>
+                            commodi consequuntur, aliquam magni quia provident...... <b><a href="{{route('poem')}}" class="text-decoration-none">Read More</a></b> </p>
                         <img src="{{asset('assets/frontend/images/Rectangle 14.png')}}" class="ad_img_2" alt=""><span
                             class="ms-2 fs-3 mb-0 fw-2 ">Smith
                             Holder</span>
@@ -27,7 +27,7 @@
 
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat minus eum
                             facere minima vel
-                            commodi consequuntur, aliquam magni quia provident...... <b><a href="poem" class="text-decoration-none" >Read More</a></b> </p>
+                            commodi consequuntur, aliquam magni quia provident...... <b><a href="{{route('poem')}}" class="text-decoration-none" >Read More</a></b> </p>
                     </div>
                 </div>
 
@@ -39,33 +39,19 @@
     <!-- End media -->
     <div class="container d-lg-flex justify-content-center mt-5">
         <div class="row g-3">
+        @forelse($homeCard as $hc)
             <div class="col-sm-12 col-md-4">
                 <div class="card">
-                    <img src="{{asset('assets/frontend/images/Rectangle 41.png')}}" class="card-img-top" alt="...">
+                    <img src="{{asset('uploads/home_page/home_card/image/'.$hc->image)}}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h6 class="card-title">Your global source for trusted, enlightening news.</h6>
+                        <h6 class="card-title">{{$hc->title}}</h6>
                         <p>12 hours ago</p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="card">
-                    <img src="{{asset('assets/frontend/images/Rectangle 42.png')}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h6 class="card-title">Your global source for trusted, enlightening news.</h6>
-                        <p>12 hours ago</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="card">
-                    <img src="{{asset('assets/frontend/images/Rectangle 43.png')}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h6 class="card-title">Your global source for trusted, enlightening news.</h6>
-                        <p>12 hours ago</p>
-                    </div>
-                </div>
-            </div>
+        @empty
+        <div>data not found</div>
+        @endforelse
         </div>
     </div>
-@endsection('content')
+@endsection
