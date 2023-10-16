@@ -19,7 +19,15 @@
                                 @method('PATCH')
                                 <input type="hidden" name="uptoken" value="{{encryptor('encrypt',$firstPage->id)}}">
                                 <div class="row">
-
+                                    <div class="col-md-6 col-12">
+                                        <select class="form-select" aria-label="Default select example">
+                                                <option selected>Select Category</option>
+                                                <option value="1">Poem</option>
+                                                <option value="2">Short Story</option>
+                                                <option value="3">Video</option>
+                                                <option value="4">Gallery</option>
+                                        </select>
+                                    </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="category">Category</label>
@@ -38,8 +46,6 @@
                                             @endif
                                         </div>
                                     </div>
-                                    
-                                   
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="image">Article/Poem Image</label>

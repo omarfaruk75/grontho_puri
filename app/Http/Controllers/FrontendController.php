@@ -43,13 +43,15 @@ class FrontendController extends Controller
     public function Poem_cat()
     {
         $homeCard=HomeCard::all();
+        $firstPage=FirstPage::all();
+
        
-        return view('frontend.poem_cat',compact('homeCard'));
+        return view('frontend.poem_cat',compact('homeCard','firstPage'));
     }
     
-    public function Poem()
+    public function Poem($id)
     {
-        $firstPage=FirstPage::first();
+        $firstPage=FirstPage::findOrFail($id);
         $link= Link::first();
         return view('frontend.poem',compact('firstPage','link'));
     }
