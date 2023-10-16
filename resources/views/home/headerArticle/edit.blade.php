@@ -29,28 +29,7 @@
                                                     <span class="text-danger"> {{ $errors->first('image') }}</span>
                                                 @endif
                                         </div>
-                                    </div>
-                                    <div class="col-md-6 col-12">
-                                        <div class="form-group">
-                                            <label for="logo_img">Logo Image</label>
-                                            <input type="file" id="logo_img" class="form-control"
-                                                placeholder="logo_img" name="logo_img">
-                                                @if($errors->has('logo_img'))
-                                                    <span class="text-danger"> {{ $errors->first('logo_img') }}</span>
-                                                @endif
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 col-12">
-                                        <div class="form-group">
-                                            <label for="user_id">Name</label>
-                                            <input type="text" id="user_id" class="form-control" value="{{ old('user_id',$home->user_id)}}" name="user_id">
-                                            @if($errors->has('user_id'))
-                                                <span class="text-danger"> {{ $errors->first('user_id') }}</span>
-                                            @endif
-                                        </div>
-                                    </div>
-                                
+                                    </div>   
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="title">Title</label>
@@ -71,11 +50,9 @@
                                     </div>
                                 </div>
                                 
-                                <div class="row">
-                                    
+                                <div class="row">  
                                     <div class="col-12 d-flex justify-content-end">
                                         <img width="80px" height="50px" src="{{asset('uploads/home_page/header_article/image/'.$home->image)}}" alt="image" class="mx-4">
-                                        <img width="50px" height="50px" src="{{asset('uploads/home_page/header_article/logo_img/'.$home->logo_img)}}" alt="logo_img" class="mx-4">
                                         <button type="submit" class="btn btn-primary me-1 mb-1 mx-2">Save</button>
                                     </div>
                                 </div>

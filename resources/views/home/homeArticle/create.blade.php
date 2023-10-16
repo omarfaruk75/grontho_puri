@@ -17,25 +17,8 @@
                             <form class="form" method="post" enctype="multipart/form-data" action="{{route(currentUser().'.homeArticle.store')}}">
                                 @csrf
                                 <div class="row">
-                                    <div class="col-md-6 col-12">
-                                        <div class="form-group">
-                                            <label for="image">Image</label>
-                                            <input type="file" id="image" class="form-control"
-                                                placeholder="Image" name="image">
-                                                @if($errors->has('image'))
-                                                    <span class="text-danger"> {{ $errors->first('image') }}</span>
-                                                @endif
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-12">
-                                        <div class="form-group">
-                                            <label for="name">Writer Name</label>
-                                            <input type="text" id="name" class="form-control" value="{{ old('name')}}" name="name">
-                                            @if($errors->has('name'))
-                                                <span class="text-danger"> {{ $errors->first('name') }}</span>
-                                            @endif
-                                        </div>
-                                    </div>
+                                    
+                                    
                                 
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">

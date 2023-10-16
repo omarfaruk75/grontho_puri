@@ -275,10 +275,7 @@
 
 }
 
-.button_design {
-    background-color: #183158;
-    border-radius: 5px;
-}
+
 
 ul li:hover {
 
@@ -322,6 +319,10 @@ ul li:hover {
     background-color: #fff;
     text-decoration: none;
 
+}
+
+.image_text_time {
+    font-size: 10px !important;
 }
 
 .button_body {
@@ -469,7 +470,6 @@ ul li:hover {
     }
 
     .main_body_image img {
-        width: 50% !important;
         height: auto;
 
 
@@ -497,5 +497,10 @@ ul li:hover {
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
 
+    }
+
+    .button_design {
+        font-size: 12px;
+        padding-top: 2px;
     }
 }

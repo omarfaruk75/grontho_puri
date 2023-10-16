@@ -65,13 +65,9 @@ use App\Http\Middleware\isSalesman;
 
 Route::get('/', [frontend::class,'home'])->name('home');
 Route::get('/home', [frontend::class,'home'])->name('home');
-
 Route::get('/about', [frontend::class,'about'])->name('about');
 Route::get('/poem', [frontend::class,'poem'])->name('poem');
 Route::get('/poem_cat', [frontend::class,'poem_cat'])->name('poem_cat');
-Route::get('/footer', [frontend::class,'footer'])->name('footer');
-
-
 Route::get('/login', [auth::class,'signInForm'])->name('login');
 Route::get('/register', [auth::class,'signUpForm'])->name('register');
 Route::post('/register', [auth::class,'signUpStore'])->name('register.store');

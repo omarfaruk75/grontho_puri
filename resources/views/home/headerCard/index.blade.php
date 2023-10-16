@@ -22,8 +22,7 @@
                             <tr>
                                 <th scope="col">{{__('#SL')}}</th>
                                 <th scope="col">{{__('Image')}}</th>
-                                <th scope="col">{{__('Logo Image')}}</th>
-                                <th scope="col">{{__('Writer Name')}}</th>
+                              
                                 <th scope="col">{{__('Title')}}</th>
                                 <th scope="col">{{__('Short Details')}}</th>
                                 <th scope="col">{{__('Status')}}</th>
@@ -35,12 +34,12 @@
                             <tr>
                                 <th scope="row">{{ ++$loop->index }}</th>
                                 <td><img width="50px" src="{{asset('uploads/home_page/header_card/image/'.$p->image)}}" alt="image"></td>
-                                <td><img width="50px" src="{{asset('uploads/home_page/header_card/logo_img/'.$p->logo_img)}}" alt="logo_img"></td>
-                                <td>{{$p->name}}</td>
+                               
+                               
                                 <td>{{$p->title}}</td>
                                 <td>{{$p->short_details}}</td>
                                 <td>@if($p->status == 1) {{__('Active') }} @else {{__('Inactive') }} @endif</td>
-                                <!-- or <td>{{ $p->status == 1?"Active":"Inactive" }}</td>-->
+                                {{-- or <td>{{ $p->status == 1?"Active":"Inactive" }}</td> --}}
                                 <td class="white-space-nowrap">
                                     <a href="{{route(currentUser().'.headerCard.edit',encryptor('encrypt',$p->id))}}">
                                         <i class="bi bi-pencil-square"></i>

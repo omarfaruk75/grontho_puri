@@ -14,7 +14,7 @@
                             <h2>
                             {{$firstPage->title}}
                             </h2>
-                            <img src="{{asset('uploads/firstPage/logo_img/'.$firstPage->logo_img)}}" class="image_icon" alt=""> <span>{{$firstPage->name}}</span> | 29th
+                            <img class="image_icon" src="{{asset('uploads/userimg/'.$firstPage->user?->image)}}" onerror="this.onerror=null;this.src='{{ asset('assets/images/logo/default.jpeg')}}';" > <span>{{$firstPage->user?->name}}</span> | 29th
                             November 2023
                             <br> <br>
 

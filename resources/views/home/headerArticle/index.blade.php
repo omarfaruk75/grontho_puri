@@ -22,8 +22,6 @@
                             <tr>
                                 <th scope="col">{{__('#SL')}}</th>
                                 <th scope="col">{{__('Image')}}</th>
-                                <th scope="col">{{__('Logo Image')}}</th>
-                                <th scope="col">{{__('Writer Name')}}</th>
                                 <th scope="col">{{__('Title')}}</th>
                                 <th scope="col">{{__('Category')}}</th>
                                 <th scope="col">{{__('Status')}}</th>
@@ -35,8 +33,6 @@
                             <tr>
                                 <th scope="row">{{ ++$loop->index }}</th>
                                 <td><img width="50px" src="{{asset('uploads/home_page/header_article/image/'.$p->image)}}" alt="image"></td>
-                                <td><img width="50px" src="{{asset('uploads/home_page/header_article/logo_img/'.$p->logo_img)}}" alt="logo_img"></td>
-                                <td>{{$p->user_id}}</td>
                                 <td>{{$p->title}}</td>
                                 <td>{{$p->category}}</td>
                                 <td>@if($p->status == 1) {{__('Active') }} @else {{__('Inactive') }} @endif</td>

@@ -53,10 +53,6 @@ class FrontendController extends Controller
         $link= Link::first();
         return view('frontend.poem',compact('firstPage','link'));
     }
-    public function Footer()
-    {
-        $contact=Contact::first();
-        return view('frontend.app',compact('contact'));
-    }
+   
 
 }

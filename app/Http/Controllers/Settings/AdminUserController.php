@@ -14,10 +14,12 @@ use App\Http\Requests\AdminUser\AddNewRequest;
 use App\Http\Requests\AdminUser\UpdateRequest;
 use Illuminate\Support\Facades\Hash;
 use Exception;
+use App\Http\Traits\ImageHandleTraits;
 
 class AdminUserController extends Controller
 {
     use ResponseTrait;
+    use ImageHandleTraits;
     /**
      * Display a listing of the resource.
      *
@@ -51,6 +53,7 @@ class AdminUserController extends Controller
             $user= new User;
             $user->name=$request->userName;
             $user->contact_no=$request->contactNumber;
+            $user->image=$this->resizeImage($request->image,'uploads/userimg',true,1920,803,true);
             $user->email=$request->userEmail;
             $user->password=Hash::make($request->password);
             $user->role_id=1;
@@ -104,13 +107,18 @@ class AdminUserController extends Controller
             $user->language=$request->language;
             if($request->has('password') && $request->password)
                 $user->password=Hash::make($request->password);
+
+                $path='uploads/userimg';
+                if($request->has('image') && $request->image)
+                if($this->deleteImage($user->image,$path))
+                $user->image=$this->resizeImage($request->image,$path,true,1920,803,true);
          
             if($user->save())
                 return redirect()->route(currentUser().'.admin.index')->with($this->resMessageHtml(true,null,'Successfully updated'));
             else
                 return redirect()->back()->withInput()->with($this->resMessageHtml(false,'error','Please try again'));
         }catch(Exception $e){
-            //dd($e);
+            dd($e);
             return redirect()->back()->withInput()->with($this->resMessageHtml(false,'error','Please try again'));
         }
     }

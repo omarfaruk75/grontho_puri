@@ -36,7 +36,7 @@
                                 <td>{{$p->name}}</td>
                                 <td>{{$p->email}}</td>
                                 <td>{{$p->contact_no}}</td>
-                                <td><img width="50px" src="{{asset('uploads/admin/'.$p->image)}}" alt=""></td>
+                                <td><img width="50px" src="{{asset('uploads/userimg/'.$p->image)}}" alt=""></td>
                                 <td>@if($p->status == 1) {{__('Active') }} @else {{__('Inactive') }} @endif</td>
                                 <!-- or <td>{{ $p->status == 1?"Active":"Inactive" }}</td>-->
                                 <td class="white-space-nowrap">

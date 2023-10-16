@@ -13,7 +13,7 @@ class ContactController extends Controller
 {
     use ResponseTrait;
 
-    /**
+    /**   
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response

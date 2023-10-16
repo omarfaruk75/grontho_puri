@@ -20,26 +20,9 @@
                                 <input type="hidden" name="uptoken" value="{{encryptor('encrypt',$home->id)}}">
                                 <div class="row">
 
-                                    <div class="col-md-6 col-12">
-                                        <div class="form-group">
-                                            <label for="image">Image</label>
-                                            <input type="file" id="image" class="form-control"
-                                                placeholder="Image" name="image">
-                                                @if($errors->has('image'))
-                                                    <span class="text-danger"> {{ $errors->first('image') }}</span>
-                                                @endif
-                                        </div>
-                                    </div>
+                                   
 
-                                    <div class="col-md-6 col-12">
-                                        <div class="form-group">
-                                            <label for="name">Name</label>
-                                            <input type="text" id="name" class="form-control" value="{{ old('name',$home->name)}}" name="name">
-                                            @if($errors->has('name'))
-                                                <span class="text-danger"> {{ $errors->first('name') }}</span>
-                                            @endif
-                                        </div>
-                                    </div>
+                                   
                                 
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
@@ -64,7 +47,7 @@
                                 <div class="row">
                                     
                                     <div class="col-12 d-flex justify-content-end">
-                                        <img width="80px" height="50px" src="{{asset('uploads/home_page/home_article/image/'.$home->image)}}" alt="image" class="mx-4">
+                                       
                                         <button type="submit" class="btn btn-primary me-1 mb-1 mx-2">Save</button>
                                     </div>
                                 </div>

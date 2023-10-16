@@ -45,9 +45,9 @@ class HeaderArticleController extends Controller
             $home=new HeaderArticle;
             if($request->has('image'))
                 $home->image=$this->resizeImage($request->image,'uploads/home_page/header_article/image',true,200,200,false);
-             if($request->has('logo_img'))
-                $home->logo_img=$this->resizeImage($request->logo_img,'uploads/home_page/header_article/logo_img',true,200,200,false);
-            $home->user_id=$request->user_id;
+            //  if($request->has('logo_img'))
+            //     $home->logo_img=$this->resizeImage($request->logo_img,'uploads/home_page/header_article/logo_img',true,200,200,false);
+            $home->user_id=currentUserId();
             $home->title=$request->title;
             $home->category=$request->category;
             
@@ -98,9 +98,8 @@ class HeaderArticleController extends Controller
             $home=HeaderArticle::findOrFail(encryptor('decrypt',$id));
             if($request->has('image'))
                 $home->image=$this->resizeImage($request->image,'uploads/home_page/header_article/image',true,200,200,false);
-             if($request->has('logo_img'))
-                $home->logo_img=$this->resizeImage($request->logo_img,'uploads/home_page/header_article/logo_img',true,200,200,false);
-            $home->user_id=$request->user_id;
+            
+            $home->user_id=currentUserId();
             $home->title=$request->title;
             $home->category=$request->category;
             

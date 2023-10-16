@@ -43,10 +43,8 @@ class FirstPageController extends Controller
         try{
             $firstPage=new FirstPage;
              if($request->has('image'))
-                $firstPage->image=$this->resizeImage($request->image,'uploads/firstPage/image/',true,200,200,false);
-             if($request->has('logo_img'))
-                $firstPage->logo_img=$this->resizeImage($request->logo_img,'uploads/firstPage/logo_img/',true,200,200,false);
-            $firstPage->name=$request->name;
+            $firstPage->image=$this->resizeImage($request->image,'uploads/firstPage/image/',true,200,200,false);
+            $firstPage->user_id=currentUserId();
             $firstPage->category=$request->category;
             $firstPage->heading=$request->heading;
             $firstPage->text=$request->text;
@@ -92,17 +90,15 @@ class FirstPageController extends Controller
     {
         try{
             $firstPage=FirstPage::findOrFail(encryptor('decrypt',$id));
-            $firstPage->name=$request->name;
+            if($request->has('image'))
+            $firstPage->image=$this->resizeImage($request->image,'uploads/firstPage/image/',true,200,200,false);
+            $firstPage->user_id=currentUserId();
             $firstPage->category=$request->category;
             $firstPage->heading=$request->heading;
             $firstPage->text=$request->text;
             $firstPage->short_text=$request->short_text;
             $firstPage->title=$request->title;
-            if($request->has('image'))
-                $firstPage->image=$this->resizeImage($request->image,'uploads/firstPage/image/',true,200,200,false);
-            if($request->has('logo_img'))
-                $firstPage->logo_img=$this->resizeImage($request->logo_img,'uploads/firstPage/logo_img/',true,200,200,false);
-            
+           
             if($firstPage->save())
                 return redirect()->route(currentUser().'.firstPage.index')->with($this->resMessageHtml(true,null,'Successfully updated'));
             else

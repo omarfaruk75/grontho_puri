@@ -27,25 +27,8 @@
                                                 @endif
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-12">
-                                        <div class="form-group">
-                                            <label for="logo_img">Logo Image</label>
-                                            <input type="file" id="logo_img" class="form-control"
-                                                placeholder="logo_img" name="logo_img">
-                                                @if($errors->has('logo_img'))
-                                                    <span class="text-danger"> {{ $errors->first('logo_img') }}</span>
-                                                @endif
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-12">
-                                        <div class="form-group">
-                                            <label for="user_id">Writr Name</label>
-                                            <input type="text" id="user_id" class="form-control" value="{{ old('user_id')}}" name="user_id">
-                                            @if($errors->has('user_id'))
-                                                <span class="text-danger"> {{ $errors->first('user_id') }}</span>
-                                            @endif
-                                        </div>
-                                    </div>
+                                   
+                                    
                                 
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">

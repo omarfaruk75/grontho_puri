@@ -12,10 +12,12 @@ use App\Http\Traits\ResponseTrait;
 use App\Http\Requests\User\AddNewRequest;
 use Illuminate\Support\Facades\Hash;
 use Exception;
+use App\Http\Traits\ImageHandleTraits;
 
 class UserController extends Controller
 {
     use ResponseTrait;
+    use ImageHandleTraits;
     /**
      * Display a listing of the resource.
      *
@@ -58,6 +60,7 @@ class UserController extends Controller
             $user->name=$request->userName;
             $user->contact_no=$request->contactNumber;
             $user->email=$request->userEmail;
+            $user->image=$this->resizeImage($request->image,'uploads/userimg',true,1920,803,true);
             $user->password=Hash::make($request->password);
             $user->company_id=company()['company_id'];
             $user->branch_id=$request->branch_id;
@@ -123,6 +126,11 @@ class UserController extends Controller
 
             $user->branch_id=$request->branch_id;
             $user->role_id=$request->role_id;
+
+            $path='uploads/userimg';
+            if($request->has('image') && $request->image)
+            if($this->deleteImage($user->image,$path))
+                $user->image=$this->resizeImage($request->image,$path,true,1920,803,true);
 
             if($user->save())
                 return redirect()->route(currentUser().'.users.index')->with($this->resMessageHtml(true,null,'Successfully updated'));

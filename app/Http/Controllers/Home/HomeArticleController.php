@@ -44,9 +44,7 @@ class HomeArticleController extends Controller
     {
         try{
             $home=new HomeArticle;
-            if($request->has('image'))
-            $home->image=$this->resizeImage($request->image,'uploads/home_page/home_article/image',true,200,200,false);
-            $home->name=$request->name;
+            $home->user_id=currentUserId();
             $home->category=$request->category;
             $home->short_details=$request->short_details;
             
@@ -95,11 +93,9 @@ class HomeArticleController extends Controller
     {
         try{
             $home=HomeArticle::findOrFail(encryptor('decrypt',$id));
-            $home->name=$request->name;
+            $home->user_id=currentUserId();
             $home->category=$request->category;
             $home->short_details=$request->short_details;
-            if($request->has('image'))
-                $home->image=$this->resizeImage($request->image,'uploads/home_page/home_article/image',true,200,200,false);
             if($home->save())
                 return redirect()->route(currentUser().'.homeArticle.index')->with($this->resMessageHtml(true,null,'Successfully updated'));
             else

@@ -16,10 +16,9 @@ return new class extends Migration
         Schema::create('header_cards', function (Blueprint $table) {
             $table->id();
             $table->string('image');
-            $table->string('logo_img');
-            $table->string('name');
             $table->string('title');
             $table->string('short_details');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }

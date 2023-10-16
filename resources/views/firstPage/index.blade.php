@@ -23,8 +23,6 @@
                                 <th scope="col">{{__('#SL')}}</th>
                                 <th scope="col">{{__('Category Name')}}</th>
                                 <th scope="col">{{__('Title')}}</th>
-                                <th scope="col">{{__('Logo Image')}}</th>
-                                <th scope="col">{{__('Writer Name')}}</th>
                                 <th scope="col">{{__('Article/Poem Image')}}</th>
                                 <th scope="col">{{__('Headline')}}</th>
                                 <th scope="col">{{__('Short Text')}}</th>
@@ -39,8 +37,6 @@
                                 <th scope="row">{{ ++$loop->index }}</th>
                                 <td>{{$p->category}}</td>
                                 <td>{{$p->title}}</td>
-                                <td><img width="50px" src="{{asset('uploads/firstPage/logo_img/'.$p->logo_img)}}" alt="logo_img"></td>
-                                <td>{{$p->name}}</td>
                                 <td><img width="50px" src="{{asset('uploads/firstPage/image/'.$p->image)}}" alt="image"></td>
                                 <td>{{$p->heading}}</td>
                                 <td>{{$p->short_text}}</td>

@@ -72,21 +72,17 @@
                     <br>
                     <span><i class="fa-solid fa-envelope pt-3 mt-3"></i></span>
                 </div>
+                @php
+                $footer=\App\Models\Footer\Contact::first();
+                @endphp
                 <div class="col-10 col-sm-10 col-md-4 co-lg-4  mt-4 mb-4 address-text">
                     <h4 class="m-auto mb-4 ">Grontho Puri</h4>
-                    <p><span> ট্র্যাভেলেক্স, 109,স্যানমার
-                            স্প্রীং
-                            গার্ডেন(১ম
-                            তলা),
-                            ৬৪, জামাল খান রোড,চট্টগ্রাম</span></p>
+                    <p><span>{{$footer?->address}}</span></p>
 
 
-                    <p><span class="p-2">০৩১-২৮৫২৮৬৬,০১৭১৬১৫৯৫৯৬,
-                            ০১৯৭৬১৫৯৫৯৬,০১৯৭৬১৫৯৫৯৮,
-                            ০১৯৭৬১৫৯৫৯৯
-                        </span></p>
+                    <p><span class="p-2">{{$footer?->mobile}}</span></p>
                     <p>
-                        <span class="p-2">bohemian_2425@yahoo.com</span>
+                        <span class="p-2">{{$footer?->email}}</span>
                     </p>
 
                 </div>

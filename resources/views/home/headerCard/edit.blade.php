@@ -30,26 +30,7 @@
                                                 @endif
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-12">
-                                        <div class="form-group">
-                                            <label for="logo_img">Logo Image</label>
-                                            <input type="file" id="logo_img" class="form-control"
-                                                placeholder="logo_img" name="logo_img">
-                                                @if($errors->has('logo_img'))
-                                                    <span class="text-danger"> {{ $errors->first('logo_img') }}</span>
-                                                @endif
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 col-12">
-                                        <div class="form-group">
-                                            <label for="name">Name</label>
-                                            <input type="text" id="name" class="form-control" value="{{ old('name',$home->name)}}" name="name">
-                                            @if($errors->has('name'))
-                                                <span class="text-danger"> {{ $errors->first('name') }}</span>
-                                            @endif
-                                        </div>
-                                    </div>
+                                  
                                 
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
@@ -75,7 +56,7 @@
                                     
                                     <div class="col-12 d-flex justify-content-end">
                                         <img width="80px" height="50px" src="{{asset('uploads/home_page/header_card/image/'.$home->image)}}" alt="image" class="mx-4">
-                                        <img width="50px" height="50px" src="{{asset('uploads/home_page/header_card/logo_img/'.$home->logo_img)}}" alt="logo_img" class="mx-4">
+
                                         <button type="submit" class="btn btn-primary me-1 mb-1 mx-2">Save</button>
                                     </div>
                                 </div>

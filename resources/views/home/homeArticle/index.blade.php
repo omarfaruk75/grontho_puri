@@ -21,8 +21,7 @@
                         <thead>
                             <tr>
                                 <th scope="col">{{__('#SL')}}</th>
-                                <th scope="col">{{__('Image')}}</th>
-                                <th scope="col">{{__('Writer Name')}}</th>
+                         
                                 <th scope="col">{{__('Category')}}</th>
                                 <th scope="col">{{__('Short Details')}}</th>
                                 <th scope="col">{{__('Status')}}</th>
@@ -33,8 +32,6 @@
                             @forelse($home as $p)
                             <tr>
                                 <th scope="row">{{ ++$loop->index }}</th>
-                                <td><img width="50px" src="{{asset('uploads/home_page/home_article/image/'.$p->image)}}" alt="image"></td>
-                                <td>{{$p->name}}</td>
                                 <td>{{$p->category}}</td>
                                 <td>{{$p->short_details}}</td>
                                 <td>@if($p->status == 1) {{__('Active') }} @else {{__('Inactive') }} @endif</td>
