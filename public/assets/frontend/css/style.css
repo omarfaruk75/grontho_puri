@@ -1,13 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     list-style: none;
     box-sizing: border-box;
-
+}
+body {
+    font-family: "Roboto", sans-serif !important;
 }
 
-/*------------------- Home Page Css---------------------------------- */
+/* @font-face {
+    font-family: "Roboto", sans-serif;
+    src: url("Roboto-ThinItalic-webfont.eot");
+    src: url("Roboto-ThinItalic-webfont.eot?#iefix") format("embedded-opentype"),
+        url("Roboto-ThinItalic-webfont.woff") format("woff"),
+        url("Roboto-ThinItalic-webfont.ttf") format("truetype"),
+        url("Roboto-ThinItalic-webfont.svg#RobotoThinItalic") format("svg");
+    font-weight: 200;
+} */
 
+/*------------------- Home Page Css---------------------------------- */
 
 /* ----------Navbar Logo----------- */
 
@@ -16,10 +29,7 @@
     height: 4.375rem;
 }
 
-.logo_style {
-    text-align: center;
-}
-
+/* 
 .website_name {
     display: inline-block;
     line-height: 10px;
@@ -28,11 +38,7 @@
 .website_name p {
     margin-top: -5px;
     text-align: left;
-}
-
-.header_view {
-    font-size: 12px;
-}
+}*/
 
 /* --------------Nav Menu----------------- */
 
@@ -68,7 +74,6 @@
     bottom: 35px;
     right: 50px;
 }
-
 
 .post h4 {
     margin-bottom: 0;
@@ -108,7 +113,6 @@
 .share h4 {
     margin-bottom: 0;
     padding-left: 15px;
-
 }
 
 .share h1 {
@@ -121,9 +125,7 @@
     padding-top: 100px;
     padding-left: 100px;
     padding-bottom: 100px;
-
 }
-
 
 .image-collage-1 {
     position: relative;
@@ -149,7 +151,6 @@
 }
 
 .image-collage-2 {
-
     position: relative;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
     padding-left: 0px;
@@ -202,8 +203,6 @@
     position: relative;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
     /* background-image: url(images/Rectangle\ 14.png); */
-
-
 }
 
 .image-content-4 {
@@ -217,19 +216,14 @@
     color: #000;
     text-align: center;
     margin-top: 1px;
-
 }
-
-
 
 .mission h3 {
     text-align: center;
 }
 
-
 .box {
-
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
 }
 
 .mission_content {
@@ -249,14 +243,11 @@
 
 .footer {
     background-color: #292836;
-
 }
 
 .footer h4 {
-    color: #A3FFD2;
-
+    color: #a3ffd2;
 }
-
 
 .address-text {
     font-family: 9px;
@@ -271,16 +262,11 @@
     padding-top: 70px;
     font-size: 30px;
     text-align: right;
-    color: #A3FFD2;
-
+    color: #a3ffd2;
 }
 
-
-
 ul li:hover {
-
     cursor: pointer;
-
 }
 
 .main_body {
@@ -294,12 +280,40 @@ ul li:hover {
 }
 
 .ad_img_1 {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 }
-
 .ad_img_2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.ad-img-2_text {
+    color: #00000086;
+}
+.ad-img-2_text-cat {
+    font-size: 12px;
+}
+.ad-img-2_text-time {
+    font-size: 11px;
+    color: #00000086;
+}
+.text_p {
+    color: #00000086;
+}
+.ad_img_3_text {
+    color: #00000086;
+    text-align: justify;
+}
+.text-para-1 {
+    text-align: justify;
+}
+.text-para-2 {
+    text-align: justify;
+    font-weight: 300;
+}
+.ad_img_3 {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -308,7 +322,7 @@ ul li:hover {
 .advertisement {
     width: 50px;
     height: auto;
-    background-color: #A3FFD2;
+    background-color: #a3ffd2;
 }
 
 .button_design {
@@ -318,7 +332,6 @@ ul li:hover {
     padding-right: 15px;
     background-color: #fff;
     text-decoration: none;
-
 }
 
 .image_text_time {
@@ -328,7 +341,6 @@ ul li:hover {
 .button_body {
     text-align: center;
     margin-bottom: 25px;
-
 }
 
 .image_icon {
@@ -337,8 +349,6 @@ ul li:hover {
     border: 1px solid black;
     border-radius: 50%;
 }
-
-
 
 .poem_advertise {
     width: 50px;
@@ -351,7 +361,6 @@ ul li:hover {
     color: #fff;
     text-align: center;
     margin-top: 1px;
-
 }
 
 .icons {
@@ -367,12 +376,11 @@ ul li:hover {
     color: #fff;
     background-color: transparent;
     cursor: pointer;
-
 }
 
 /* For mobile phones: */
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     .masthead {
         min-height: 60vh;
     }
@@ -381,7 +389,6 @@ ul li:hover {
         position: sticky;
         bottom: 180px;
         left: 50px;
-
     }
 
     .main_content {
@@ -399,7 +406,6 @@ ul li:hover {
     }
 
     .image-collage-1 {
-
         padding-left: 2px;
         width: 98%;
         margin-bottom: 10px;
@@ -420,14 +426,11 @@ ul li:hover {
     .image-collage-2_1 {
         max-width: 98%;
         margin-bottom: 5px;
-
-
     }
 
     .image-collage-3 {
         max-width: 98%;
         margin-bottom: 8px;
-
     }
 
     .image-collage-4 img {
@@ -453,9 +456,7 @@ ul li:hover {
     }
 
     .information {
-
         text-align: center;
-
     }
 
     .search_btn {
@@ -471,18 +472,15 @@ ul li:hover {
 
     .main_body_image img {
         height: auto;
-
-
     }
 
     .advertisement {
-        background-color: #A3FFD2;
+        background-color: #a3ffd2;
     }
 
     .text_image_home {
         font-size: 10px;
     }
-
 
     .poem_title {
         margin-top: 20px;
@@ -496,7 +494,6 @@ ul li:hover {
         overflow-x: auto;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
-
     }
 
     .button_design {

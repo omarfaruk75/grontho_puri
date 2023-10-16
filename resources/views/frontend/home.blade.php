@@ -6,16 +6,23 @@
             <div class="col-sm-6 col-md-4 col-lg-8  ps-5 main_home_image">
                 <img src="{{asset('uploads/home_page/header_card/image/'.$headerCard?->image)}}" class="img-fluid w-100" alt="">
                 <div class="container mt-5 ">
-                    <div class="row div_design ">
-                   
+                    <div class="row div_design">            
                         <div class="col-sm-flex col-md-12 col-lg-12 ">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card shadow" style="width: 18rem;">
                                 <div class="card-body">
-                                    <h5 class="card-title"><img class="ad_img_1" src="{{asset('uploads/userimg/'.$headerCard->user?->image)}}" onerror="this.onerror=null;this.src='{{ asset('assets/images/logo/default.jpeg')}}';" > {{$headerCard->user?->name}} <span class="fs-6">{{$headerCard->created_at->diffForHumans()}}</span></h5>
-
-                                    <h4 class="card-text pt-3 mb-3">{{$headerCard->title}}
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <img class="ad_img_1 mt-1" src="{{asset('uploads/userimg/'.$headerCard->user?->image)}}" onerror="this.onerror=null;this.src='{{ asset('assets/images/logo/default.jpeg')}}';" > 
+                                        </div>
+                                        <div class="col-sm-10 ps-3">
+                                            <h5 class="card-title mb-0 mt-0 fw-bold"> {{$headerCard->user?->name}} </h5>
+                                            <p class="mt-0 text_p">{{$headerCard->created_at->diffForHumans()}}</p>
+                                        </div>
+                                     </div>
+                                
+                                    <h4 class="card-text mt-0  mb-3 my-2 text-para-1">{{$headerCard->title}}
                                     </h4>
-                                    <p>{{$headerCard->short_details}}<b><a href="#" class="text-decoration-none">See More</a></b></p>
+                                    <p class="text-para-2">{{$headerCard->short_details}}<b><a href="#" class="text-decoration-none ms-1"> See More</a></b></p>
 
                                 </div>
                             </div>
@@ -26,21 +33,19 @@
             <div class="col-sm-6 col-md-4 col-lg-4 ">
                 <div class="row">
                     @forelse($header as $h)
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-4 main_body_image">
-                        <div><img src="{{asset('uploads/home_page/header_article/image/'.$h->image)}}" class=" img-fluid w-100  mt-3 mb-4" alt=""></div>
-                    </div>
-                    <div class="col-6 col-sm-6 col-md-8 col-lg-8 mt-2">
-                        <div class="mt-2 mb-4 text_image_home">
-                            <div><img class="ad_img_1" src="{{asset('uploads/userimg/'.$h->user?->image)}}" onerror="this.onerror=null;this.src='{{ asset('assets/images/logo/default.jpeg')}}';">
-                                <span
-                                    class="fs-5 fw-3 ps-1">{{$h->user?->name}}
-                                </span> </div>
-                            <h6 class="mt-1">{{$h->title}}</h6>
-                            <span class="fs-5 text-danger">Business</span> <span class="fs-6">{{$h->created_at->diffForHumans()}}</span>
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 ">
+                            <div><img src="{{asset('uploads/home_page/header_article/image/'.$h->image)}}" class=" img-fluid w-100  mt-3 mb-4" alt=""></div>
                         </div>
+                        <div class="col-6 col-sm-6 col-md-8 col-lg-8 mt-3">
+                            <div class="d-flex">
+                                <img class="ad_img_2" src="{{asset('uploads/userimg/'.$h->user?->image)}}" onerror="this.onerror=null;this.src='{{ asset('assets/images/logo/default.jpeg')}}';">
+                                <h5 class="fs-6 fw-3 ps-2 ad-img-2_text">{{$h->user?->name}} </h5> 
+                            </div>
+                                <h6 class="mt-1 text-para-2">{{$h->title}}</h6>
+                                  <span class="ad-img-2_text-cat ">{{$h->category}} ,</span> <span class=" ms-3 ad-img-2_text-time ">{{$h->created_at->diffForHumans()}}</span>
                     </div>
                     @empty
-                    <div>No Data Found</div>
+                        <div>No Data Found</div>
                     |@endforelse
                 </div>
             </div>
@@ -56,13 +61,13 @@
             <div class="col-sm-8 col-md-8 col-lg-8 ">
             @forelse($homeArticle as $h)
                 <div class="row">
-                    <div class="col-2 col-sm-2 col-md-1"><img class="ad_img_2" src="{{asset('uploads/userimg/'.$h->user?->image)}}" onerror="this.onerror=null;this.src='{{ asset('assets/images/logo/default.jpeg')}}';">
+                    <div class="col-2 col-sm-2 col-md-1"><img class="ad_img_3" src="{{asset('uploads/userimg/'.$h->user?->image)}}" onerror="this.onerror=null;this.src='{{ asset('assets/images/logo/default.jpeg')}}';">
                     </div>
-                    <div class="col-10 col-sm-10 col-md-11"><span class=" fs-4 fw-2 ps-2"> {{$h->user?->name}}</span>
-                        <p class="ps-2">{{$h->category}}{{$h->created_at->diffForHumans()}}</p>
+                    <div class="col-10 col-sm-10 col-md-11"><h5 class=" ms-4 mb-0 mt-0 fw-bold"> {{$h->user?->name}}</h5>
+                        <p class="ms-4">{{$h->category}}, <span class="ms-1 text_p">{{$h->created_at->diffForHumans()}}</span></p>
                     </div>
                     <div class="col-12">
-                        <p>{{$h->short_details}}<b><a href="#" class="text-decoration-none">See More</a></b> </p>
+                        <p class="ad_img_3_text">{{$h->short_details}}<b><a href="#" class="text-decoration-none">See More</a></b> </p>
                     </div>
                     <hr>
                 </div>

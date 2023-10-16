@@ -1,20 +1,20 @@
-
+{{-- 
 
    <!--Start Logo-Part -->
    <div class="container ">
-        <div class="row ">
-            <div class="col-sm-8 col-md-6 col-lg-8 logo_style ">
-                <img src="{{asset('assets/frontend/images/logo.jpeg')}}" class="p-2 bg-light" alt="logo">
-                <div class="website_name p-2">
-                    <h3 mb-0 mt-1>Grantho-Puri</h3>
-                    <p> Grantho-Puri </p>
-                </div>
-            </div>
-            <div class="col-sm-4  col-md-6 col-lg-4 header_view p-1 mt-4">
-                <span>0.00 k </span><i class=" fa fa-eye" aria-hidden="true"> </i>
+    <div class="row ">
+        <div class=" col-12 col-sm-12 col-md-8 col-lg-8  ">
+            <img src="{{asset('assets/frontend/images/logo.jpeg')}}" class="p-2 bg-light " alt="logo">
+            <div class="website_name p-2">
+                <h3 mb-0 mt-1>Grantho-Puri</h3>
+                <p> Grantho-Puri </p>
             </div>
         </div>
+        <div class=" col-12 col-sm-12  col-md-4 col-lg-4 header_view p-1 mt-4">
+            <span>0.00 k </span><i class=" fa fa-eye" aria-hidden="true"> </i>
+        </div>
     </div>
+</div>
     <!-- End Logo-Part -->
     <!--Start Menu-Part -->
     <nav
@@ -37,4 +37,4 @@
 
         </div>
     </nav>
-    <!--End Menu-Part -->
+    <!--End Menu-Part --> --}} --}}

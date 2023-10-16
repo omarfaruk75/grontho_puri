@@ -1,4 +1,4 @@
-
+{{-- 
 <div class="footer">
         <div class="container">
             <div class="row text-light">
@@ -51,4 +51,4 @@
                 <div class="col-sm-2 col-md-1 col-lg-1 "></div>
             </div>
         </div>
-    </div>
+    </div> --}}
