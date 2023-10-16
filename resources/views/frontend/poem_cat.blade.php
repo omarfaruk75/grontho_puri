@@ -12,10 +12,10 @@
                             <img src="{{asset('uploads/firstPage/image/'.$fs->image)}}" class="img-fluid w-100 mb-3" alt="">
                         </div>
                         <div class="col-12 col-sm-12 col-md-6">
-                            <img src="{{asset('assets/frontend/images/Rectangle 14.png')}}" class="ad_img_2" alt=""><span
-                                class="ms-2 fs-3 mb-0 fw-2 ">Smith
-                                Holder</span>
-                            <p class="ms-5 ps-1 "> Poem . 1 hour</p>
+                            <div class="col-2"></div>
+                            <img src="{{asset('uploads/userimg/'.$fs->user?->image)}}" onerror="this.onerror=null;this.src='{{ asset('assets/images/logo/default.jpeg')}}';" class="ad_img_2" alt=""><span
+                                class="ms-2 fs-3 mb-0 fw-2 ">{{$fs->user?->name}}</span>
+                            <p class="ms-5 ps-1 ">{{$fs->category}}{{$fs->created_at->diffForHumans()}}</p>
 
                             <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat minus eum
                                 facere minima vel

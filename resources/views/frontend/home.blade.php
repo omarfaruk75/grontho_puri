@@ -59,7 +59,7 @@
                     <div class="col-2 col-sm-2 col-md-1"><img class="ad_img_2" src="{{asset('uploads/userimg/'.$h->user?->image)}}" onerror="this.onerror=null;this.src='{{ asset('assets/images/logo/default.jpeg')}}';">
                     </div>
                     <div class="col-10 col-sm-10 col-md-11"><span class=" fs-4 fw-2 ps-2"> {{$h->user?->name}}</span>
-                        <p class="ps-2">{{$h->category}}. 1 hour</p>
+                        <p class="ps-2">{{$h->category}}{{$h->created_at->diffForHumans()}}</p>
                     </div>
                     <div class="col-12">
                         <p>{{$h->short_details}}<b><a href="#" class="text-decoration-none">See More</a></b> </p>

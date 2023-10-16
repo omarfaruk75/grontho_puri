@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
 
 
-class firstPage extends Model
+class FirstPage extends Model
 {
     use HasFactory;
     public function user(){

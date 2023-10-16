@@ -36,8 +36,8 @@
             <li class="submenu-item sidebar-item has-sub">
                 <a href="#" class='sidebar-link'> {{__('Poem Page')}}</a>
                 <ul class="submenu">
-                    <li class="py-1"><a href="{{route(currentUser().'.firstPage.index')}}">{{__('Poem')}}</a></li>
-                    <li class="py-1"><a href="{{route(currentUser().'.link.index')}}">{{__('Poem Article')}}</a></li>
+                    <li class="py-1"><a href="{{route(currentUser().'.firstPage.index')}}">{{__('Full Article')}}</a></li>
+                    <li class="py-1"><a href="{{route(currentUser().'.link.index')}}">{{__('Social Link')}}</a></li>
                     
                 </ul>
             </li>
