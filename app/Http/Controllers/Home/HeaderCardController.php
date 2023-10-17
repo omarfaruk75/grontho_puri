@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Home\HeaderCard;
 use Illuminate\Http\Request;
+use App\Http\Requests\HeaderCard\AddNewRequest;
+use App\Http\Requests\HeaderCard\UpdateRequest;
+
 use App\Http\Traits\ResponseTrait;
 use App\Http\Traits\ImageHandleTraits;
 
@@ -40,7 +43,7 @@ class HeaderCardController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AddNewRequest $request)
     {
         try{
             $home=new HeaderCard;
@@ -94,7 +97,7 @@ class HeaderCardController extends Controller
      * @param  \App\Models\HeaderCard  $HeaderCard
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateRequest $request, $id)
     {
         try{
             $home=HeaderCard::findOrFail(encryptor('decrypt',$id));

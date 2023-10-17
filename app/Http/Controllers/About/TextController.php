@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 
 use App\Models\About\Text;
 use Illuminate\Http\Request;
+use App\Http\Requests\Text\AddNewRequest;
+use App\Http\Requests\Text\UpdateRequest;
 use App\Http\Traits\ResponseTrait;
 
 
@@ -40,7 +42,7 @@ class TextController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AddNewRequest $request)
     {
        try{
             $text=new Text;
@@ -88,7 +90,7 @@ class TextController extends Controller
      * @param  \App\Models\about\Text  $text
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateRequest $request, $id)
     {
         try{
             $text= Text::findOrFail(encryptor('decrypt',$id));

@@ -31,7 +31,7 @@
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="short_texts">Short Texts</label>
-                                            <input type="text" id="short_texts" class="form-control" value="{{ old('short_texts',$text->short_texts)}}" name="short_texts">
+                                             <textarea type="text" id="short_texts" class="form-control" value="{{ old('short_texts')}}" name="short_texts" cols="30" rows="5">{{$text->short_texts}}</textarea>
                                             @if($errors->has('short_texts'))
                                                 <span class="text-danger"> {{ $errors->first('short_texts') }}</span>
                                             @endif

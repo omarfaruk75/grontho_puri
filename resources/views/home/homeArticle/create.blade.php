@@ -31,9 +31,8 @@
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="short_details">Sort Details</label>
+                                            <label for="short_details">Short Details</label>
                                             <textarea type="text" id="short_details" class="form-control" value="{{ old('short_details')}}" name="short_details" cols="30" rows="5"></textarea>
-                                            
                                             @if($errors->has('short_details'))
                                                 <span class="text-danger"> {{ $errors->first('short_details') }}</span>
                                             @endif

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\FirstPage;
 use Illuminate\Http\Request;
+use App\Http\Requests\FirstPage\AddNewRequest;
+use App\Http\Requests\FirstPage\UpdateRequest;
 use App\Http\Traits\ResponseTrait;
 use App\Http\Traits\ImageHandleTraits;
 
@@ -38,7 +40,7 @@ class FirstPageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AddNewRequest $request)
     {
         try{
             $firstPage=new FirstPage;
@@ -86,7 +88,7 @@ class FirstPageController extends Controller
     }
 
     
-    public function update(Request $request, $id)
+    public function update(UpdateRequest $request, $id)
     {
         try{
             $firstPage=FirstPage::findOrFail(encryptor('decrypt',$id));

@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Home;
 use App\Http\Controllers\Controller;
 use App\Models\Home\HomeCard;
 use Illuminate\Http\Request;
+use App\Http\Requests\HomeCard\AddNewRequest;
+use App\Http\Requests\HomeCard\UpdateRequest;
 use App\Http\Traits\ResponseTrait;
 use App\Http\Traits\ImageHandleTraits;
 
@@ -39,7 +41,7 @@ class HomeCardController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AddNewRequest $request)
     {
         try{
             $card= new HomeCard;
@@ -88,7 +90,7 @@ class HomeCardController extends Controller
      * @param  \App\Models\Home\HomeCard  $homeCard
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateRequest $request, $id)
     {
         try{
             $card=HomeCard::findOrFail(encryptor('decrypt',$id));

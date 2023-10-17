@@ -99,7 +99,7 @@
                     <img src="{{asset('uploads/home_page/home_card/image/'.$hc->image)}}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h6 class="card-title">{{$hc->title}}</h6>
-                        <p>12 hours ago</p>
+                        <p>{{$hc->created_at->diffForHumans()}}</p>
                     </div>
                 </div>
             </div>

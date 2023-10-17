@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Home;
 use App\Http\Controllers\Controller;
 use App\Models\Home\HeaderArticle;
 use Illuminate\Http\Request;
+use App\Http\Requests\HeaderArticle\AddNewRequest;
+use App\Http\Requests\HeaderArticle\UpdateRequest;
 use App\Http\Traits\ResponseTrait;
 use App\Http\Traits\ImageHandleTraits;
 
@@ -39,7 +41,7 @@ class HeaderArticleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AddNewRequest $request)
     {
         try{
             $home=new HeaderArticle;
@@ -92,7 +94,7 @@ class HeaderArticleController extends Controller
      * @param  \App\Models\HeaderArticle  $headerArticle
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateRequest $request, $id)
     {
         try{
             $home=HeaderArticle::findOrFail(encryptor('decrypt',$id));

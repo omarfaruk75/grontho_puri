@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Home\HomeArticle;
 use Illuminate\Http\Request;
+use App\Http\Requests\HomeArticle\AddNewRequest;
+use App\Http\Requests\HomeArticle\UpdateRequest;
 use App\Http\Traits\ResponseTrait;
 use App\Http\Traits\ImageHandleTraits;
 
