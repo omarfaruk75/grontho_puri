@@ -6,18 +6,17 @@
             <div class="col-sm-2 col-md-2 col-lg-2 box ">
             </div>
             <div class="col-sm-8 col-md-8 col-lg-8 ">
-                <div class="row">
+                <div class="row mt-3">
                     <div class="col-sm-12 col-md-12 col-lg-12  ">
                         <div class=" poem_title">
 
                             <h4 class="text-primary m-auto">{{$firstPage->category}}</h4>
-                            <h2>
+                            <h4 class="mt-2 fw-bold">
                             {{$firstPage->title}}
-                            </h2>
-                            <img class="image_icon" src="{{asset('uploads/userimg/'.$firstPage->user?->image)}}" onerror="this.onerror=null;this.src='{{ asset('assets/images/logo/default.jpeg')}}';" > <span>{{$firstPage->user?->name}}</span> | 29th
-                            November 2023
-                            <br> <br>
-
+                            </h4>
+                            <div class="mb-2">
+                            <img class="image_icon" src="{{asset('uploads/userimg/'.$firstPage->user?->image)}}" onerror="this.onerror=null;this.src='{{ asset('assets/images/logo/default.jpeg')}}';" > <span class="ms-2">{{$firstPage->user?->name}}</span> | {{$firstPage->created_at->diffForHumans()}}
+                            </div>
                             <img src="{{asset('uploads/firstPage/image/'.$firstPage->image)}}" class="w-100 " alt="">
                             <hr>
 
@@ -52,20 +51,19 @@
                             <hr>
                             <div class="row mb-3">
                                 <div class="col-2">
-                                    <img src="{{asset('assets/frontend/images/Rectangle 14.png')}}" class="ad_img_2 mt-4 ms-5" alt="">
+                                    <img src="{{asset('assets/frontend/images/Rectangle 14.png')}}" class="ad_img_icon " alt="">
                                 </div>
                                 <div class="col-10 ">
                                     <label for="exampleFormControlTextarea1" class="form-label"></label>
                                     <textarea class="form-control" id="exampleFormControlTextarea1"
-                                        placeholder="Share Your Thoughts" rows="1"></textarea>
+                                        placeholder="Share Your Thoughts" rows="1">
+                                    </textarea>
 
-                                    <dvi class="d-flex justify-content-end"> <button type="submit"
-                                            class="btn btn-primary px-5  mt-2">
-                                            Comment</button>
-                                    </dvi>
+                                    <div class="d-flex justify-content-end"> 
+                                        <button type="submit" class="btn btn-primary px-5  mt-2"> Comment</button>
+                                    </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>

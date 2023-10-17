@@ -20,15 +20,16 @@
                                 <input type="hidden" name="uptoken" value="{{encryptor('encrypt',$firstPage->id)}}">
                                 <div class="row">
                                     <div class="col-md-6 col-12">
-                                        <select class="form-select" aria-label="Default select example">
-                                                <option selected>Select Category</option>
-                                                <option value="1">Poem</option>
-                                                <option value="2">Short Story</option>
-                                                <option value="3">Video</option>
-                                                <option value="4">Gallery</option>
+                                        <label for="category">Category</label>
+                                        <select class="form-select" aria-label="Default select example" name="category">
+                                            <option selected>Select Category</option>
+                                            <option value="Poem" {{ $firstPage->category=='Poem'?'selected':''}}>Poem</option>
+                                            <option value="Short Story" {{ $firstPage->category=='Short Story'?'selected':''}}>Short Story</option>
+                                            <option value="Video" {{ $firstPage->category=='Video'?'selected':''}}>Video</option>
+                                            <option value="Gallery" {{ $firstPage->category=='Gallery'?'selected':''}}>Gallery</option>
                                         </select>
                                     </div>
-                                    <div class="col-md-6 col-12">
+                                    {{-- <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="category">Category</label>
                                             <input type="text" id="category" class="form-control" value="{{ old('category',$firstPage->category)}}" name="category">
@@ -36,7 +37,7 @@
                                                 <span class="text-danger"> {{ $errors->first('category') }}</span>
                                             @endif
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="title">Title</label>

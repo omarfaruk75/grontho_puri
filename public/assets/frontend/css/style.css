@@ -289,11 +289,20 @@ ul li:hover {
     height: 20px;
     border-radius: 50%;
 }
+.ad_img_icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 80px;
+    margin-top: 30px;
+}
+
 .ad-img-2_text {
     color: #00000086;
 }
 .ad-img-2_text-cat {
     font-size: 12px;
+    color: #00000086;
 }
 .ad-img-2_text-time {
     font-size: 11px;
@@ -313,6 +322,7 @@ ul li:hover {
     text-align: justify;
     font-weight: 300;
 }
+
 .ad_img_3 {
     width: 60px;
     height: 60px;

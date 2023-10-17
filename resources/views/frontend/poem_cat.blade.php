@@ -12,14 +12,20 @@
                             <img src="{{asset('uploads/firstPage/image/'.$fs->image)}}" class="img-fluid w-100 mb-3" alt="">
                         </div>
                         <div class="col-12 col-sm-12 col-md-6">
-                            <div class="col-2"></div>
-                            <img src="{{asset('uploads/userimg/'.$fs->user?->image)}}" onerror="this.onerror=null;this.src='{{ asset('assets/images/logo/default.jpeg')}}';" class="ad_img_2" alt=""><span
-                                class="ms-2 fs-3 mb-0 fw-2 ">{{$fs->user?->name}}</span>
-                            <p class="ms-5 ps-1 ">{{$fs->category}}{{$fs->created_at->diffForHumans()}}</p>
-
-                            <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat minus eum
-                                facere minima vel
-                                commodi consequuntur, aliquam magni quia provident...... <b><a href="{{route('single_page',$fs->id)}}" class="text-decoration-none">Read More</a></b> </p>
+                            <div class="row">
+                                <div class=" col-2 col-sm-2">
+                                    <img class="ad_img_1" src="{{asset('uploads/userimg/'.$fs->user?->image)}}" onerror="this.onerror=null;this.src='{{ asset('assets/images/logo/default.jpeg')}}';"  >
+                                </div>
+                                <div class="col-10 col-sm-10 "> 
+                                    <h6 class="mb-0 ms-1 fw-bold">{{$fs->user?->name}}</h6>
+                                    <p class="mt-0 ms-1 ad-img-2_text-cat">{{$fs->category}}, <span class="ms-2">{{$fs->created_at->diffForHumans()}}</span></p></div>
+                                </div>
+                                 <div class="col-12">
+                                    <p class="mb-5 ad_img_3_text">{{$fs->short_text}}....<b><a href="{{route('single_page',$fs->id)}}" class="text-decoration-none ms-2">Read More</a></b> </p>
+                           
+                           
+                                 </div>
+                            
                         </div>
                     </div>
                 @empty
