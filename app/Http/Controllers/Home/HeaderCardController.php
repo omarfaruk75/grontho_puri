@@ -107,8 +107,7 @@ class HeaderCardController extends Controller
             $home->user_id=currentUserId();
             if($request->has('image'))
                 $home->image=$this->resizeImage($request->image,'uploads/home_page/header_card/image/',true,200,200,false);
-            // if($request->has('logo_img'))
-            //     $home->logo_img=$this->resizeImage($request->logo_img,'uploads/home_page/header_card/logo_img/',true,200,200,false);
+            
             
             if($home->save())
                 return redirect()->route(currentUser().'.headerCard.index')->with($this->resMessageHtml(true,null,'Successfully updated'));

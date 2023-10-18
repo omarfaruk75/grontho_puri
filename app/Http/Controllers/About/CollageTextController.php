@@ -46,9 +46,9 @@ class CollageTextController extends Controller
             $collage=new CollageText;
             if($request->has('image'))
             $collage->image=$this->resizeImage($request->image,'uploads/about_page/collage_image/images',true,200,200,false);
-            $collage->brand=$request->brand;
+            $collage->category=$request->category;
             $collage->title=$request->title;
-            $collage->name=$request->name;
+            $collage->user_id=currentUserId();
             if($collage->save())
                 return redirect()->route(currentUser().'.collage.index')->with($this->resMessageHtml(true,null,'Successfully Registred'));
             else
@@ -96,9 +96,9 @@ class CollageTextController extends Controller
             $collage= CollageText::findOrFail(encryptor('decrypt',$id));
             if($request->has('image'))
             $collage->image=$this->resizeImage($request->image,'uploads/about_page/collage_image/images',true,200,200,false);
-            $collage->brand=$request->brand;
+             $collage->category=$request->category;
             $collage->title=$request->title;
-            $collage->name=$request->name;
+            $collage->user_id=currentUserId();
             if($collage->save())
                 return redirect()->route(currentUser().'.collage.index')->with($this->resMessageHtml(true,null,'Successfully Registred'));
             else

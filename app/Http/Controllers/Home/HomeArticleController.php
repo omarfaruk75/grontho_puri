@@ -42,11 +42,12 @@ class HomeArticleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AddNewRequest $request)
     {
         try{
             $home=new HomeArticle;
             $home->user_id=currentUserId();
+            $home->is_popular=$request->is_popular;
             $home->category=$request->category;
             $home->short_details=$request->short_details;
             
@@ -91,11 +92,12 @@ class HomeArticleController extends Controller
      * @param  \App\Models\HomeArticle  $homeArticle
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateRequest $request, $id)
     {
         try{
             $home=HomeArticle::findOrFail(encryptor('decrypt',$id));
             $home->user_id=currentUserId();
+             $home->is_popular=$request->is_popular;
             $home->category=$request->category;
             $home->short_details=$request->short_details;
             if($home->save())

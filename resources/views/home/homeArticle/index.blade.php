@@ -21,7 +21,7 @@
                         <thead>
                             <tr>
                                 <th scope="col">{{__('#SL')}}</th>
-                         
+                                <th scope="col">{{__('Popular')}}</th>
                                 <th scope="col">{{__('Category')}}</th>
                                 <th scope="col">{{__('Short Details')}}</th>
                                 <th scope="col">{{__('Status')}}</th>
@@ -32,6 +32,8 @@
                             @forelse($home as $p)
                             <tr>
                                 <th scope="row">{{ ++$loop->index }}</th>
+
+                                <td>{{$p->is_popular}}</td>
                                 <td>{{$p->category}}</td>
                                 <td>{{$p->short_details}}</td>
                                 <td>@if($p->status == 1) {{__('Active') }} @else {{__('Inactive') }} @endif</td>

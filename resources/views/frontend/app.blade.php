@@ -67,11 +67,11 @@
             <div class="row text-light">
 
                 <div class="col-2 col-sm-2 col-md-2 col-lg-2 footer-icon ">
-                    <span><i class=" fa-solid fa-location-dot mb-3 mt-3"></i> </span>
+                    <span><i class=" fa-solid fa-location-dot mb-3 mt-3 "></i> </span>
                     <br>
-                    <span><i class=" fa-solid fa-phone pt-3 mt-3 "></i> </span>
+                    <span><i class=" fa-solid fa-phone pt-3 mt-1"></i> </span>
                     <br>
-                    <span><i class="fa-solid fa-envelope pt-3 mt-3"></i></span>
+                    <span><i class="fa-solid fa-envelope pt-3 mt-1"></i></span>
                 </div>
                 @php
                 $footer=\App\Models\Footer\Contact::first();

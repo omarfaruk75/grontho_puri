@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('home_articles', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
+            $table->integer('is_popular');
             $table->string('category');
             $table->string('short_details');
             $table->timestamps();

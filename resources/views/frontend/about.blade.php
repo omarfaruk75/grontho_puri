@@ -1,10 +1,10 @@
 @extends('frontend.app')
 @section('content')   
     <!--Start Main Image 01-->
-    <div class="container-fluid ">
-        <div class="row">
+    <div class="container-fluid bout_image ">
+        <div class="row  about_image">
             <div class="col-sm-12 col-md-12 col-lg-12 p-0 m-0 about_us">
-                <h4 class="ps-5">About Us</h4>
+                <h4 class="ps-5 my-2  fw-bold text dark">About Us</h4>
                 <img src="{{asset('uploads/about_page/about_image/images/'.$aboutImage->image)}}" class="img-fluid w-100 " alt="">
             </div>
             <div class="col-12"></div>
@@ -51,9 +51,9 @@
             <div class="col-sm-6 col-md-6  image-collage-1  ">
                 <img src="{{asset('uploads/about_page/collage_image/images/'. $collageText->image)}}" class="img-fluid w-100  " alt="">
                 <div class=" image-content-1 text-white">
-                    <a href="#" class="border border-white text-white ">{{ $collageText->brand}}</a>
+                    <a href="#" class="border border-white text-white ">{{ $collageText->category}}</a>
                     <h3 class="my-1">{{ $collageText->title}}</h3>
-                    <span> {{ $collageText->name}} </span> | <span> Feb 17 </span>
+                    <span>{{$collageText->user?->name}}</span> | <span>{{$collageText->created_at->diffForHumans()}}</span>
                 </div>
             </div>
             <div class="col-sm-6 col-md-6 ">
@@ -92,13 +92,14 @@
     <div class="container-fluid  mb-5">
         <div class="row mx-1 mission">
             <div class="col-sm-4 col-md-1 col-lg-1 box "></div>
-            <div class="col-sm-7 col-md-10 col-lg-10 mt-5">
+            <div class="col-sm-7 col-md-10 col-lg-10 mt-2">
                 <h3>{{ $mission->title}}</h3>
                 <div class="row">
-                    <div class="col-sm-6 col-md-6 col-lg-6  mission_content m-0 p-0">
-                        <p class="text-muted ">{{ $mission->short_texts}}</p>
+                    <div class="col-sm-6 col-md-6 col-lg-6  mission_content m-0 px-3">
+                        <p class="text-muted mb-4">{{ $mission->short_texts}}</p>
+                        <a href="" class="bg-dark text-white text-decoration-none  p-2 ms-3  ">View More</a>
 
-                        <input type="button" class="bg-dark text-white  p-1 " value="View More">
+                        
                     </div>
 
                     <div class="col-sm-6 col-md-3 col-lg-3 mt-3 ">

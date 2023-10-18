@@ -99,7 +99,7 @@ class HeaderArticleController extends Controller
         try{
             $home=HeaderArticle::findOrFail(encryptor('decrypt',$id));
             if($request->has('image'))
-                $home->image=$this->resizeImage($request->image,'uploads/home_page/header_article/image',true,200,200,false);
+             $home->image=$this->resizeImage($request->image,'uploads/home_page/header_article/image',true,200,200,false);
             
             $home->user_id=currentUserId();
             $home->title=$request->title;

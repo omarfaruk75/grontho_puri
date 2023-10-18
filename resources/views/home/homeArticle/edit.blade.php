@@ -20,10 +20,14 @@
                                 <input type="hidden" name="uptoken" value="{{encryptor('encrypt',$home->id)}}">
                                 <div class="row">
 
-                                   
-
-                                   
-                                
+                                   <div class="col-md-6 col-12">
+                                        <label for="is_popular">Is Popular</label>
+                                        <select class="form-select" aria-label="Default select example" name="is_popular">
+                                            <option selected>Select Popular</option>
+                                            <option value="1" {{ $home->category=='1'?'selected':''}}>Yes</option>
+                                            <option value="0"  {{ $home->category=='0'?'selected':''}}>No</option>
+                                        </select>
+                                    </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="category">Category</label>

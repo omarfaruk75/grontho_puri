@@ -10,12 +10,13 @@
                     <div class="col-sm-12 col-md-12 col-lg-12  ">
                         <div class=" poem_title">
 
-                            <h4 class="text-primary m-auto">{{$firstPage->category}}</h4>
+                            <h5 class="text-primary m-auto">{{$firstPage->category}}</h5>
                             <h4 class="mt-2 fw-bold">
                             {{$firstPage->title}}
                             </h4>
                             <div class="mb-2">
-                            <img class="image_icon" src="{{asset('uploads/userimg/'.$firstPage->user?->image)}}" onerror="this.onerror=null;this.src='{{ asset('assets/images/logo/default.jpeg')}}';" > <span class="ms-2">{{$firstPage->user?->name}}</span> | {{$firstPage->created_at->diffForHumans()}}
+                            <img class="image_icon" src="{{asset('uploads/userimg/'.$firstPage->user?->image)}}" onerror="this.onerror=null;this.src='{{ asset('assets/images/logo/default.jpeg')}}';" > 
+                            <span class="ms-2 image_icon_text ">{{$firstPage->user?->name}}</span> | <span class="image_icon_text"> {{$firstPage->created_at->diffForHumans()}}</span>
                             </div>
                             <img src="{{asset('uploads/firstPage/image/'.$firstPage->image)}}" class="w-100 " alt="">
                             <hr>
@@ -25,12 +26,11 @@
                             <p>{{$firstPage->short_text}}</p>
                             <p>{{$firstPage->text}}</p>
                             
-                            <div class=" mb-5"><input type="button"
-                                    class="bg-white px-3 border-primary text-primary m-2" value="কবিতা">
-                                <input type="button" class="bg-white px-3 border-primary text-primary m-2"
-                                    value="কবিতা">
-                                <input type="button" class="bg-white px-3 border-primary text-primary m-2"
-                                    value="কবিতা">
+                            <div class=" mb-5">
+                                <button type="button" class="btn btn-outline-primary mx-2">কবিতা</button>
+                                <button type="button" class="btn btn-outline-primary mx-2">কবিতা</button>
+                                <button type="button" class="btn btn-outline-primary mx-2">কবিতা</button>
+                               
                             </div>
                             <hr>
                             <div class="row">

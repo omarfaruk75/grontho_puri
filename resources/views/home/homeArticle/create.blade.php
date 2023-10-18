@@ -18,7 +18,14 @@
                                 @csrf
                                 <div class="row">
                                     
-                                    
+                                     <div class="col-md-6 col-12">
+                                        <label for="is_popular">Is Popular</label>
+                                        <select class="form-select" aria-label="Default select example" name="is_popular">
+                                            <option selected>Select Popular</option>
+                                            <option value="1">Yes</option>
+                                            <option value="0">No</option>
+                                        </select>
+                                    </div>
                                 
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
