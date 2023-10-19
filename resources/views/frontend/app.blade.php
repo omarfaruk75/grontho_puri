@@ -48,9 +48,9 @@
             <div class=" collapse navbar-collapse " id="btn">
                 <ul class="navbar-nav m-auto">
                     <li class="nav-item px-3"><a href="{{route('home')}}" class="nav-link text-dark">Home</a></li>
-                    <li class="nav-item px-3"><a href="#" class="nav-link text-dark">Book Review</a></li>
-                    <li class="nav-item px-3"><a href="#" class="nav-link text-dark">Film</a></li>
-                    <li class="nav-item px-3"><a href="#" class="nav-link text-dark">Art</a></li>
+                    <li class="nav-item px-3"><a href="{{route('poem_cat')}}" class="nav-link text-dark">Book Review</a></li>
+                    <li class="nav-item px-3"><a href="{{route('poem_cat')}}" class="nav-link text-dark">Film</a></li>
+                    <li class="nav-item px-3"><a href="{{route('poem_cat')}}" class="nav-link text-dark">Art</a></li>
                     <li class="nav-item px-3"><a href="{{route('about')}}" class="nav-link text-dark">About Us</a></li>
 
                 </ul>
