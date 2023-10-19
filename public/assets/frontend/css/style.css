@@ -10,17 +10,7 @@ body {
     font-family: "Roboto", sans-serif !important;
 }
 
-/* @font-face {
-    font-family: "Roboto", sans-serif;
-    src: url("Roboto-ThinItalic-webfont.eot");
-    src: url("Roboto-ThinItalic-webfont.eot?#iefix") format("embedded-opentype"),
-        url("Roboto-ThinItalic-webfont.woff") format("woff"),
-        url("Roboto-ThinItalic-webfont.ttf") format("truetype"),
-        url("Roboto-ThinItalic-webfont.svg#RobotoThinItalic") format("svg");
-    font-weight: 200;
-} */
-
-/*------------------- Home Page Css---------------------------------- */
+/*------------------- Header Css  Style---------------------------------- */
 
 /* ----------Navbar Logo----------- */
 
@@ -28,17 +18,6 @@ body {
     width: 4.375rem;
     height: 4.375rem;
 }
-
-/* 
-.website_name {
-    display: inline-block;
-    line-height: 10px;
-}
-
-.website_name p {
-    margin-top: -5px;
-    text-align: left;
-}*/
 
 /* --------------Nav Menu----------------- */
 
@@ -55,14 +34,12 @@ body {
     background-color: #000;
     position: absolute;
 }
+/*-------------------End  Header Css  Style---------------------------------- */
 
-/* .masthead {
-    background-size: cover; 
-    min-height: 60vh;
-    position: relative;
-    color: white;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
-} */
+/* -----------------------About Page Css Style ------------------------------ */
+
+/* -------Main Image Css Style -------- */
+
 .about_image {
     position: relative;
 }
@@ -121,13 +98,18 @@ body {
     margin-top: 0;
     padding-left: 15px;
 }
+/* ------- End Main Image Css Style -------- */
 
-/* main content */
+/* -----------Main Text content ---------------- */
+
 .main_content {
     padding-top: 100px;
     padding-left: 100px;
     padding-bottom: 100px;
 }
+/* ----------- End Main Text ontent ---------------- */
+
+/* ----------- Four Collage Image Css Style--------- */
 
 .image-collage-1 {
     position: relative;
@@ -161,7 +143,7 @@ body {
 
 .image-content-2 {
     position: absolute;
-    top: 75px;
+    top: 110px;
     left: 20px;
 }
 
@@ -174,17 +156,12 @@ body {
 
 .image-collage-3 {
     margin-left: 0;
-    /* background-size: cover; */
-    /* min-height: 30vh; */
     position: relative;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
-    /* background-image: url(images/Rectangle\ 14.png); */
 }
-
 .image_3-4 {
     margin-right: 0px;
 }
-
 .image-content-3 {
     position: absolute;
     top: 80px;
@@ -200,11 +177,10 @@ body {
 
 .image-collage-4 {
     margin-left: 0;
-    /* background-size: cover; */
+
     min-height: 30vh;
     position: relative;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
-    /* background-image: url(images/Rectangle\ 14.png); */
 }
 
 .image-content-4 {
@@ -220,6 +196,10 @@ body {
     margin-top: 1px;
 }
 
+/* -----End  Four Collage Image Css Style----- */
+
+/* -----------Mission Css Style--------- */
+
 .mission h3 {
     text-align: center;
 }
@@ -234,7 +214,11 @@ body {
     font-size: 18px;
     font-weight: 400;
 }
+/* ----------- End Mission Css Style--------- */
 
+/* ----------------------- End About Page Css Style ------------------------------ */
+
+/* -----------------------Footer Css Style ------------------------------ */
 .footer {
     background-color: #292836;
 }
@@ -258,10 +242,11 @@ body {
     text-align: right;
     color: #a3ffd2;
 }
+/* ----------------------- End Footer Css Style ------------------------------ */
 
-ul li:hover {
-    cursor: pointer;
-}
+/* -----------------------Home Page Css Style ------------------------------ */
+
+/* ------------ Home Page Main Image Css Style -------- */
 
 .main_body {
     position: relative;
@@ -272,6 +257,9 @@ ul li:hover {
     top: 90px;
     left: -20px;
 }
+/* ------------ End Home Page Main Image Css Style -------- */
+
+/* -------- Popular Article Css Style -------- */
 
 .ad_img_1 {
     width: 40px;

@@ -36,9 +36,9 @@
                                         <select class="form-select" aria-label="Default select example" name="category">
                                             <option selected>Select Category</option>
                                             <option value="Poem" {{ $collage->category=='Poem'?'selected':''}}>Poem</option>
-                                            <option value="Short Story" {{ $collage->category=='Short Story'?'selected':''}}>Short Story</option>
-                                            <option value="Video" {{ $collage->category=='Video'?'selected':''}}>Video</option>
-                                            <option value="Gallery" {{ $collage->category=='Gallery'?'selected':''}}>Gallery</option>
+                                            <option value="Book Review" {{ $collage->category=='Book Review'?'selected':''}}>Book Review</option>
+                                            <option value="Film" {{ $collage->category=='Film'?'selected':''}}>Film</option>
+                                            <option value="Art" {{ $collage->category=='Art'?'selected':''}}>Art</option>
                                         </select>
                                     </div>
                                 

@@ -51,7 +51,7 @@
             <div class="col-sm-6 col-md-6  image-collage-1  ">
                 <img src="{{asset('uploads/about_page/collage_image/images/'. $collageText->image)}}" class="img-fluid w-100  " alt="">
                 <div class=" image-content-1 text-white">
-                    <a href="#" class="border border-white text-white ">{{ $collageText->category}}</a>
+                    <a href="{{route('poem_cat')}}" class="border border-white text-white ">{{ $collageText->category}}</a>
                     <h3 class="my-1">{{ $collageText->title}}</h3>
                     <span>{{$collageText->user?->name}}</span> | <span>{{$collageText->created_at->diffForHumans()}}</span>
                 </div>
@@ -60,26 +60,26 @@
                 <div class="pb-1 image-collage-2 ">
                     <img src="{{asset('uploads/about_page/collage2nd_image/images/'.$collageSecond->image)}}" class=" img-fluid w-100   image-collage-2_1 " alt="">
                     <div class="image-content-2 text-black">
-                        <a href="#" class="border border-dark">{{ $collageSecond->brand}}</a>
+                        <a href="{{route('poem_cat')}}" class="border border-dark">{{ $collageSecond->category}}</a>
                         <h5 class="my-0">{{ $collageSecond->title}}</h5>
-                        <span> {{ $collageSecond->name}} </span> | <span> Feb 17 </span>
+                        <span> {{ $collageSecond->user?->name}} </span> | <span> {{$collageSecond->created_at->diffForHumans()}}</span>
                     </div>
                 </div>
                 <div class="row me-0  image_3-4">
                     <div class="col-sm-12 col-md-6 col-lg-6 pe-0 image-collage-3">
                         <img src="{{asset('uploads/about_page/collage3rd_image/images/'.$collageThird->image)}}" class="img-fluid w-100 " alt="">
                         <div class="image-content-3  text-white">
-                            <a href="#" class="border border-white">{{ $collageThird->brand}}</a>
+                            <a href="{{route('poem_cat')}}" class="border border-white">{{ $collageThird->category}}</a>
                             <h6>{{ $collageThird->title}}</h6>
-                            <span> {{ $collageThird->name}}  </span>|<span> Feb 17 </span>
+                            <span> {{ $collageThird->user?->name}}  </span>|<span> {{$collageThird->created_at->diffForHumans()}}</span>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6 pe-0 image-collage-4 ">
                         <img src="{{asset('uploads/about_page/collage4_image/images/'.$collageFour->image)}}" class="img-fluid w-100 " alt="">
                         <div class="image-content-4  text-black">
-                            <a href="#" class="border border-dark">{{ $collageFour->brand}}</a>
+                            <a href="{{route('poem_cat')}}" class="border border-dark">{{ $collageFour->category}}</a>
                             <h6>{{ $collageFour->title}}</h6>
-                            <span> {{ $collageFour->name}}  </span>|<span> Feb 17 </span>
+                            <span> {{ $collageFour->user?->name}}  </span>|<span> {{$collageFour->created_at->diffForHumans()}} </span>
                         </div>
                     </div>
                 </div>

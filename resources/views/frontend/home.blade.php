@@ -84,9 +84,9 @@
         <div class="row">
             <div class="d-flex justify-content-center button_body">
                 <a href="{{route('poem_cat')}}" class="button_design text-muted active me-1 pb-1 ">Poem</a>
-                <a href="#" class="button_design text-muted mx-1 pb-1  ">Short Story</a>
-                <a href="#" class="button_design text-muted mx-1 pb-1  ">Video</a>
-                <a href="#" class="button_design text-muted ms-1 pb-1  ">Gallery</a>
+                <a href="{{route('poem_cat')}}" class="button_design text-muted mx-1 pb-1  ">Book Review</a>
+                <a href="{{route('poem_cat')}}" class="button_design text-muted mx-1 pb-1  ">Film</a>
+                <a href="{{route('poem_cat')}}" class="button_design text-muted ms-1 pb-1  ">Art</a>
             </div>
         </div>
     </div>

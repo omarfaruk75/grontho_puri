@@ -45,9 +45,9 @@ class CollageFourController extends Controller
         $four= new CollageFour;
         if($request->has('image'))
         $four->image=$this->resizeImage($request->image,'uploads/about_page/collage4_image/images',true,200,200,false);
-        $four->brand=$request->brand;
+        $four->category=$request->category;
         $four->title=$request->title;
-        $four->name=$request->name;
+        $four->user_id=currentUserId();
         if($four->save())
             return redirect()->route(currentUser().'.collageFour.index')->with($this->resMessageHtml(true,null,'Successfully Registred'));
         else
@@ -96,9 +96,9 @@ class CollageFourController extends Controller
             $four=CollageFour::findOrFail(encryptor('decrypt', $id));
             if($request->has('image'))
             $four->image=$this->resizeImage($request->image,'uploads/about_page/collage4_image/images',true,200,200,false);
-            $four->brand=$request->brand;
+            $four->category=$request->category;
             $four->title=$request->title;
-            $four->name=$request->name;
+            $four->user_id=currentUserId();
             if($four->save())
                 return redirect()->route(currentUser().'.collageFour.index')->with($this->resMessageHtml(true,null,'Successfully Registred'));
             else

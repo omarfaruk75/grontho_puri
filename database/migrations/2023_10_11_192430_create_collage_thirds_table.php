@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('collage_thirds', function (Blueprint $table) {
             $table->id();
             $table->string('image');
-            $table->string('brand');
+            $table->string('category');
             $table->string('title');
-            $table->string('name');
+            $table->string('user_id');
             $table->timestamps();
         });
     }

@@ -24,20 +24,12 @@
                                         <select class="form-select" aria-label="Default select example" name="category">
                                             <option selected>Select Category</option>
                                             <option value="Poem" {{ $firstPage->category=='Poem'?'selected':''}}>Poem</option>
-                                            <option value="Short Story" {{ $firstPage->category=='Short Story'?'selected':''}}>Short Story</option>
-                                            <option value="Video" {{ $firstPage->category=='Video'?'selected':''}}>Video</option>
-                                            <option value="Gallery" {{ $firstPage->category=='Gallery'?'selected':''}}>Gallery</option>
+                                            <option value="Book Review" {{ $firstPage->category=='Book Review'?'selected':''}}>Book Review</option>
+                                            <option value="Film" {{ $firstPage->category=='Film'?'selected':''}}>Film</option>
+                                            <option value="Art" {{ $firstPage->category=='Art'?'selected':''}}>Art</option>
                                         </select>
                                     </div>
-                                    {{-- <div class="col-md-6 col-12">
-                                        <div class="form-group">
-                                            <label for="category">Category</label>
-                                            <input type="text" id="category" class="form-control" value="{{ old('category',$firstPage->category)}}" name="category">
-                                            @if($errors->has('category'))
-                                                <span class="text-danger"> {{ $errors->first('category') }}</span>
-                                            @endif
-                                        </div>
-                                    </div> --}}
+                                   
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="title">Title</label>

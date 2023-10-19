@@ -22,9 +22,9 @@
                                         <select class="form-select" aria-label="Default select example" name="category">
                                             <option selected>Select Category</option>
                                             <option value="Poem">Poem</option>
-                                            <option value="Short Story">Short Story</option>
-                                            <option value="Video">Video</option>
-                                            <option value="Gallery">Gallery</option>
+                                            <option value="Book Review">Book Review</option>
+                                            <option value="Film">Film</option>
+                                            <option value="Art">Art</option>
                                         </select>
                                     </div>
                                     {{-- <div class="col-md-6 col-12">

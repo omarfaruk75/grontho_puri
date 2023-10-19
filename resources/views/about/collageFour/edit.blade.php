@@ -32,15 +32,15 @@
                                     </div>
 
                                     <div class="col-md-6 col-12">
-                                        <div class="form-group">
-                                            <label for="brand">Brand Category</label>
-                                            <input type="text" id="brand" class="form-control" value="{{ old('brand',$four->brand)}}" name="brand">
-                                            @if($errors->has('brand'))
-                                                <span class="text-danger"> {{ $errors->first('brand') }}</span>
-                                            @endif
-                                        </div>
+                                        <label for="category">Category</label>
+                                        <select class="form-select" aria-label="Default select example" name="category">
+                                            <option selected>Select Category</option>
+                                            <option value="Poem" {{ $four->category=='Poem'?'selected':''}}>Poem</option>
+                                            <option value="Book Review" {{ $four->category=='Book Review'?'selected':''}}>Book Review</option>
+                                            <option value="Film" {{ $four->category=='Film'?'selected':''}}>Film</option>
+                                            <option value="Art" {{ $four->category=='Art'?'selected':''}}>Art</option>
+                                        </select>
                                     </div>
-                                
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="title">Title Name</label>
@@ -50,15 +50,7 @@
                                             @endif
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-12">
-                                        <div class="form-group">
-                                            <label for="name">Name</label>
-                                            <input type="text" id="name" class="form-control" value="{{old('name',$four->name)}}" name="name">
-                                            @if($errors->has('name'))
-                                                <span class="text-danger"> {{ $errors->first('name') }}</span>
-                                            @endif
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                                 
                                 <div class="row">

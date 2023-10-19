@@ -22,9 +22,8 @@
                             <tr>
                                 <th scope="col">{{__('#SL')}}</th>
                                 <th scope="col">{{__('Image')}}</th>
-                                <th scope="col">{{__('Brand Name')}}</th>
+                                <th scope="col">{{__('Category')}}</th>
                                 <th scope="col">{{__('Title')}}</th>
-                                <th scope="col">{{__('Name')}}</th>
                                 <th scope="col">{{__('Status')}}</th>
                                 <th class="white-space-nowrap">{{__('Action') }}</th>
                             </tr>
@@ -34,9 +33,9 @@
                             <tr>
                                 <th scope="row">{{ ++$loop->index }}</th>
                                 <td><img width="50px" src="{{asset('uploads/about_page/collage2nd_image/images/'.$s->image)}}" alt="image"></td>
-                                <td>{{$s->brand}}</td>
+                                <td>{{$s->category}}</td>
                                 <td>{{$s->title}}</td>
-                                <td>{{$s->name}}</td>
+                             
                                 <td>@if($s->status == 1) {{__('Active') }} @else {{__('Inactive') }} @endif</td>
                               
                                 <td class="white-space-nowrap">

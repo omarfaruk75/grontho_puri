@@ -45,9 +45,9 @@ class CollageThirdController extends Controller
             $third = new CollageThird;
             if($request->has('image'))
             $third->image=$this->resizeImage($request->image,'uploads/about_page/collage3rd_image/images',true,200,200,false);
-            $third->brand=$request->brand;
+            $third->category=$request->category;
             $third->title=$request->title;
-            $third->name=$request->name;
+            $third->user_id=currentUserId();
             if($third->save())
                 return redirect()->route(currentUser().'.collageThird.index')->with($this->resMessageHtml(true,null,'Successfully Registred'));
             else
@@ -96,9 +96,9 @@ class CollageThirdController extends Controller
             $third =CollageThird::findOrFail(encryptor('decrypt',$id));
             if($request->has('image'))
             $third->image=$this->resizeImage($request->image,'uploads/about_page/collage3rd_image/images',true,200,200,false);
-            $third->brand=$request->brand;
+            $third->category=$request->category;
             $third->title=$request->title;
-            $third->name=$request->name;
+            $third->user_id=currentUserId();
             if($third->save())
                 return redirect()->route(currentUser().'.collageThird.index')->with($this->resMessageHtml(true,null,'Successfully Registred'));
             else
