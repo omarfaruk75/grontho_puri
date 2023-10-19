@@ -62,8 +62,8 @@
 
 @yield('content')
 
-    <div class="footer">
-        <div class="container">
+    
+        <div class="container-fluid footer">
             <div class="row text-light">
 
                 <div class="col-2 col-sm-2 col-md-2 col-lg-2 footer-icon ">
@@ -103,25 +103,25 @@
                                 type="button">Subscribe</button>
                         </div>
                     </div>
-                    <div class="google_app_icon">
-                        <a title=" কবিতা"
+                    <div class="google_app_icon pe-3">
+                        <a 
                             href="https://play.google.com/store/apps/details?id=bd.com.sohelmahroof.choto_golpo"
-                            target="_blank"> <img src="{{asset('assets/frontend/images/google-play-3d-rendering-icon_578229-292.avif')}}"
-                                class="w-25" alt="">  কবিতা
+                            target="_blank"> <img src="{{asset('assets/frontend/images/apple_store.png')}}"
+                                class="w-100" alt=""> 
                         </a></span>
 
-                        <a title=" ছড়া"
+                        <a 
                             href="https://play.google.com/store/apps/details?id=bd.com.sohelmahroof.choto_golpo"
-                            target="_blank"> <img src="{{asset('assets/frontend/images/google-play-3d-rendering-icon_578229-292.avif')}}"
-                                class="w-25" alt="">
-                              ছড়া </a>
+                            target="_blank"> <img src="{{asset('assets/frontend/images/apple_store.png')}}"
+                                class="w-100" alt="">
+                              </a>
 
                     </div>
                 </div>
                 <div class="col-sm-2 col-md-1 col-lg-1 "></div>
             </div>
         </div>
-    </div>
+
 </body>
 @stack('scripts')
 <!-- Bootstrap Cdn js link -->

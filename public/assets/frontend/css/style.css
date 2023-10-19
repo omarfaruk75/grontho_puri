@@ -9,7 +9,31 @@
 body {
     font-family: "Roboto", sans-serif !important;
 }
-
+/* @font-face {
+    font-family: "Roboto", sans-serif;
+    src: url("Roboto-ThinItalic-webfont.eot");
+    src: url("Roboto-ThinItalic-webfont.eot?#iefix") format("embedded-opentype"),
+        url("Roboto-ThinItalic-webfont.woff") format("woff"),
+        url("Roboto-ThinItalic-webfont.ttf") format("truetype"),
+        url("Roboto-ThinItalic-webfont.svg#RobotoThinItalic") format("svg");
+    font-weight: 200;
+} */
+/* 
+.website_name {
+    display: inline-block;
+    line-height: 10px;
+}
+.website_name p {
+    margin-top: -5px;
+    text-align: left;
+}*/
+/* .masthead {
+    background-size: cover; 
+    min-height: 60vh;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
+} */
 /*------------------- Header Css  Style---------------------------------- */
 
 /* ----------Navbar Logo----------- */
@@ -143,7 +167,7 @@ body {
 
 .image-content-2 {
     position: absolute;
-    top: 110px;
+    top: 75px;
     left: 20px;
 }
 
@@ -247,7 +271,9 @@ body {
 /* -----------------------Home Page Css Style ------------------------------ */
 
 /* ------------ Home Page Main Image Css Style -------- */
-
+ul li:hover {
+    cursor: pointer;
+}
 .main_body {
     position: relative;
 }
