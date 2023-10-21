@@ -46,7 +46,7 @@
     <!-- End Text Content -->
 
     <!-- Start Collage Image -->
-    <div class="container-fluid mb-5  ">
+    <div class="container-fluid mb-5">
         <div class="row  ">
             <div class="col-sm-6 col-md-6  image-collage-1  ">
                 <img src="{{asset('uploads/about_page/collage_image/images/'. $collageText->image)}}" class="img-fluid w-100  " alt="">
