@@ -105,13 +105,13 @@
                     <div class="google_app_icon pe-3">
                         <a 
                             href="https://play.google.com/store/apps/details?id=bd.com.sohelmahroof.choto_golpo"
-                            target="_blank"> <img src="{{asset('assets/frontend/images/apple_store.png')}}"
+                            target="_blank"> <img src="{{asset('assets/frontend/images/google-play-icon.png')}}"
                                 class="w-100" alt=""> 
                         </a></span>
 
                         <a 
                             href="https://play.google.com/store/apps/details?id=bd.com.sohelmahroof.choto_golpo"
-                            target="_blank"> <img src="{{asset('assets/frontend/images/apple_store.png')}}"
+                            target="_blank"> <img src="{{asset('assets/frontend/images/apple-icon.png')}}"
                                 class="w-100" alt="">
                               </a>
 

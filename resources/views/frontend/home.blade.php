@@ -1,7 +1,7 @@
 @extends('frontend.app')
 @section('content')
     <!--  Start Main Home Body -->
-    <div class="container main_body">
+    <div class="container main_body my-3">
         <div class="row">
             <div class="col-sm-6 col-md-4 col-lg-8  ps-5 main_home_image">
                 <img src="{{asset('uploads/home_page/header_card/image/'.$headerCard?->image)}}" class="img-fluid w-100" alt="">

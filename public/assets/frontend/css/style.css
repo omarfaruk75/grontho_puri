@@ -485,9 +485,8 @@ ul li:hover {
     }
 
     .div_design {
-        top: 0px;
-        left: 35px;
-        display: none;
+        top: -30px;
+        left: 60px;
     }
 
     .main_body_image img {

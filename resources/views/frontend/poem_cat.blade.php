@@ -18,14 +18,12 @@
                                 </div>
                                 <div class="col-10 col-sm-10 "> 
                                     <h6 class="mb-0 ms-1 fw-bold">{{$fs->user?->name}}</h6>
-                                    <p class="mt-0 ms-1 ad-img-2_text-cat">{{$fs->category}}, <span class="ms-2">{{$fs->created_at->diffForHumans()}}</span></p></div>
+                                    <p class="mt-0 ms-1 ad-img-2_text-cat">{{$fs->category}}, <span class="ms-2">{{$fs->created_at->diffForHumans()}}</span></p>
                                 </div>
-                                 <div class="col-12">
+                            </div>
+                            <div class="col-12">
                                     <p class="mb-5 ad_img_3_text">{{$fs->short_text}}....<b><a href="{{route('single_page',$fs->id)}}" class="text-decoration-none ms-2">Read More</a></b> </p>
-                           
-                           
-                                 </div>
-                            
+                            </div>
                         </div>
                     </div>
                 @empty
