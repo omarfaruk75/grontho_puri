@@ -21,16 +21,25 @@
                                 <div class="row">
                                 <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="title">Title Name</label>
+                                            <label for="title">{{__('Title')}}</label>
                                             <input type="text" id="title" class="form-control" value="{{ old('title',$mission->title)}}" name="title">
                                             @if($errors->has('title'))
                                                 <span class="text-danger"> {{ $errors->first('title') }}</span>
                                             @endif
                                         </div>
                                     </div>
+                                <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="title_bn">Title_BN</label>
+                                            <input type="text" id="title_bn" class="form-control" value="{{ old('title_bn',$mission->title_bn)}}" name="title_bn">
+                                            @if($errors->has('title_bn'))
+                                                <span class="text-danger"> {{ $errors->first('title_bn') }}</span>
+                                            @endif
+                                        </div>
+                                    </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="short_texts">Short Text</label>
+                                            <label for="short_texts">{{__('Short Text')}}</label>
                                             <input type="text" id="short_texts" class="form-control" value="{{ old('short_texts', $mission->short_texts)}}" name="short_texts">
                                             @if($errors->has('short_texts'))
                                                 <span class="text-danger"> {{ $errors->first('short_texts') }}</span>
@@ -39,7 +48,16 @@
                                      </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="image">Image</label>
+                                            <label for="short_texts_bn">{{__('Short Text_BN')}}</label>
+                                            <input type="text" id="short_texts_bn" class="form-control" value="{{ old('short_texts_bn', $mission->short_texts_bn)}}" name="short_texts_bn">
+                                            @if($errors->has('short_texts_bn'))
+                                                <span class="text-danger"> {{ $errors->first('short_texts_bn') }}</span>
+                                            @endif
+                                        </div>
+                                     </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="image">{{__('Image')}}</label>
                                             <input type="file" id="image" class="form-control"
                                                 placeholder="Image" name="image">
                                                 @if($errors->has('image'))
@@ -49,7 +67,7 @@
                                      </div>
                                      <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="image_2">Image-2</label>
+                                            <label for="image_2">{{_('Image-2')}}</label>
                                             <input type="file" id="image_2" class="form-control"
                                                 placeholder="Image-2" name="image_2">
                                                 @if($errors->has('image_2'))
@@ -59,7 +77,7 @@
                                      </div>
                                      <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="image_3">Image-3</label>
+                                            <label for="image_3">{{__('Image-3')}}</label>
                                             <input type="file" id="image_3" class="form-control"
                                                 placeholder="Image-3" name="image_3">
                                                 @if($errors->has('image_3'))
@@ -75,7 +93,7 @@
                                         <img width="80px" height="50px" src="{{asset('uploads/about_page/mission_image/image-1/images/'.$mission->image)}}" alt="image" class="mx-4">
                                         <img width="80px" height="50px" src="{{asset('uploads/about_page/mission_image/image-2/images/'.$mission->image_2)}}" alt="image-2" class="mx-4">
                                         <img width="80px" height="50px" src="{{asset('uploads/about_page/mission_image/image-3/images/'.$mission->image_3)}}" alt="image-3" class="mx-4">
-                                        <button type="submit" class="btn btn-primary me-1 mb-1 mx-2">Save</button>
+                                        <button type="submit" class="btn btn-primary me-1 mb-1 mx-2">{{__('Save')}}</button>
                                     </div>
                                 </div>
                             </form>

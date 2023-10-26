@@ -22,7 +22,9 @@
                             <tr>
                                 <th scope="col">{{__('#SL')}}</th>
                                 <th scope="col">{{__('Title')}}</th>
+                                <th scope="col">{{__('Title_BN')}}</th>
                                 <th scope="col">{{__('Short Text')}}</th>
+                                <th scope="col">{{__('Short Text_BN')}}</th>
                                 <th scope="col">{{__('Image')}}</th>
                                 <th scope="col">{{__('Image-2')}}</th>
                                 <th scope="col">{{__('Image-3')}}</th>
@@ -36,7 +38,9 @@
                                 <th scope="row">{{ ++$loop->index }}</th>
                                 
                                 <td>{{$m->title}}</td>
+                                <td>{{$m->title_bn}}</td>
                                 <td>{{$m->short_texts}}</td>
+                                <td>{{$m->short_texts_bn}}</td>
                                 <td><img width="50px" src="{{asset('uploads/about_page/mission_image/image-1/images/'.$m->image)}}" alt="image"></td>
                                 <td><img width="50px" src="{{asset('uploads/about_page/mission_image/image-2/images/'.$m->image_2)}}" alt="image-2"></td>
                                 <td><img width="50px" src="{{asset('uploads/about_page/mission_image/image-3/images/'.$m->image_3)}}" alt="image-3"></td>

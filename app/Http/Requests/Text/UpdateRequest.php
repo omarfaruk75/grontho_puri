@@ -25,7 +25,7 @@ class UpdateRequest extends FormRequest
     {
         return [
           'category'=>'required|max:60',
-          'short_texts'=> 'required|max:150'
+          'short_texts'=> 'required|max:500'
         ];
     }
     public function messages()

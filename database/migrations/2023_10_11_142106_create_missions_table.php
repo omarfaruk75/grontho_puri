@@ -16,7 +16,9 @@ return new class extends Migration
         Schema::create('missions', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('title_bn');
             $table->string('short_texts');
+            $table->string('short_texts_bn');
             $table->string('image');
             $table->string('image_2');
             $table->string('image_3');

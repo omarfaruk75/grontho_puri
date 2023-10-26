@@ -16,7 +16,9 @@ return new class extends Migration
         Schema::create('texts', function (Blueprint $table) {
             $table->id();
             $table->string('category');
+            $table->string('category_bn');
             $table->string('short_texts');
+            $table->string('short_texts_bn');
             $table->timestamps();
         });
     }

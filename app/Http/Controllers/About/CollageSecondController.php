@@ -46,7 +46,9 @@ class CollageSecondController extends Controller
             if($request->has('image'))
             $second->image=$this->resizeImage($request->image,'uploads/about_page/collage2nd_image/images',true,200,200,false);
             $second->category=$request->category;
+            $second->category_bn=$request->category_bn;
             $second->title=$request->title;
+            $second->title_bn=$request->title_bn;
             $second->user_id=currentUserId();
             if($second->save())
                 return redirect()->route(currentUser().'.collageSecond.index')->with($this->resMessageHtml(true,null,'Successfully Registred'));
@@ -95,8 +97,10 @@ class CollageSecondController extends Controller
             $second = CollageSecond::findOrFail(encryptor('decrypt',$id));
             if($request->has('image'))
             $second->image=$this->resizeImage($request->image,'uploads/about_page/collage2nd_image/images',true,200,200,false);
-            $second->category=$request->category;
+             $second->category=$request->category;
+            $second->category_bn=$request->category_bn;
             $second->title=$request->title;
+            $second->title_bn=$request->title_bn;
             $second->user_id=currentUserId();
             if($second->save())
                 return redirect()->route(currentUser().'.collageSecond.index')->with($this->resMessageHtml(true,null,'Successfully Registred'));

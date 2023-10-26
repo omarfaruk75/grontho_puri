@@ -22,7 +22,9 @@
                             <tr>
                                 <th scope="col">{{__('#SL')}}</th> 
                                 <th scope="col">{{__('Category')}}</th>
-                                <th scope="col">{{__('Short Texts')}}</th>
+                                <th scope="col">{{__('Category_BN')}}</th>
+                                <th scope="col">{{__('Short Text')}}</th>
+                                <th scope="col">{{__('Short Text_BN')}}</th>
                                 <th scope="col">{{__('Status')}}</th>
                                 <th class="white-space-nowrap">{{__('Action') }}</th>
                             </tr>
@@ -34,7 +36,9 @@
                                 
                               
                                 <td>{{$abt->category}}</td>
+                                <td>{{$abt->category_bn}}</td>
                                 <td>{{$abt->short_texts}}</td>
+                                <td>{{$abt->short_texts_bn}}</td>
                                 <td>@if($abt->status == 1) {{__('Active') }} @else {{__('Inactive') }} @endif</td>
                                
                                 <td class="white-space-nowrap">

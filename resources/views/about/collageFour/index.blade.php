@@ -23,7 +23,9 @@
                                 <th scope="col">{{__('#SL')}}</th>
                                 <th scope="col">{{__('Image')}}</th>
                                 <th scope="col">{{__('Category')}}</th>
+                                <th scope="col">{{__('Category_BN')}}</th>
                                 <th scope="col">{{__('Title')}}</th>
+                                <th scope="col">{{__('Title_BN')}}</th>
                                 
                                 <th scope="col">{{__('Status')}}</th>
                                 <th class="white-space-nowrap">{{__('Action') }}</th>

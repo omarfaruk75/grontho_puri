@@ -22,7 +22,7 @@
 
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="image">Image</label>
+                                            <label for="image">{{__('Image')}}</label>
                                             <input type="file" id="image" class="form-control"
                                                 placeholder="Image" name="image">
                                                 @if($errors->has('image'))
@@ -32,7 +32,7 @@
                                     </div>
 
                                     <div class="col-md-6 col-12">
-                                        <label for="category">Category</label>
+                                        <label for="category">{{__('Category')}}</label>
                                         <select class="form-select" aria-label="Default select example" name="category">
                                             <option selected>Select Category</option>
                                             <option value="Poem" {{ $four->category=='Poem'?'selected':''}}>Poem</option>
@@ -42,11 +42,30 @@
                                         </select>
                                     </div>
                                     <div class="col-md-6 col-12">
+                                        <label for="category_bn">{{__('Category_BN')}}</label>
+                                        <select class="form-select" aria-label="Default select example" name="category_bn">
+                                            <option selected>শ্রেনী নির্ধারণ করুন</option>
+                                            <option value="কবিতা" {{ $four->category=='কবিতা'?'selected':''}}>কবিতা</option>
+                                            <option value="বই পুনঃমূল্যায়ন " {{$four->category=='বই পুনঃমূল্যায়ন '?'selected':''}}>বই পুনঃমূল্যায়ন </option>
+                                            <option value="ছবি" {{ $four->category=='ছবি'?'selected':''}}>ছবি</option>
+                                            <option value="শিল্প" {{ $four->category=='শিল্প'?'selected':''}}>শিল্প</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="title">Title Name</label>
+                                            <label for="title">{{__('Title')}}</label>
                                             <input type="text" id="title" class="form-control" value="{{ old('title',$four->title)}}" name="title">
                                             @if($errors->has('title'))
                                                 <span class="text-danger"> {{ $errors->first('title') }}</span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                     <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="title_bn">{{__('Title_BN')}}</label>
+                                            <input type="text" id="title_bn" class="form-control" value="{{ old('title_bn',$four->title_bn)}}" name="title_bn">
+                                            @if($errors->has('title_bn'))
+                                                <span class="text-danger"> {{ $errors->first('title_bn') }}</span>
                                             @endif
                                         </div>
                                     </div>
@@ -57,7 +76,7 @@
                                     
                                     <div class="col-12 d-flex justify-content-end">
                                         <img width="80px" height="50px" src="{{asset('uploads/about_page/collage4_image/images/'.$four->image)}}" alt="image" class="mx-4">
-                                        <button type="submit" class="btn btn-primary me-1 mb-1 mx-2">Save</button>
+                                        <button type="submit" class="btn btn-primary me-1 mb-1 mx-2">{{__('Save')}}</button>
                                     </div>
                                 </div>
                             </form>

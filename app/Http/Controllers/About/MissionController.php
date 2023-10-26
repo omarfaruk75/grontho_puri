@@ -44,7 +44,9 @@ class MissionController extends Controller
         try{
             $mission = new Mission;
             $mission->title=$request->title;
+            $mission->title_bn=$request->title_bn;
             $mission->short_texts=$request->short_texts;
+            $mission->short_texts_bn=$request->short_texts_bn;
             if($request->has('image'))
             $mission->image=$this->resizeImage($request->image,'uploads/about_page/mission_image/image-1/images',true,200,200,false);
             if($request->has('image_2'))
@@ -99,8 +101,10 @@ class MissionController extends Controller
     {
         try{
             $mission = Mission::findOrFail(encryptor('decrypt',$id));
-            $mission->title=$request->title;
+           $mission->title=$request->title;
+            $mission->title_bn=$request->title_bn;
             $mission->short_texts=$request->short_texts;
+            $mission->short_texts_bn=$request->short_texts_bn;
             if($request->has('image'))
             $mission->image=$this->resizeImage($request->image,'uploads/about_page/mission_image/image-1/images',true,200,200,false);
             if($request->has('image_2'))

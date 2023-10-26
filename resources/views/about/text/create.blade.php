@@ -19,7 +19,7 @@
                                 <div class="row">
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="category">Category</label>
+                                            <label for="category">{{__('Category')}}</label>
                                             <input type="text" id="category" class="form-control" value="{{ old('category')}}" name="category">
                                             @if($errors->has('category'))
                                                 <span class="text-danger"> {{ $errors->first('category') }}</span>
@@ -28,8 +28,26 @@
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="short_texts">Short Text</label>
+                                            <label for="category_bn">{{__('Category_BN')}}</label>
+                                            <input type="text" id="category_bn" class="form-control" value="{{ old('category_bn')}}" name="category_bn">
+                                            @if($errors->has('category_bn'))
+                                                <span class="text-danger"> {{ $errors->first('category_bn') }}</span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="short_texts">{{__('Short Text')}}</label>
                                             <textarea type="text" id="short_texts" class="form-control" value="{{ old('short_texts')}}" name="short_texts" cols="30" rows="5"></textarea>
+                                            @if($errors->has('short_texts'))
+                                                <span class="text-danger"> {{ $errors->first('short_texts') }}</span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="short_texts_bn">{{__('Short Text_BN')}}</label>
+                                            <textarea type="text" id="short_texts_bn" class="form-control" value="{{ old('short_texts_bn')}}" name="short_texts_bn" cols="30" rows="5"></textarea>
                                             @if($errors->has('short_texts'))
                                                 <span class="text-danger"> {{ $errors->first('short_texts') }}</span>
                                             @endif
@@ -39,7 +57,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-12 d-flex justify-content-end">
-                                        <button type="submit" class="btn btn-primary me-1 mb-1">Save</button>
+                                        <button type="submit" class="btn btn-primary me-1 mb-1">{{__('Save')}}</button>
                                     </div>
                                 </div>
                             </form>

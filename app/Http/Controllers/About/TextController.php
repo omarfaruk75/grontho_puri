@@ -47,7 +47,9 @@ class TextController extends Controller
        try{
             $text=new Text;
             $text->category=$request->category;
+            $text->category_bn=$request->category_bn;
             $text->short_texts=$request->short_texts;
+            $text->short_texts_bn=$request->short_texts_bn;
             
             if($text->save())
                 return redirect()->route(currentUser().'.text.index')->with($this->resMessageHtml(true,null,'Successfully Registred'));
@@ -95,7 +97,9 @@ class TextController extends Controller
         try{
             $text= Text::findOrFail(encryptor('decrypt',$id));
             $text->category=$request->category;
+            $text->category_bn=$request->category_bn;
             $text->short_texts=$request->short_texts;
+            $text->short_texts_bn=$request->short_texts_bn;
             if($text->save())
                 return redirect()->route(currentUser().'.text.index')->with($this->resMessageHtml(true,null,'Successfully Registred'));
             else
