@@ -21,12 +21,17 @@
                         <thead>
                             <tr>
                                 <th scope="col">{{__('#SL')}}</th>
-                                <th scope="col">{{__('Category Name')}}</th>
+                                <th scope="col">{{__('Category')}}</th>
+                                <th scope="col">{{__('Category_BN')}}</th>
                                 <th scope="col">{{__('Title')}}</th>
-                                <th scope="col">{{__('Article/Poem Image')}}</th>
+                                <th scope="col">{{__('Title_BN')}}</th>
+                                <th scope="col">{{__('Image')}}</th>
                                 <th scope="col">{{__('Headline')}}</th>
+                                <th scope="col">{{__('Headline_BN')}}</th>
                                 <th scope="col">{{__('Short Text')}}</th>
+                                <th scope="col">{{__('Short Text_BN')}}</th>
                                 <th scope="col">{{__('Text')}}</th>
+                                <th scope="col">{{__('Text_BN')}}</th>
                                 <th scope="col">{{__('Status')}}</th>
                                 <th class="white-space-nowrap">{{__('Action') }}</th>
                             </tr>
@@ -36,11 +41,16 @@
                             <tr>
                                 <th scope="row">{{ ++$loop->index }}</th>
                                 <td>{{$p->category}}</td>
+                                <td>{{$p->category_bn}}</td>
                                 <td>{{$p->title}}</td>
+                                <td>{{$p->title_bn}}</td>
                                 <td><img width="50px" src="{{asset('uploads/firstPage/image/'.$p->image)}}" alt="image"></td>
                                 <td>{{$p->heading}}</td>
+                                <td>{{$p->heading_bn}}</td>
                                 <td>{{$p->short_text}}</td>
+                                <td>{{$p->short_text_bn}}</td>
                                 <td>{{$p->text}}</td>
+                                <td>{{$p->text_bn}}</td>
                                 <td>@if($p->status == 1) {{__('Active') }} @else {{__('Inactive') }} @endif</td>
                                 <!-- or <td>{{ $p->status == 1?"Active":"Inactive" }}</td>-->
                                 <td class="white-space-nowrap">

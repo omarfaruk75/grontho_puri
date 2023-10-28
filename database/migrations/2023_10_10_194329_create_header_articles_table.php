@@ -18,7 +18,9 @@ return new class extends Migration
             $table->string('image');
             $table->integer('user_id');
             $table->string('title');
+            $table->string('title_bn');
             $table->string('category');
+            $table->string('category_bn');
             $table->timestamps();
         });
     }

@@ -51,7 +51,9 @@ class HeaderArticleController extends Controller
             //     $home->logo_img=$this->resizeImage($request->logo_img,'uploads/home_page/header_article/logo_img',true,200,200,false);
             $home->user_id=currentUserId();
             $home->title=$request->title;
+            $home->title_bn=$request->title_bn;
             $home->category=$request->category;
+            $home->category_bn=$request->category_bn;
             
             if($home->save())
                 return redirect()->route(currentUser().'.headerArticle.index')->with($this->resMessageHtml(true,null,'Successfully Registred'));
@@ -103,7 +105,9 @@ class HeaderArticleController extends Controller
             
             $home->user_id=currentUserId();
             $home->title=$request->title;
+            $home->title_bn=$request->title_bn;
             $home->category=$request->category;
+            $home->category_bn=$request->category_bn;
             
             if($home->save())
                 return redirect()->route(currentUser().'.headerArticle.index')->with($this->resMessageHtml(true,null,'Successfully updated'));

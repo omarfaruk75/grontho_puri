@@ -48,6 +48,7 @@ class HomeCardController extends Controller
             if($request->has('image'))
             $card->image=$this->resizeImage($request->image,'uploads/home_page/home_card/image',true,200,200,false);
             $card->title=$request->title;
+            $card->title_bn=$request->title_bn;
             if($card->save())
                 return redirect()->route(currentUser().'.homeCard.index')->with($this->resMessageHtml(true,null,'Successfully Registred'));
             else
@@ -96,7 +97,8 @@ class HomeCardController extends Controller
             $card=HomeCard::findOrFail(encryptor('decrypt',$id));
             if($request->has('image'))
             $card->image=$this->resizeImage($request->image,'uploads/home_page/home_card/image',true,200,200,false);
-            $card->title=$request->title;
+              $card->title=$request->title;
+            $card->title_bn=$request->title_bn;
             if($card->save())
                 return redirect()->route(currentUser().'.homeCard.index')->with($this->resMessageHtml(true,null,'Successfully Registred'));
             else

@@ -21,9 +21,12 @@
                         <thead>
                             <tr>
                                 <th scope="col">{{__('#SL')}}</th>
-                                <th scope="col">{{__('Popular')}}</th>
+                                <th scope="col">{{__('Is Popular')}}</th>
+                                <th scope="col">{{__('Is Popular_BN')}}</th>
                                 <th scope="col">{{__('Category')}}</th>
-                                <th scope="col">{{__('Short Details')}}</th>
+                                <th scope="col">{{__('Category_BN')}}</th>
+                                <th scope="col">{{__('Short Text')}}</th>
+                                <th scope="col">{{__('Short Text_BN')}}</th>
                                 <th scope="col">{{__('Status')}}</th>
                                 <th class="white-space-nowrap">{{__('Action') }}</th>
                             </tr>
@@ -34,8 +37,11 @@
                                 <th scope="row">{{ ++$loop->index }}</th>
 
                                 <td>{{$p->is_popular}}</td>
+                                <td>{{$p->is_popular_bn}}</td>
                                 <td>{{$p->category}}</td>
+                                <td>{{$p->category_bn}}</td>
                                 <td>{{$p->short_details}}</td>
+                                <td>{{$p->short_details_bn}}</td>
                                 <td>@if($p->status == 1) {{__('Active') }} @else {{__('Inactive') }} @endif</td>
                                 <!-- or <td>{{ $p->status == 1?"Active":"Inactive" }}</td>-->
                                 <td class="white-space-nowrap">

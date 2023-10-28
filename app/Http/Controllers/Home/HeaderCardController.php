@@ -53,7 +53,9 @@ class HeaderCardController extends Controller
             //     $home->logo_img=$this->resizeImage($request->logo_img,'uploads/home_page/header_card/logo_img',true,200,200,false);
             // $home->name=$request->name;
             $home->title=$request->title;
+            $home->title_bn=$request->title_bn;
             $home->short_details=$request->short_details;
+            $home->short_details_bn=$request->short_details_bn;
             $home->user_id=currentUserId();
             
             if($home->save())
@@ -101,10 +103,11 @@ class HeaderCardController extends Controller
     {
         try{
             $home=HeaderCard::findOrFail(encryptor('decrypt',$id));
-            // $home->name=$request->name;
-            $home->title=$request->title;
-            $home->short_details=$request->short_details;
-            $home->user_id=currentUserId();
+                $home->title=$request->title;
+                $home->title_bn=$request->title_bn;
+                $home->short_details=$request->short_details;
+                $home->short_details_bn=$request->short_details_bn;
+                $home->user_id=currentUserId();
             if($request->has('image'))
                 $home->image=$this->resizeImage($request->image,'uploads/home_page/header_card/image/',true,200,200,false);
             

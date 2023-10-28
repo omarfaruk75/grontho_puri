@@ -15,10 +15,13 @@ return new class extends Migration
     {
         Schema::create('home_articles', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
             $table->integer('is_popular');
+            $table->integer('is_popular_bn');
             $table->string('category');
+            $table->string('category_bn');
             $table->string('short_details');
+            $table->string('short_details_bn');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }

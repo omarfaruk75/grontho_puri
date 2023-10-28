@@ -22,7 +22,7 @@
 
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="image">Image</label>
+                                            <label for="image">{{__('Image')}}</label>
                                             <input type="file" id="image" class="form-control"
                                                 placeholder="Image" name="image">
                                                 @if($errors->has('image'))
@@ -32,10 +32,19 @@
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="title">Title</label>
+                                            <label for="title">{{__('Title')}}</label>
                                             <input type="text" id="title" class="form-control" value="{{ old('title',$card->title)}}" name="title">
                                             @if($errors->has('title'))
                                                 <span class="text-danger"> {{ $errors->first('title') }}</span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="title_bn">{{__('{{__('Title_BN')}}')}}</label>
+                                            <input type="text" id="title_bn" class="form-control" value="{{ old('title_bn',$card->title_bn)}}" name="title_bn">
+                                            @if($errors->has('title_bn'))
+                                                <span class="text-danger"> {{ $errors->first('title_bn') }}</span>
                                             @endif
                                         </div>
                                     </div>
@@ -43,7 +52,7 @@
                                 <div class="row">   
                                     <div class="col-12 d-flex justify-content-end">
                                         <img width="80px" height="50px" src="{{asset('uploads/home_page/home_card/image/'.$card->image)}}" alt="image" class="mx-4"> 
-                                        <button type="submit" class="btn btn-primary me-1 mb-1 mx-2">Save</button>
+                                        <button type="submit" class="btn btn-primary me-1 mb-1 mx-2">{{__('Save')}}</button>
                                     </div>
                                 </div>
                             </form>

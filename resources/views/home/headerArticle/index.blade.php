@@ -23,7 +23,9 @@
                                 <th scope="col">{{__('#SL')}}</th>
                                 <th scope="col">{{__('Image')}}</th>
                                 <th scope="col">{{__('Title')}}</th>
+                                <th scope="col">{{__('Title_BN')}}</th>
                                 <th scope="col">{{__('Category')}}</th>
+                                <th scope="col">{{__('Category_BN')}}</th>
                                 <th scope="col">{{__('Status')}}</th>
                                 <th class="white-space-nowrap">{{__('Action') }}</th>
                             </tr>
@@ -34,7 +36,9 @@
                                 <th scope="row">{{ ++$loop->index }}</th>
                                 <td><img width="50px" src="{{asset('uploads/home_page/header_article/image/'.$p->image)}}" alt="image"></td>
                                 <td>{{$p->title}}</td>
+                                <td>{{$p->title_bn}}</td>
                                 <td>{{$p->category}}</td>
+                                <td>{{$p->category_bn}}</td>
                                 <td>@if($p->status == 1) {{__('Active') }} @else {{__('Inactive') }} @endif</td>
                                 <!-- or <td>{{ $p->status == 1?"Active":"Inactive" }}</td>-->
                                 <td class="white-space-nowrap">

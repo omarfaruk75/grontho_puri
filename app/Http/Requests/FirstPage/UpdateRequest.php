@@ -24,14 +24,14 @@ class UpdateRequest extends FormRequest
        public function rules()
     {
         return [
-           'text'=> 'required|max:2650',
+           'text'=> 'max:2650',
            'short_text' => 'required|max:260'
         ];
     }
     public function messages()
     {
         return [
-        'required'=> " The: attribute filled is required"
+        'required'=> " The Field attribute filled is required"
         ];
     }
 }

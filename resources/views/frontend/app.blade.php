@@ -25,7 +25,7 @@
     <div class="container ">
         <div class="row ">
             <div class=" col-12 col-sm-12 col-md-8 col-lg-8">
-                <img src="{{asset('assets/frontend/images/logo.jpeg')}}" class="p-2 bg-light " alt="logo">
+              <a href="{{route('home')}}" class="text-decoration-none"><img src="{{asset('assets/frontend/images/logo.jpeg')}}" class="p-2 bg-light " alt="logo"></a>  
                 {{-- <div class="website_name p-2">
                     <h3 mb-0 mt-1>Grantho-Puri</h3>
                     <p> Grantho-Puri </p>

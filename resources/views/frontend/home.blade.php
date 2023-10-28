@@ -73,7 +73,8 @@
                 </div>
             @empty
                <div>data not found</div>
-            @endforelse  
+            @endforelse 
+            <div>{{ $homeArticle->links() }}</div> 
             </div>
             <div class="col-md-2 col-lg-2 advertisement"></div>
         </div>

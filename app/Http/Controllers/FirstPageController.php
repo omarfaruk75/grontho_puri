@@ -48,10 +48,16 @@ class FirstPageController extends Controller
             $firstPage->image=$this->resizeImage($request->image,'uploads/firstPage/image/',true,200,200,false);
             $firstPage->user_id=currentUserId();
             $firstPage->category=$request->category;
-            $firstPage->heading=$request->heading;
-            $firstPage->text=$request->text;
-            $firstPage->short_text=$request->short_text;
+            $firstPage->category_bn=$request->category_bn;
             $firstPage->title=$request->title;
+            $firstPage->title_bn=$request->title_bn;
+            $firstPage->heading=$request->heading;
+            $firstPage->heading_bn=$request->heading_bn;
+            $firstPage->text=$request->text;
+            $firstPage->text_bn=$request->text_bn;
+            $firstPage->short_text=$request->short_text;
+            $firstPage->short_text_bn=$request->short_text_bn;
+         
             
             if($firstPage->save())
                 return redirect()->route(currentUser().'.firstPage.index')->with($this->resMessageHtml(true,null,'Successfully Registred'));
@@ -92,15 +98,24 @@ class FirstPageController extends Controller
     {
         try{
             $firstPage=FirstPage::findOrFail(encryptor('decrypt',$id));
-            if($request->has('image'))
-            $firstPage->image=$this->resizeImage($request->image,'uploads/firstPage/image/',true,200,200,false);
-            $firstPage->user_id=currentUserId();
+            $path='uploads/firstPage/image';
+
+            if($request->has('image') && $request->image)
+            if($this->deleteImage($firstPage->image,$path))
+                $firstPage->image=$this->resizeImage($request->image,$path,true,200,200,false);
+            // if($request->has('image'))
+            // $firstPage->image=$this->resizeImage($request->image,'uploads/firstPage/image/',true,200,200,false);
             $firstPage->category=$request->category;
-            $firstPage->heading=$request->heading;
-            $firstPage->text=$request->text;
-            $firstPage->short_text=$request->short_text;
+            $firstPage->category_bn=$request->category_bn;
             $firstPage->title=$request->title;
-           
+            $firstPage->title_bn=$request->title_bn;
+            $firstPage->heading=$request->heading;
+            $firstPage->heading_bn=$request->heading_bn;
+            $firstPage->text=$request->text;
+            $firstPage->text_bn=$request->text_bn;
+            $firstPage->short_text=$request->short_text;
+            $firstPage->short_text_bn=$request->short_text_bn;
+            $firstPage->user_id=currentUserId();
             if($firstPage->save())
                 return redirect()->route(currentUser().'.firstPage.index')->with($this->resMessageHtml(true,null,'Successfully updated'));
             else

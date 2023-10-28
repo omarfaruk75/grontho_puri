@@ -48,8 +48,11 @@ class HomeArticleController extends Controller
             $home=new HomeArticle;
             $home->user_id=currentUserId();
             $home->is_popular=$request->is_popular;
+            $home->is_popular_bn=$request->is_popular_bn;
             $home->category=$request->category;
+            $home->category_bn=$request->category_bn;
             $home->short_details=$request->short_details;
+            $home->short_details_bn=$request->short_details_bn;
             
             if($home->save())
                 return redirect()->route(currentUser().'.homeArticle.index')->with($this->resMessageHtml(true,null,'Successfully Registred'));
@@ -97,9 +100,12 @@ class HomeArticleController extends Controller
         try{
             $home=HomeArticle::findOrFail(encryptor('decrypt',$id));
             $home->user_id=currentUserId();
-             $home->is_popular=$request->is_popular;
+            $home->is_popular=$request->is_popular;
+            $home->is_popular_bn=$request->is_popular_bn;
             $home->category=$request->category;
+            $home->category_bn=$request->category_bn;
             $home->short_details=$request->short_details;
+            $home->short_details_bn=$request->short_details_bn;
             if($home->save())
                 return redirect()->route(currentUser().'.homeArticle.index')->with($this->resMessageHtml(true,null,'Successfully updated'));
             else

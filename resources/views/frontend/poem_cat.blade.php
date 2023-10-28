@@ -29,6 +29,7 @@
                 @empty
                     <div>NO Data Found</div>
                 @endforelse
+                <div>{{$firstPage->links()}}</div>
             </div>
             <div class="col-2 col-sm-2.col-md-2 box"></div>
         </div>

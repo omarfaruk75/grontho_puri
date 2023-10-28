@@ -15,13 +15,18 @@ return new class extends Migration
     {
         Schema::create('first_pages', function (Blueprint $table) {
             $table->id();
-            $table->string('category');
-            $table->string('title');
-            $table->integer('user_id');
             $table->string('image');
+            $table->string('category');
+            $table->string('category_bn');
+            $table->string('title');
+            $table->string('title_bn');
             $table->string('heading');
+            $table->string('heading_bn');
             $table->string('short_text');
+            $table->string('short_text_bn');
             $table->text('text');
+            $table->text('text_bn');
+             $table->integer('user_id');
             $table->timestamps();
         });
     }

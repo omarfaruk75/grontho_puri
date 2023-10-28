@@ -24,7 +24,7 @@ class FrontendController extends Controller
     {
         $header=HeaderArticle::all();
         $headerCard=HeaderCard::first();
-        $homeArticle=HomeArticle::all();
+        $homeArticle=HomeArticle::paginate(10);
         $homeCard=HomeCard::all();
         return view('frontend.home',compact('header','headerCard','homeArticle','homeCard'));
     }
@@ -43,7 +43,7 @@ class FrontendController extends Controller
     public function Poem_cat()
     {
         $homeCard=HomeCard::all();
-        $firstPage=FirstPage::all();
+        $firstPage=FirstPage::paginate(10);
 
        
         return view('frontend.poem_cat',compact('homeCard','firstPage'));
