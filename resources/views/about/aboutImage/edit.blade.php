@@ -21,7 +21,7 @@
                                 <div class="row">
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="image">Image</label>
+                                            <label for="image">{{__('Image')}}</label>
                                             <input type="file" id="image" class="form-control"
                                                 placeholder="Image" name="image">
                                                 @if($errors->has('image'))
@@ -35,7 +35,7 @@
                                     <div class="col-12 d-flex justify-content-end">
                                         <img width="80px" height="50px" src="{{asset('uploads/about_page/about_image/images/'.$about->image)}}" alt="image" class="mx-4">
 
-                                        <button type="submit" class="btn btn-primary me-1 mb-1 mx-2">Save</button>
+                                        <button type="submit" class="btn btn-primary me-1 mb-1 mx-2">{{__('Save')}}</button>
                                     </div>
                                 </div>
                             </form>

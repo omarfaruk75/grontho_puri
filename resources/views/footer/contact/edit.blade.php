@@ -23,7 +23,7 @@
                                     
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="address">Address</label>
+                                            <label for="address">{{__('Address')}}</label>
                                             <input type="text" id="address" class="form-control" value="{{ old('address',$contact->address)}}" name="address">
                                             @if($errors->has('address'))
                                                 <span class="text-danger"> {{ $errors->first('address') }}</span>
@@ -33,7 +33,7 @@
                                 
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="mobile">Contact Number</label>
+                                            <label for="mobile">{{__('Contact Number')}}</label>
                                             <input type="text" id="mobile" class="form-control" value="{{ old('mobile',$contact->mobile)}}" name="mobile">
                                             @if($errors->has('mobile'))
                                                 <span class="text-danger"> {{ $errors->first('mobile') }}</span>
@@ -42,7 +42,7 @@
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="email">E-mail</label>
+                                            <label for="email">{{__('E-mail')}}</label>
                                             <input type="email" id="email" class="form-control" value="{{old('email',$contact->email)}}" name="email">
                                             @if($errors->has('email'))
                                                 <span class="text-danger"> {{ $errors->first('email') }}</span>

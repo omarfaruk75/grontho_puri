@@ -19,7 +19,7 @@
                                 <div class="row">
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="address">Address</label>
+                                            <label for="address">{{__('Address')}}</label>
                                             <input type="text" id="address" class="form-control" value="{{ old('address')}}" name="address">
                                             @if($errors->has('address'))
                                                 <span class="text-danger"> {{ $errors->first('address') }}</span>
@@ -28,7 +28,7 @@
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="contact">Contact Number</label>
+                                            <label for="contact">{{__('Contact Number')}}</label>
                                             <input type="text" id="contact" class="form-control" value="{{ old('contact')}}" name="contact">
                                             @if($errors->has('contact'))
                                                 <span class="text-danger"> {{ $errors->first('contact') }}</span>
@@ -37,7 +37,7 @@
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="email">E-mail</label>
+                                            <label for="email">{{__('E-mail')}}</label>
                                             <input type="email" id="email" class="form-control" value="{{ old('email')}}" name="email">
                                             @if($errors->has('email'))
                                                 <span class="text-danger"> {{ $errors->first('email') }}</span>
@@ -47,7 +47,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-12 d-flex justify-content-end">
-                                        <button type="submit" class="btn btn-primary me-1 mb-1">Save</button>
+                                        <button type="submit" class="btn btn-primary me-1 mb-1">{{__('Save')}}</button>
                                     </div>
                                 </div>
                             </form>

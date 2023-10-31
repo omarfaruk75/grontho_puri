@@ -21,7 +21,7 @@
                                 <div class="row">
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="facebook">Facebook</label>
+                                            <label for="facebook">{{__('Facebook')}}</label>
                                             <input type="text" id="facebook" class="form-control" value="{{ old('facebook',$link->facebook)}}" name="facebook">
                                             @if($errors->has('facebook'))
                                                 <span class="text-danger"> {{ $errors->first('facebook') }}</span>
@@ -30,7 +30,7 @@
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="twitter">Twitter</label>
+                                            <label for="twitter">{{__('Twitter')}}</label>
                                             <input type="text" id="twitter" class="form-control" value="{{ old('twitter',$link->twitter)}}" name="twitter">
                                             @if($errors->has('twitter'))
                                                 <span class="text-danger"> {{ $errors->first('twitter') }}</span>
@@ -39,7 +39,7 @@
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="share">Share</label>
+                                            <label for="share">{{__('Share')}}</label>
                                             <input type="text" id="share" class="form-control" value="{{ old('share',$link->share)}}" name="share">
                                             @if($errors->has('share'))
                                                 <span class="text-danger"> {{ $errors->first('share') }}</span>
@@ -48,7 +48,7 @@
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="save">Save</label>
+                                            <label for="save">{{__('Save')}}</label>
                                             <input type="text" id="save" class="form-control" value="{{ old('save',$link->save)}}" name="save">
                                             @if($errors->has('save'))
                                                 <span class="text-danger"> {{ $errors->first('save') }}</span>
@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-12 d-flex justify-content-end">
-                                        <button type="submit" class="btn btn-primary me-1 mb-1">Save</button>
+                                        <button type="submit" class="btn btn-primary me-1 mb-1">{{__('Save')}}</button>
                                     </div>
                                 </div>
                             </form>

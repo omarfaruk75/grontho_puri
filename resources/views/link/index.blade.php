@@ -21,10 +21,10 @@
                         <thead>
                             <tr>
                                 <th scope="col">{{__('#SL')}}</th>
-                                <th scope="col">{{__('Facebook Link')}}</th>
-                                <th scope="col">{{__('Twitter Link')}}</th>
-                                <th scope="col">{{__('Share Link')}}</th>
-                                <th scope="col">{{__('Save Link')}}</th>
+                                <th scope="col">{{__('Facebook')}}</th>
+                                <th scope="col">{{__('Twitter')}}</th>
+                                <th scope="col">{{__('Share')}}</th>
+                                <th scope="col">{{__('Save')}}</th>
                                 <th scope="col">{{__('Status')}}</th>
                                 <th class="white-space-nowrap">{{__('Action') }}</th>
                             </tr>
