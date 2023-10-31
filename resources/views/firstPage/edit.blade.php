@@ -89,7 +89,7 @@
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="short_text">{{__('Short Text')}}</label>
-                                            <textarea type="short_text" id="short_text" class="form-control" value="{{ old('short_text',$firstPage->short_text)}}" name="short_text" cols="30" rows="5">{{$firstPage->short_text}}</textarea>
+                                            <textarea type="text" id="short_text" class="form-control" value="{{ old('short_text',$firstPage->short_text)}}" name="short_text" cols="30" rows="5">{{$firstPage->short_text}}</textarea>
                                             @if($errors->has('short_text'))
                                                 <span class="text-danger"> {{ $errors->first('short_text') }}</span>
                                             @endif
@@ -98,7 +98,7 @@
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="short_text_bn">{{__('Short Text_BN')}}</label>
-                                            <textarea type="short_text_bn" id="short_text_bn" class="form-control" value="{{ old('short_text_bn',$firstPage->short_text_bn)}}" name="short_text_bn" cols="30" rows="5">{{$firstPage->short_text_bn}}</textarea>
+                                            <textarea type="text" id="short_text_bn" class="form-control" value="{{ old('short_text_bn',$firstPage->short_text_bn)}}" name="short_text_bn" cols="30" rows="5">{{$firstPage->short_text_bn}}</textarea>
                                             @if($errors->has('short_text_bn'))
                                                 <span class="text-danger"> {{ $errors->first('short_text_bn') }}</span>
                                             @endif
@@ -116,7 +116,7 @@
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="text_bn">{{__('Text_BN')}}</label>
-                                            <textarea type="text" id="text_bn" class="form-control" value="{{ old('text_bn',$firstPage->text_bn)}}" name="text" cols="30" rows="15">{{$firstPage->text_bn}}</textarea> 
+                                            <textarea type="text" id="text_bn" class="form-control" value="{{ old('text_bn',$firstPage->text_bn)}}" name="text_bn" cols="30" rows="15">{{$firstPage->text_bn}}</textarea> 
                                             @if($errors->has('text_bn'))
                                                 <span class="text-danger"> {{ $errors->first('text_bn') }}</span>
                                             @endif
