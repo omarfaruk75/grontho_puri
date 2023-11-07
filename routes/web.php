@@ -26,6 +26,7 @@ use App\Http\Controllers\About\CollageFourController as collageFour;
 use App\Http\Controllers\About\MissionController as mission;
 use App\Http\Controllers\About\AboutImageController as aboutImage;
 use App\Http\Controllers\Footer\ContactController as contact;
+use App\Http\Controllers\LocalizationController;
 
 /* Middleware */
 use App\Http\Middleware\isMember;
@@ -75,7 +76,7 @@ Route::get('/admin', [auth::class,'signInForm'])->name('signIn');
 Route::get('/login', [auth::class,'signInForm'])->name('login');
 Route::post('/login', [auth::class,'signInCheck'])->name('login.check');
 Route::get('/logout', [auth::class,'singOut'])->name('logOut');
-
+Route::get('/language', [LocalizationController::class,'lang_change'])->name('LangChange');
 
 Route::group(['middleware'=>isAdmin::class],function(){
     Route::prefix('admin')->group(function(){

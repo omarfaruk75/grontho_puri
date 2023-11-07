@@ -32,6 +32,12 @@
                 </div> --}}
             </div>
             <div class=" col-12 col-sm-12  col-md-4 col-lg-4 header_view p-1 mt-4 text-end">
+                <div class="col-md-4">
+                    <select class="form-control Langchange" onchange="change_language(this)">
+                        <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>English</option>
+                        <option value="bn" {{ session()->get('locale') == 'bn' ? 'selected' : '' }}>Bangla</option>                    
+                    </select>
+                </div>
                 <span>0.00 k </span><i class=" fa fa-eye" aria-hidden="true"> </i>
             </div>
         </div>
@@ -47,11 +53,11 @@
             </button>
             <div class=" collapse navbar-collapse " id="btn">
                 <ul class="navbar-nav m-auto">
-                    <li class="nav-item px-3"><a href="{{route('home')}}" class="nav-link text-dark">Home</a></li>
-                    <li class="nav-item px-3"><a href="{{route('poem_cat')}}" class="nav-link text-dark">Book Review</a></li>
-                    <li class="nav-item px-3"><a href="{{route('poem_cat')}}" class="nav-link text-dark">Film</a></li>
-                    <li class="nav-item px-3"><a href="{{route('poem_cat')}}" class="nav-link text-dark">Art</a></li>
-                    <li class="nav-item px-3"><a href="{{route('about')}}" class="nav-link text-dark">About Us</a></li>
+                    <li class="nav-item px-3"><a href="{{route('home')}}" class="nav-link text-dark">{{ __('Home')}}</a></li>
+                    <li class="nav-item px-3"><a href="{{route('poem_cat')}}" class="nav-link text-dark">{{ __('Book Review')}}</a></li>
+                    <li class="nav-item px-3"><a href="{{route('poem_cat')}}" class="nav-link text-dark">{{ __('Film')}}</a></li>
+                    <li class="nav-item px-3"><a href="{{route('poem_cat')}}" class="nav-link text-dark">{{ __('Art')}}</a></li>
+                    <li class="nav-item px-3"><a href="{{route('about')}}" class="nav-link text-dark">{{ __('About Us')}}</a></li>
                 </ul>
             </div>
 
@@ -125,6 +131,11 @@
 @stack('scripts')
 <!-- Bootstrap Cdn js link -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
+<script type="text/javascript">  
+    function change_language(e){
+        var url = "{{ route('LangChange') }}";
+        window.location.href = url + "?lang="+ e.value;
+    }
+</script>
 
 </html>
