@@ -23,7 +23,7 @@
                     {{--  <li class="py-1"><a href="{{route(currentUser().'.terms.index')}}">{{__('Terms & Condition')}}</a></li>  --}}
                     {{--  <li class="py-1"><a href="{{route(currentUser().'.settings.index')}}">{{__('Website Settings')}}</a></li>  --}}
                 </ul>
-            </li>
+            {{-- </li>
             <li class="submenu-item sidebar-item has-sub">
                 <a href="#" class='sidebar-link'> {{__('Home Page')}}</a>
                 <ul class="submenu">
@@ -52,13 +52,12 @@
                     <li class="py-1"><a href="{{route(currentUser().'.mission.index')}}">{{__('Mission')}}</a></li>
                     <li class="py-1"><a href="{{route(currentUser().'.aboutImage.index')}}">{{__('About Image')}}</a></li>
                 </ul>
+            </li> --}}
+            <li class="submenu-item sidebar-item">
+                <a href="{{route(currentUser().'.category.index')}}">{{__('Category')}}</a>
             </li>
-            <li class="submenu-item sidebar-item has-sub">
-                <a href="#" class='sidebar-link'> {{__('Footer')}}</a>
-                <ul class="submenu">
-                    <li class="py-1"><a href="{{route(currentUser().'.contact.index')}}">{{__('Contact Address')}}</a></li>
-                   
-                </ul>
+            <li class="submenu-item sidebar-item">
+                <a href="{{route(currentUser().'.post.index')}}">{{__('Post')}}</a>
             </li>
         </ul>
     </li>

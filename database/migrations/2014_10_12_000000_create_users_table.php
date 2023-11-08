@@ -22,10 +22,6 @@ return new class extends Migration
             $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
             $table->string('password');
             $table->string('language')->default('en');
-            $table->unsignedBigInteger('company_id')->nullable()->index();
-            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
-            $table->unsignedBigInteger('branch_id')->nullable()->index();
-            $table->foreign('branch_id')->references('id')->on('branches')->onDelete('cascade');
             $table->string('image')->nullable();
             $table->boolean('status')->default(1)->comment('1=>active 2=>inactive');
             $table->rememberToken();

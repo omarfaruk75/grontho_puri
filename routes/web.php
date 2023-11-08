@@ -15,7 +15,8 @@ use App\Http\Controllers\Home\HomeArticleController as home;
 use App\Http\Controllers\Home\HeaderCardController as HeaderCard;
 use App\Http\Controllers\Home\HomeCardController as HomeCard;
 use App\Http\Controllers\Home\HeaderArticleController as HeaderArticle;
-use App\Http\Controllers\FirstPageController as firstPage;
+use App\Http\Controllers\CategoryController as category;
+use App\Http\Controllers\PostController as post;
 use App\Http\Controllers\LinkController as link;
 use App\Http\Controllers\FrontendController as frontend;
 use App\Http\Controllers\About\TextController as about;
@@ -96,8 +97,14 @@ Route::group(['middleware'=>isAdmin::class],function(){
         Route::resource('headerCard',HeaderCard::class,['as'=>'admin']);
         Route::resource('homeCard',HomeCard::class,['as'=>'admin']);
         Route::resource('headerArticle',HeaderArticle::class,['as'=>'admin']);
-        /* Page-1 */
-        Route::resource('firstPage',firstPage::class,['as'=>'admin']);
+
+
+        /* Category */
+        Route::resource('category',category::class,['as'=>'admin']);
+        /* Post */
+        Route::resource('post',post::class,['as'=>'admin']);
+
+
         /* Link */
         Route::resource('link',link::class,['as'=>'admin']);
         /* About Page*/ 
