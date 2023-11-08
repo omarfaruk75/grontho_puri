@@ -12,17 +12,17 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm-2">
-                                            <img class="ad_img_1 mt-1" src="{{asset('uploads/userimg/'.$headerCard->user?->image)}}" onerror="this.onerror=null;this.src='{{ asset('assets/images/logo/default.jpeg')}}';" > 
+                                            <img class="ad_img_1 mt-1" src="{{asset('uploads/userimg/'.$headerCard?->user?->image)}}" onerror="this.onerror=null;this.src='{{ asset('assets/images/logo/default.jpeg')}}';" > 
                                         </div>
                                         <div class="col-sm-10 ps-3">
-                                            <h5 class="card-title mb-0 mt-0 fw-bold"> {{$headerCard->user?->name}} </h5>
-                                            <p class="mt-0 text_p">{{$headerCard->created_at->diffForHumans()}}</p>
+                                            <h5 class="card-title mb-0 mt-0 fw-bold"> {{$headerCard?->user?->name}} </h5>
+                                            <p class="mt-0 text_p">{{$headerCard?->created_at->diffForHumans()}}</p>
                                         </div>
                                      </div>
                                 
-                                    <h4 class="card-text mt-0  mb-3 my-2 text-para-1">{{$headerCard->title}}
+                                    <h4 class="card-text mt-0  mb-3 my-2 text-para-1"><?= $headerCard?->{'title_'.session()->get('locale')}?>
                                     </h4>
-                                    <p class="text-para-2">{{$headerCard->short_details}}<b><a href="#" class="text-decoration-none ms-1"> See More</a></b></p>
+                                    <p class="text-para-2">{{$headerCard?->short_details}}<b><a href="#" class="text-decoration-none ms-1"> See More</a></b></p>
 
                                 </div>
                             </div>
@@ -74,7 +74,6 @@
             @empty
                <div>data not found</div>
             @endforelse 
-            <div>{{ $homeArticle->links() }}</div> 
             </div>
             <div class="col-md-2 col-lg-2 advertisement"></div>
         </div>

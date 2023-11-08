@@ -53,27 +53,15 @@ class AuthenticationController extends Controller
     }
     public function signUpStore(SignupRequest $request){
         try{
-            $company=new Company;
-            $company->status=1;
-            if($company->save()){
-                $branch=new Branch;
-                $branch->status=1;
-                $branch->company_id=$company->id;
-                if($branch->save()){
-                    $user=new User;
-                    $user->name=$request->FullName;
-                    $user->contact_no=$request->PhoneNumber;
-                    $user->email=$request->EmailAddress;
-                    $user->password=Hash::make($request->password);
-                    $user->company_id=$company->id;
-                    $user->role_id=2;
-                    if($user->save())
-                        return redirect('login')->with($this->resMessageHtml(true,null,'Successfully Registred'));
-                    else
-                        return redirect('login')->with($this->resMessageHtml(false,'error','Please try again'));
-                }else
-                    return redirect('login')->with($this->resMessageHtml(false,'error','Please try again'));
-            }else
+            $user=new User;
+            $user->name=$request->FullName;
+            $user->contact_no=$request->PhoneNumber;
+            $user->email=$request->EmailAddress;
+            $user->password=Hash::make($request->password);
+            $user->role_id=2;
+            if($user->save())
+                return redirect('login')->with($this->resMessageHtml(true,null,'Successfully Registred'));
+            else
                 return redirect('login')->with($this->resMessageHtml(false,'error','Please try again'));
         }catch(Exception $e){
             //dd($e);

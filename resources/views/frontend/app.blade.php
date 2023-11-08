@@ -1,3 +1,4 @@
+@php $site_setting=\App\Models\Setting::first(); @endphp
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,17 +79,15 @@
                     <br>
                     <span><i class="fa-solid fa-envelope pt-3 mt-1"></i></span>
                 </div>
-                @php
-                $footer=\App\Models\Footer\Contact::first();
-                @endphp
+               
                 <div class="col-10 col-sm-10 col-md-4 co-lg-4  mt-4 mb-4 address-text">
                     <h4 class="m-auto mb-4 ">Grontho Puri</h4>
-                    <p><span>{{$footer?->address}}</span></p>
+                    <p><span>{{$site_setting?->address}}</span></p>
 
 
-                    <p><span class="p-2">{{$footer?->mobile}}</span></p>
+                    <p><span class="p-2">{{$site_setting?->mobile}}</span></p>
                     <p>
-                        <span class="p-2">{{$footer?->email}}</span>
+                        <span class="p-2">{{$site_setting?->email}}</span>
                     </p>
 
                 </div>

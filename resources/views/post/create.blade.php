@@ -61,7 +61,7 @@
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="short_text_bn">{{__('Short Text_BN')}}</label>
-                                            <textarea type="text" id="short_text_bn" class="form-control" value="{{ old('short_text_bn')}}" name="short_text_bn" cols="30" rows="5"></textarea>
+                                            <textarea type="text" id="short_text_bn" class="form-control" name="short_text_bn" cols="30" rows="5">{{ old('short_text_bn')}}</textarea>
                                             
                                             @if($errors->has('short_text_bn'))
                                                 <span class="text-danger"> {{ $errors->first('short_text_bn') }}</span>
@@ -72,7 +72,7 @@
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="short_text_en">{{__('Short Text_EN')}}</label>
-                                            <textarea type="text" id="short_text_en" class="form-control" value="{{ old('short_text_en')}}" name="short_text_en" cols="30" rows="5"></textarea>
+                                            <textarea type="text" id="short_text_en" class="form-control" name="short_text_en" cols="30" rows="5">{{ old('short_text_en')}}</textarea>
                                             
                                             @if($errors->has('short_text_en'))
                                                 <span class="text-danger"> {{ $errors->first('short_text_en') }}</span>
@@ -83,7 +83,7 @@
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="text_bn">{{__('Text_BN')}}</label>
-                                            <textarea type="text" id="text_bn" class="form-control" value="{{ old('text_bn')}}" name="text_bn" cols="30" rows="15"></textarea>
+                                            <textarea type="text" id="text_bn" class="form-control" name="text_bn" cols="30" rows="15">{{ old('text_bn')}}</textarea>
                                             @if($errors->has('text_bn'))
                                                 <span class="text-danger"> {{ $errors->first('text_bn') }}</span>
                                             @endif
@@ -93,7 +93,7 @@
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="text_en">{{__('Text_EN')}}</label>
-                                            <textarea type="text" id="text_en" class="form-control" value="{{ old('text_en')}}" name="text_en" cols="30" rows="15"></textarea>
+                                            <textarea type="text" id="text_en" class="form-control" name="text_en" cols="30" rows="15">{{ old('text_en')}}</textarea>
                                             @if($errors->has('text_en'))
                                                 <span class="text-danger"> {{ $errors->first('text_en') }}</span>
                                             @endif
