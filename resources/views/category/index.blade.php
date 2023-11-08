@@ -43,9 +43,9 @@
                                     <a href="{{route(currentUser().'.category.edit',encryptor('encrypt',$p->id))}}">
                                         <i class="bi bi-pencil-square"></i>
                                     </a>
-                                    <a href="javascript:void()" onclick="$('#form{{$p->id}}').submit()">
+                                    {{-- <a href="javascript:void()" onclick="$('#form{{$p->id}}').submit()">
                                         <i class="bi bi-trash"></i>
-                                    </a>
+                                    </a> --}}
                                     <form id="form{{$p->id}}" action="{{route(currentUser().'.category.destroy',encryptor('encrypt',$p->id))}}" method="post">
                                         @csrf
                                         @method('delete')
