@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\Category;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Brian2694\Toastr\Facades\Toastr;
 use App\Http\Traits\ImageHandleTraits;
@@ -32,8 +31,7 @@ class PostController extends Controller
     public function create()
     {
         $category= Category::all();
-        $user= User::all();
-        return view('post.create',compact('category','user'));
+        return view('post.create',compact('category'));
     }
 
     /**
@@ -58,7 +56,7 @@ class PostController extends Controller
             $data->featured=$request->featured;
             $data->front_right=$request->front_right;
             $data->front_bottom=$request->front_bottom;
-            $data->user_id=$request->user_id;
+            $data->user_id=currentUserId();
             if($request->has('image'))
                 $data->image=$this->resizeImage($request->image,'uploads/post/image',true,200,200,false);
 
@@ -98,9 +96,8 @@ class PostController extends Controller
     public function edit($id)
     {
         $category= Category::all();
-        $user= User::all();
         $post=Post::findOrFail(encryptor('decrypt',$id));
-        return view('post.edit',compact('post','category','user'));
+        return view('post.edit',compact('post','category'));
     }
 
     /**
@@ -126,7 +123,6 @@ class PostController extends Controller
             $data->featured=$request->featured;
             $data->front_right=$request->front_right;
             $data->front_bottom=$request->front_bottom;
-            $data->user_id=$request->user_id;
             $path='uploads/post/image';
 
             if($request->has('image') && $request->image)

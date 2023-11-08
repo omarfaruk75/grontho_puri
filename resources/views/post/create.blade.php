@@ -29,18 +29,6 @@
                                         </select>
                                     </div>
                                     <div class="col-md-6 col-12">
-                                        <label for="user_id">{{__('User')}}</label>
-                                        <select class="form-select" aria-label="Default select example" name="user_id">
-                                            <option selected>Select User</option>
-                                            @forelse ($user as $cat )
-                                                <option value="{{$cat->id}}">{{$cat->name}}</option>
-                                            @empty
-                                                <option value="">No Data Found</option>
-                                            @endforelse
-                                        </select>
-                                    </div>
-
-                                    <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="image">{{__('Image')}}</label>
                                             <input type="file" id="image" class="form-control"
