@@ -15,8 +15,14 @@ return new class extends Migration
     {
         Schema::create('about_settings', function (Blueprint $table) {
             $table->id();
-            $table->string('field_name');
-            $table->text('field_value');
+            $table->string('about_image')->nullable();
+            $table->text('about_title')->nullable();
+            $table->text('about_description')->nullable();
+            $table->text('mission_title')->nullable();
+            $table->text('mission_description')->nullable();
+            $table->string('mission_image_1')->nullable();
+            $table->string('mission_image_2')->nullable();
+            $table->string('mission_image_3')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('about_images');
+        Schema::dropIfExists('about_settings');
     }
 };

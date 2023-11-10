@@ -28,5 +28,23 @@
             <span>{{__('Post') }}</span>
         </a>
     </li>
+    <li class="sidebar-item">
+        <a href="{{route(currentUser().'.page.index')}}" class='sidebar-link'>
+            <i class="bi bi-grid-fill"></i>
+            <span>{{__('Page') }}</span>
+        </a>
+    </li>
+    <li class="sidebar-item">
+        <a href="{{route(currentUser().'.about_setting.index')}}" class='sidebar-link'>
+            <i class="bi bi-grid-fill"></i>
+            <span>{{__('About') }}</span>
+        </a>
+    </li>
+    <li class="sidebar-item">
+        <a href="{{route(currentUser().'.advertisement.index')}}" class='sidebar-link'>
+            <i class="bi bi-grid-fill"></i>
+            <span>{{__('Advertisement') }}</span>
+        </a>
+    </li>
     
 </ul>
