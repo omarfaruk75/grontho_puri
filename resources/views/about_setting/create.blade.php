@@ -17,7 +17,7 @@
                             <form class="form" method="post" enctype="multipart/form-data" action="{{route(currentUser().'.about_setting.store')}}">
                                 @csrf
                                 <div class="row">
-                                    <div class="col-md-6 col-12">
+                                    <div class="col-12">
                                         <div class="form-group">
                                             <label for="about_image">{{__('Header_image')}}</label>
                                             <input type="file" id="about_image" class="form-control"
@@ -29,44 +29,80 @@
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="about_title">{{__('About_title')}}</label>
-                                            <textarea type="text" id="about_title" class="form-control" name="about_title" rows="2">{{ old('about_title')}}</textarea>
-                                            @if($errors->has('about_title'))
-                                                <span class="text-danger"> {{ $errors->first('about_title') }}</span>
+                                            <label for="about_title_en">{{__('About title')}}</label>
+                                            <textarea type="text" id="about_title_en" class="form-control" name="about_title_en" rows="2">{{ old('about_title_en')}}</textarea>
+                                            @if($errors->has('about_title_en'))
+                                                <span class="text-danger"> {{ $errors->first('about_title_en') }}</span>
                                             @endif
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="about_description">{{__('About_description')}}</label>
-                                            <textarea type="text" id="about_description" class="form-control" name="about_description"  rows="3">{{ old('about_description')}}</textarea>
-                                            @if($errors->has('about_description'))
-                                                <span class="text-danger"> {{ $errors->first('about_description') }}</span>
+                                            <label for="about_title_bn">{{__('About title')}}</label>
+                                            <textarea type="text" id="about_title_bn" class="form-control" name="about_title_bn" rows="2">{{ old('about_title_bn')}}</textarea>
+                                            @if($errors->has('about_title_bn'))
+                                                <span class="text-danger"> {{ $errors->first('about_title_bn') }}</span>
                                             @endif
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="mission_title">{{__('Mission_title')}}</label>
-                                            <textarea type="text" id="mission_title" class="form-control" name="mission_title"  rows="2">{{ old('mission_title')}}</textarea>
-                                            @if($errors->has('mission_title'))
-                                                <span class="text-danger"> {{ $errors->first('mission_title') }}</span>
+                                            <label for="about_description_en">{{__('About description')}}</label>
+                                            <textarea type="text" id="about_description_en" class="form-control" name="about_description_en"  rows="3">{{ old('about_description_en')}}</textarea>
+                                            @if($errors->has('about_description_en'))
+                                                <span class="text-danger"> {{ $errors->first('about_description_en') }}</span>
                                             @endif
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="mission_description">{{__('Mission_description')}}</label>
-                                            <textarea type="text" id="mission_description" class="form-control" name="mission_description"  rows="3">{{ old('mission_description')}}</textarea>
-                                            @if($errors->has('mission_description'))
-                                                <span class="text-danger"> {{ $errors->first('mission_description') }}</span>
+                                            <label for="about_description_bn">{{__('About description')}}</label>
+                                            <textarea type="text" id="about_description_bn" class="form-control" name="about_description_bn"  rows="3">{{ old('about_description_bn')}}</textarea>
+                                            @if($errors->has('about_description_bn'))
+                                                <span class="text-danger"> {{ $errors->first('about_description_bn') }}</span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="mission_title_en">{{__('Mission title')}}</label>
+                                            <textarea type="text" id="mission_title_en" class="form-control" name="mission_title_en"  rows="2">{{ old('mission_title_en')}}</textarea>
+                                            @if($errors->has('mission_title_en'))
+                                                <span class="text-danger"> {{ $errors->first('mission_title_en') }}</span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="mission_title_bn">{{__('Mission title')}}</label>
+                                            <textarea type="text" id="mission_title_bn" class="form-control" name="mission_title_bn"  rows="2">{{ old('mission_title_bn')}}</textarea>
+                                            @if($errors->has('mission_title_bn'))
+                                                <span class="text-danger"> {{ $errors->first('mission_title_bn') }}</span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="mission_description_en">{{__('Mission description')}}</label>
+                                            <textarea type="text" id="mission_description_en" class="form-control" name="mission_description_en"  rows="3">{{ old('mission_description_en')}}</textarea>
+                                            @if($errors->has('mission_description_en'))
+                                                <span class="text-danger"> {{ $errors->first('mission_description_en') }}</span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="mission_description_bn">{{__('Mission description')}}</label>
+                                            <textarea type="text" id="mission_description_bn" class="form-control" name="mission_description_bn"  rows="3">{{ old('mission_description_bn')}}</textarea>
+                                            @if($errors->has('mission_description_bn'))
+                                                <span class="text-danger"> {{ $errors->first('mission_description_bn') }}</span>
                                             @endif
                                         </div>
                                     </div>
                                     
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="mission_image_1">{{__('Mission_image_1')}}</label>
+                                            <label for="mission_image_1">{{__('Mission image 1')}}</label>
                                             <input type="file" id="mission_image_1" class="form-control"
                                             placeholder="mission_image_1" name="mission_image_1">
                                             @if($errors->has('mission_image_1'))
@@ -76,7 +112,7 @@
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="mission_image_2">{{__('Mission_image_2')}}</label>
+                                            <label for="mission_image_2">{{__('Mission image 2')}}</label>
                                             <input type="file" id="mission_image_2" class="form-control"
                                             placeholder="mission_image_2" name="mission_image_2">
                                             @if($errors->has('mission_image_2'))
@@ -86,7 +122,7 @@
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="mission_image_3">{{__('Mission_image_3')}}</label>
+                                            <label for="mission_image_3">{{__('Mission image 3')}}</label>
                                             <input type="file" id="mission_image_3" class="form-control"
                                             placeholder="mission_image_3" name="mission_image_3">
                                             @if($errors->has('mission_image_3'))

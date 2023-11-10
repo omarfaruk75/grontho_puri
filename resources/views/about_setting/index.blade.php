@@ -38,13 +38,13 @@
                             <tr>
                                 <th scope="row">{{ ++$loop->index }}</th>
                                  <td><img width="50px" src="{{asset('uploads/about_setting/about_image/'.$p->about_image)}}" alt="image"></td>
-                                <td>{{$p->about_title}}</td>
-                                <td>{{$p->about_description}}</td>
-                                <td>{{$p->mission_title}}</td>
-                                <td>{{$p->mission_description}}</td>
-                                <td><img width="50px" src="{{asset('uploads/about_setting/mission_image_1/'.$p->mission_image_1)}}" alt="image"></td>
-                                <td><img width="50px" src="{{asset('uploads/about_setting/mission_image_2/'.$p->mission_image_2)}}" alt="image"></td>
-                                <td><img width="50px" src="{{asset('uploads/about_setting/mission_image_3/'.$p->mission_image_3)}}" alt="image"></td>
+                                <td>{{$p->about_title_en}}</td>
+                                <td>{{$p->about_description_en}}</td>
+                                <td>{{$p->mission_title_en}}</td>
+                                <td>{{$p->mission_description_en}}</td>
+                                <td><img width="50px" src="{{asset('uploads/about_setting/mission_image/'.$p->mission_image_1)}}" alt="image"></td>
+                                <td><img width="50px" src="{{asset('uploads/about_setting/mission_image/'.$p->mission_image_2)}}" alt="image"></td>
+                                <td><img width="50px" src="{{asset('uploads/about_setting/mission_image/'.$p->mission_image_3)}}" alt="image"></td>
                                 <td>@if($p->status == 1) {{__('Active') }} @else {{__('Inactive') }} @endif</td>
                                 <!-- or <td>{{ $p->status == 1?"Active":"Inactive" }}</td>-->
                                 <td class="white-space-nowrap">

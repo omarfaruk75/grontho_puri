@@ -4,17 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\Category;
-
-use App\Models\About\AboutImage;
-use App\Models\About\Text;
-use App\Models\About\CollageText;
-use App\Models\About\CollageSecond;
-use App\Models\About\CollageThird;
-use App\Models\About\CollageFour;
-use App\Models\About\Mission;
-use App\Models\FirstPage;
-use App\Models\Link;
-use App\Models\Footer\Contact;
+use App\Models\AboutSetting;
 
 use Illuminate\Http\Request;
 
@@ -34,14 +24,8 @@ class FrontendController extends Controller
 
     public function about()
     {
-        $aboutImage = AboutImage::first();
-        $text = Text::first();
-        $collageText = CollageText::first();
-        $collageSecond = CollageSecond::first();
-        $collageThird = CollageThird::first();
-        $collageFour = CollageFour::first();
-        $mission = Mission::first();
-        return view('frontend.about',compact('aboutImage','text','collageText','collageSecond','collageThird','collageFour','mission'));
+        $about = AboutSetting::first();
+        return view('frontend.about',compact('about'));
     }
     public function Poem_cat()
     {

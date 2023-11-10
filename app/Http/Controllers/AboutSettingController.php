@@ -42,21 +42,25 @@ class AboutSettingController extends Controller
     {
         try{
             $data=new AboutSetting;
-            $data->about_title=$request->about_title;
-            $data->about_description=$request->about_description;
-            $data->mission_title=$request->mission_title;
-            $data->mission_description=$request->mission_description;
+            $data->about_title_en=$request->about_title_en;
+            $data->about_description_en=$request->about_description_en;
+            $data->mission_title_en=$request->mission_title_en;
+            $data->mission_description_en=$request->mission_description_en;
+            $data->about_title_bn=$request->about_title_bn;
+            $data->about_description_bn=$request->about_description_bn;
+            $data->mission_title_bn=$request->mission_title_bn;
+            $data->mission_description_bn=$request->mission_description_bn;
             if($request->has('about_image'))
                 $data->about_image=$this->resizeImage($request->about_image,'uploads/about_setting/about_image',true,200,200,false);
             
             if($request->has('mission_image_1'))
-                $data->mission_image_1=$this->resizeImage($request->mission_image_1,'uploads/about_setting/mission_image_1',true,200,200,false);
+                $data->mission_image_1=$this->resizeImage($request->mission_image_1,'uploads/about_setting/mission_image',true,200,200,false);
         
             if($request->has('mission_image_2'))
-                $data->mission_image_2=$this->resizeImage($request->mission_image_2,'uploads/about_setting/mission_image_2',true,200,200,false);
+                $data->mission_image_2=$this->resizeImage($request->mission_image_2,'uploads/about_setting/mission_image',true,200,200,false);
         
             if($request->has('mission_image_3'))
-                $data->mission_image_3=$this->resizeImage($request->mission_image_3,'uploads/about_setting/mission_image_3',true,200,200,false);
+                $data->mission_image_3=$this->resizeImage($request->mission_image_3,'uploads/about_setting/mission_image',true,200,200,false);
 
             if($data->save()){
             Toastr::success('Settings Create Successfully!');
@@ -107,31 +111,33 @@ class AboutSettingController extends Controller
     {
         try{
             $data=AboutSetting::findOrFail(encryptor('decrypt',$id));
-            $data->about_title=$request->about_title;
-            $data->about_description=$request->about_description;
-            $data->mission_title=$request->mission_title;
-            $data->mission_description=$request->mission_description;
+            $data->about_title_en=$request->about_title_en;
+            $data->about_description_en=$request->about_description_en;
+            $data->mission_title_en=$request->mission_title_en;
+            $data->mission_description_en=$request->mission_description_en;
+            $data->about_title_bn=$request->about_title_bn;
+            $data->about_description_bn=$request->about_description_bn;
+            $data->mission_title_bn=$request->mission_title_bn;
+            $data->mission_description_bn=$request->mission_description_bn;
             $path1='uploads/about_setting/about_image';
-            $path2='uploads/about_setting/mission_image_1';
-            $path3='uploads/about_setting/mission_image_2';
-            $path4='uploads/about_setting/mission_image_3';
+            $path2='uploads/about_setting/mission_image';
 
-            if($request->has('about_image') && $request->about_image)
-            if($this->deleteImage($data->about_image,$path1))
+            if($request->has('about_image') && $request->about_image){
+                $this->deleteImage($data->about_image,$path1);
                 $data->about_image=$this->resizeImage($request->about_image,$path1,true,200,200,false);
-
-            if($request->has('mission_image_1') && $request->mission_image_1)
-            if($this->deleteImage($data->mission_image_1,$path2))
+            }
+            if($request->has('mission_image_1') && $request->mission_image_1){
+                $this->deleteImage($data->mission_image_1,$path2);
                 $data->mission_image_1=$this->resizeImage($request->mission_image_1,$path2,true,200,200,false);
-
-            if($request->has('mission_image_2') && $request->mission_image_2)
-            if($this->deleteImage($data->mission_image_2,$path3))
-                $data->mission_image_2=$this->resizeImage($request->headmission_image_2er_logo,$path3,true,200,200,false);
-
-            if($request->has('mission_image_3') && $request->mission_image_3)
-            if($this->deleteImage($data->mission_image_3,$path4))
-                $data->mission_image_3=$this->resizeImage($request->mission_image_3,$path4,true,200,200,false);
-        
+            }
+            if($request->has('mission_image_2') && $request->mission_image_2){
+                $this->deleteImage($data->mission_image_2,$path2);
+                $data->mission_image_2=$this->resizeImage($request->mission_image_2,$path2,true,200,200,false);
+            }
+            if($request->has('mission_image_3') && $request->mission_image_3){
+                $this->deleteImage($data->mission_image_3,$path2);
+                $data->mission_image_3=$this->resizeImage($request->mission_image_3,$path2,true,200,200,false);
+            }
             if($data->save()){
             Toastr::success('Updated Successfully!');
             return redirect()->route(currentUser().'.about_setting.index');

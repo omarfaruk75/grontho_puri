@@ -11,10 +11,8 @@
         <div class="row" id="table-bordered">
             <div class="col-12">
                 <div class="card">
-                    @if(!$settings)
-                    <div>
-                        <a class="float-end" href="{{route(currentUser().'.settings.create')}}"style="font-size:1.7rem"><i class="bi bi-plus-square-fill"></i></a>
-                    </div>
+                    @if(count($settings) <= 0)
+                        <div><a class="float-end" href="{{route(currentUser().'.settings.create')}}" style="font-size:1.7rem"><i class="bi bi-plus-square-fill"></i></a></div>
                     @endif
                     
                         <!-- table bordered -->
