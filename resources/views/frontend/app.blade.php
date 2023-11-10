@@ -26,7 +26,7 @@
     <div class="container ">
         <div class="row ">
             <div class=" col-12 col-sm-12 col-md-8 col-lg-8">
-              <a href="{{route('home')}}" class="text-decoration-none"><img src="{{asset('assets/frontend/images/logo.jpeg')}}" class="p-2 bg-light " alt="logo"></a>  
+              <a href="{{route('home')}}" class="text-decoration-none"><img src="{{asset('uploads/settings/header_logo/'.$site_setting->header_logo)}}" class="p-2 bg-light " alt="logo"></a>  
                 {{-- <div class="website_name p-2">
                     <h3 mb-0 mt-1>Grantho-Puri</h3>
                     <p> Grantho-Puri </p>
@@ -82,10 +82,10 @@
                
                 <div class="col-10 col-sm-10 col-md-4 co-lg-4  mt-4 mb-4 address-text">
                     <h4 class="m-auto mb-4 ">Grontho Puri</h4>
-                    <p><span>{{$site_setting?->address}}</span></p>
+                    <p><span>{!!$site_setting?->{'address_'.session()->get('locale')}!!}</span></p>
 
 
-                    <p><span class="p-2">{{$site_setting?->mobile}}</span></p>
+                    <p><span class="p-2">{{$site_setting?->contact_no}}</span></p>
                     <p>
                         <span class="p-2">{{$site_setting?->email}}</span>
                     </p>

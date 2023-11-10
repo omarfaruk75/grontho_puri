@@ -22,11 +22,14 @@ class FrontendController extends Controller
 {
     public function home()
     {
-        $header=Post::where('featured',1)->where('publish_date','<',date('Y-m-d'))->get();
-        $headerCard=Post::where('front_right',1)->where('publish_date','<',date('Y-m-d'))->first();
-        $homeArticle=Post::where('front_bottom',1)->where('publish_date','<',date('Y-m-d'))->get();
-        $homeCard=Post::where('featured',1)->where('publish_date','<',date('Y-m-d'))->get();
-        return view('frontend.home',compact('header','headerCard','homeArticle','homeCard'));
+        if(!session()->get('locale')){
+            session()->put('locale', 'en');
+        }
+        $featured=Post::where('featured',1)->where('publish_date','<=',date('Y-m-d'))->get();
+        $front_right=Post::where('front_right',1)->where('publish_date','<=',date('Y-m-d'))->first();
+        $homeArticle=Post::where('front_bottom',1)->where('publish_date','<=',date('Y-m-d'))->get();
+        $homeCard=Post::where('featured',1)->where('publish_date','<=',date('Y-m-d'))->get();
+        return view('frontend.home',compact('featured','front_right','homeArticle','homeCard'));
     }
 
     public function about()

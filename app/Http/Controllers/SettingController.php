@@ -42,40 +42,27 @@ class SettingController extends Controller
     {
         try{
             $data=new setting;
-            $data->address=$request->address;
+            $data->address_en=$request->address_en;
+            $data->address_bn=$request->address_bn;
             $data->contact_no=$request->contact_no;
             $data->email_address=$request->email_address;
             $data->facebook_link=$request->facebook_link;
             $data->twitter_link=$request->twitter_link;
             $data->youtube_link=$request->youtube_link;
             $data->linkdin_link=$request->linkdin_link;
-            $data->footer_top_p1_text=$request->footer_top_p1_text;
-            $data->footer_top_p2_text=$request->footer_top_p2_text;
-            $data->footer_top_p3_text=$request->footer_top_p3_text;
             if($request->has('header_logo'))
                 $data->header_logo=$this->resizeImage($request->header_logo,'uploads/settings/header_logo',true,200,200,false);
 
-            if($request->has('footer_logo'))
-                $data->footer_logo=$this->resizeImage($request->footer_logo,'uploads/settings/footer_logo',true,200,200,false);
+            if($request->has('home_page_image'))
+                $data->home_page_image=$this->resizeImage($request->home_page_image,'uploads/settings/home_page_image',true,200,200,false);
 
-            // if($request->has('we_accept'))
-            //     $data->we_accept=$this->resizeImage($request->we_accept,'uploads/settings/we_accept',true,200,200,false);
-
-            if($request->has('footer_top_p1_image'))
-                $data->footer_top_p1_image=$this->resizeImage($request->footer_top_p1_image,'uploads/settings/we_accept_1',true,200,200,false);
-
-            if($request->has('footer_top_p2_image'))
-                $data->footer_top_p2_image=$this->resizeImage($request->footer_top_p2_image,'uploads/settings/we_accept_2',true,200,200,false);
-
-            if($request->has('footer_top_p3_image'))
-                $data->footer_top_p3_image=$this->resizeImage($request->footer_top_p3_image,'uploads/settings/we_accept_3',true,200,200,false);
-
+           
             if($data->save()){
-            Toastr::success('Settings Create Successfully!');
-            return redirect()->route(currentUser().'.settings.index');
+                Toastr::success('Settings Create Successfully!');
+                return redirect()->route(currentUser().'.settings.index');
             }else{
-            Toastr::warning('Please try Again!');
-            return redirect()->back();
+                Toastr::warning('Please try Again!');
+                return redirect()->back();
             }
 
         }
@@ -121,52 +108,34 @@ class SettingController extends Controller
     {
         try{
             $data=setting::findOrFail(encryptor('decrypt',$id));
-            $data->address=$request->address;
+            $data->address_en=$request->address_en;
+            $data->address_bn=$request->address_bn;
             $data->contact_no=$request->contact_no;
             $data->email_address=$request->email_address;
             $data->facebook_link=$request->facebook_link;
             $data->twitter_link=$request->twitter_link;
             $data->youtube_link=$request->youtube_link;
             $data->linkdin_link=$request->linkdin_link;
-            $data->footer_top_p1_text=$request->footer_top_p1_text;
-            $data->footer_top_p2_text=$request->footer_top_p2_text;
-            $data->footer_top_p3_text=$request->footer_top_p3_text;
             $path='uploads/settings/header_logo';
-            $path2='uploads/settings/footer_logo';
-            $path3='uploads/settings/we_accept_1';
-            $path4='uploads/settings/we_accept_2';
-            $path5='uploads/settings/we_accept_3';
+            $path2='uploads/settings/home_page_image';
 
-            if($request->has('header_logo') && $request->header_logo)
-            if($this->deleteImage($data->header_logo,$path))
+            if($request->has('header_logo') && $request->header_logo){
+                $this->deleteImage($data->header_logo,$path);
                 $data->header_logo=$this->resizeImage($request->header_logo,$path,true,200,200,false);
+            }
 
-            if($request->has('footer_logo') && $request->footer_logo)
-            if($this->deleteImage($data->footer_logo,$path2))
-                $data->footer_logo=$this->resizeImage($request->footer_logo,$path2,true,200,200,false);
+            if($request->has('home_page_image') && $request->home_page_image){
+                $this->deleteImage($data->home_page_image,$path2);
+                $data->home_page_image=$this->resizeImage($request->home_page_image,$path2,true,200,200,false);
+            }
 
-            // if($request->has('we_accept') && $request->we_accept)
-            // if($this->deleteImage($data->we_accept,$path))
-            //     $data->we_accept=$this->resizeImage($request->we_accept,$path,true,200,200,false);
-
-            if($request->has('footer_top_p1_image') && $request->footer_top_p1_image)
-            if($this->deleteImage($data->footer_top_p1_image,$path3))
-                $data->footer_top_p1_image=$this->resizeImage($request->footer_top_p1_image,$path3,true,200,200,false);
-
-            if($request->has('footer_top_p2_image') && $request->footer_top_p2_image)
-            if($this->deleteImage($data->footer_top_p2_image,$path4))
-                $data->footer_top_p2_image=$this->resizeImage($request->footer_top_p2_image,$path4,true,200,200,false);
-
-            if($request->has('footer_top_p3_image') && $request->footer_top_p3_image)
-            if($this->deleteImage($data->footer_top_p3_image,$path5))
-                $data->footer_top_p3_image=$this->resizeImage($request->footer_top_p3_image,$path5,true,200,200,false);
                 
             if($data->save()){
-            Toastr::success('Settings Updated Successfully!');
-            return redirect()->route(currentUser().'.settings.index');
+                Toastr::success('Settings Updated Successfully!');
+                return redirect()->route(currentUser().'.settings.index');
             }else{
-            Toastr::warning('Please try Again!');
-            return redirect()->back();
+                Toastr::warning('Please try Again!');
+                return redirect()->back();
             }
 
         }

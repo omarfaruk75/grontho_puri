@@ -16,21 +16,15 @@ return new class extends Migration
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
             $table->string('header_logo')->nullable();
-            $table->string('footer_logo')->nullable();
-            $table->text('address')->nullable();
+            $table->string('home_page_image')->nullable();
+            $table->text('address_en')->nullable();
+            $table->text('address_bn')->nullable();
             $table->string('contact_no')->nullable();
             $table->string('email_address')->nullable();
             $table->text('facebook_link')->nullable();
             $table->text('twitter_link')->nullable();
             $table->text('youtube_link')->nullable();
             $table->text('linkdin_link')->nullable();
-            $table->string('we_accept')->nullable();
-            $table->string('footer_top_p1_text')->nullable();
-            $table->string('footer_top_p1_image')->nullable();
-            $table->string('footer_top_p2_text')->nullable();
-            $table->string('footer_top_p2_image')->nullable();
-            $table->string('footer_top_p3_text')->nullable();
-            $table->string('footer_top_p3_image')->nullable();
             $table->timestamps();
         });
     }

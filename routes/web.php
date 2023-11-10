@@ -50,6 +50,7 @@ Route::group(['middleware'=>isAdmin::class],function(){
         /* settings */
         Route::resource('users',user::class,['as'=>'admin']);
         Route::resource('admin',admin::class,['as'=>'admin']);
+        Route::resource('settings',settings::class,['as'=>'admin']);
 
 
         /* Category */
