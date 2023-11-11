@@ -38,13 +38,13 @@
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="title">{{__('Title')}}</label>
-                                            <input type="text" id="title" class="form-control" value="{{ old('title',$advertisement->title)}}" name="link">
+                                            <input type="text" id="title" class="form-control" value="{{ old('title',$advertisement->title)}}" name="title">
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="location">{{__('Location')}}</label>
-                                            <input type="text" id="location" class="form-control" value="{{ old('location',$advertisement->location)}}" name="link">
+                                            <input type="text" id="location" class="form-control" value="{{ old('location',$advertisement->location)}}" name="location">
                                         </div>
                                     </div>
                                 <div class="row">
