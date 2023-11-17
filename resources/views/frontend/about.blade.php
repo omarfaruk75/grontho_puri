@@ -5,7 +5,7 @@
         <div class="row  about_image">
             <div class="col-sm-12 col-md-12 col-lg-12 p-0 m-0 about_us">
                 <h4 class="ps-5 my-2  fw-bold text dark">{{__('About Us')}}</h4>
-                <img src="{{asset('uploads/about_setting/about_image/'.$about->about_image)}}" class="img-fluid w-100 " alt="">
+                <img src="{{asset('uploads/about_setting/about_image/'.$about?->about_image)}}" class="img-fluid w-100 " alt="">
             </div>
             <div class="col-12"></div>
         </div>
