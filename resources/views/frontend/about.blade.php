@@ -36,10 +36,10 @@
     <div class="container">
         <div class="row main_content">
             <div class="col-sm-12 col-lg-6 ">
-                <h3>{!!$about->{'about_title_'.session()->get('locale')} !!} </h3>
+                <h3>{!!$about?->{'about_title_'.session()->get('locale')} !!} </h3>
             </div>
             <div class="col-sm-12 col-lg-6 text-muted">
-                <p>{!!$about->{'about_description_'.session()->get('locale')} !!}</p>
+                <p>{!!$about?->{'about_description_'.session()->get('locale')} !!}</p>
             </div>
         </div>
     </div>
@@ -94,21 +94,21 @@
         <div class="row mx-1 mission">
             <div class="col-sm-4 col-md-1 col-lg-1 box "></div>
             <div class="col-sm-7 col-md-10 col-lg-10 mt-2">
-                <h3>{!!$about->{'mission_title_'.session()->get('locale')} !!}</h3>
+                <h3>{!!$about?->{'mission_title_'.session()->get('locale')} !!}</h3>
                 <div class="row">
                     <div class="col-sm-6 col-md-6 col-lg-6  mission_content m-0 px-3">
-                        <p class="text-muted mb-4">{!!$about->{'mission_description_'.session()->get('locale')} !!}</p>
+                        <p class="text-muted mb-4">{!!$about?->{'mission_description_'.session()->get('locale')} !!}</p>
                         <a href="" class="bg-dark text-white text-decoration-none  p-2 ms-3  ">View More</a>
 
                         
                     </div>
 
                     <div class="col-sm-6 col-md-3 col-lg-3 mt-3 ">
-                        <img src="{{asset('uploads/about_setting/mission_image/'.$about->mission_image_1)}}" class="img-fluid w-100 mt-1" alt="">
+                        <img src="{{asset('uploads/about_setting/mission_image/'.$about?->mission_image_1)}}" class="img-fluid w-100 mt-1" alt="">
                     </div>
                     <div class="col-sm-6 col-md-3 col-lg-3 mt-3  ">
-                        <img src="{{asset('uploads/about_setting/mission_image/'.$about->mission_image_2)}}" class="img-fluid w-100 m-1 mb-3" alt="">
-                        <img src="{{asset('uploads/about_setting/mission_image/'.$about->mission_image_3)}}" class="img-fluid w-100 m-1" alt="">
+                        <img src="{{asset('uploads/about_setting/mission_image/'.$about?->mission_image_2)}}" class="img-fluid w-100 m-1 mb-3" alt="">
+                        <img src="{{asset('uploads/about_setting/mission_image/'.$about?->mission_image_3)}}" class="img-fluid w-100 m-1" alt="">
                     </div>
                 </div>
             </div>
